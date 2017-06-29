@@ -87,46 +87,22 @@
 
 
 
-<meta name="description" content="1. 使用方式 ：ln [option] source_file dist_file
--f 建立时，将同档案名删除;
--i 删除前进行询问;
-ln -s abc cde 建立abc 的软连接;
-ln abc cde 建立abc的硬连接.
-
-2. 软链接与硬链接的区别（通俗）：
-硬链接可认为是一个文件拥有两个文件名;而软链接则是
-系统新建一个链接文件，此文件指向其所要指的文件
-
-3. 软链接与硬链接">
+<meta name="description" content="1. 使用方式 ：ln [option] source_file dist_file-f 建立时，将同档案名删除;-i 删除前进行询问;ln -s abc cde 建立abc 的软连接;ln abc cde 建立abc的硬连接.
+2. 软链接与硬链接的区别（通俗）：硬链接可认为是一个文件拥有两个文件名;而软链接则是系统新建一个链接文件，此文件指向其所要指的文件
+3. 软链接与硬链接的区别（讲解）：">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux_软连接与硬连接">
+<meta property="og:title" content="软连接与硬连接">
 <meta property="og:url" content="http://yoursite.com/2016/01/22/Linux/Linux_软连接与硬连接/index.html">
 <meta property="og:site_name" content="203Monitor">
-<meta property="og:description" content="1. 使用方式 ：ln [option] source_file dist_file
--f 建立时，将同档案名删除;
--i 删除前进行询问;
-ln -s abc cde 建立abc 的软连接;
-ln abc cde 建立abc的硬连接.
-
-2. 软链接与硬链接的区别（通俗）：
-硬链接可认为是一个文件拥有两个文件名;而软链接则是
-系统新建一个链接文件，此文件指向其所要指的文件
-
-3. 软链接与硬链接">
-<meta property="og:updated_time" content="2017-01-10T02:24:50.000Z">
+<meta property="og:description" content="1. 使用方式 ：ln [option] source_file dist_file-f 建立时，将同档案名删除;-i 删除前进行询问;ln -s abc cde 建立abc 的软连接;ln abc cde 建立abc的硬连接.
+2. 软链接与硬链接的区别（通俗）：硬链接可认为是一个文件拥有两个文件名;而软链接则是系统新建一个链接文件，此文件指向其所要指的文件
+3. 软链接与硬链接的区别（讲解）：">
+<meta property="og:updated_time" content="2017-06-29T06:22:09.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux_软连接与硬连接">
-<meta name="twitter:description" content="1. 使用方式 ：ln [option] source_file dist_file
--f 建立时，将同档案名删除;
--i 删除前进行询问;
-ln -s abc cde 建立abc 的软连接;
-ln abc cde 建立abc的硬连接.
-
-2. 软链接与硬链接的区别（通俗）：
-硬链接可认为是一个文件拥有两个文件名;而软链接则是
-系统新建一个链接文件，此文件指向其所要指的文件
-
-3. 软链接与硬链接">
+<meta name="twitter:title" content="软连接与硬连接">
+<meta name="twitter:description" content="1. 使用方式 ：ln [option] source_file dist_file-f 建立时，将同档案名删除;-i 删除前进行询问;ln -s abc cde 建立abc 的软连接;ln abc cde 建立abc的硬连接.
+2. 软链接与硬链接的区别（通俗）：硬链接可认为是一个文件拥有两个文件名;而软链接则是系统新建一个链接文件，此文件指向其所要指的文件
+3. 软链接与硬链接的区别（讲解）：">
 
 
 
@@ -160,7 +136,7 @@ ln abc cde 建立abc的硬连接.
 
 
 
-  <title> Linux_软连接与硬连接 | 203Monitor </title>
+  <title> 软连接与硬连接 | 203Monitor </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -300,7 +276,7 @@ ln abc cde 建立abc的硬连接.
             
             
               
-                Linux_软连接与硬连接
+                软连接与硬连接
               
             
           </h1>
@@ -315,7 +291,7 @@ ln abc cde 建立abc的硬连接.
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-01-22T00:25:19+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-01-22T00:00:00+08:00">
                 2016-01-22
               </time>
             
@@ -373,32 +349,17 @@ ln abc cde 建立abc的硬连接.
       
 
       
-        <h4 id="1-__u4F7F_u7528_u65B9_u5F0F__uFF1Aln__5Boption_5D_source_file_dist_file"><a href="#1-__u4F7F_u7528_u65B9_u5F0F__uFF1Aln__5Boption_5D_source_file_dist_file" class="headerlink" title="1. 使用方式 ：ln [option] source_file dist_file"></a>1. 使用方式 ：<code>ln [option] source_file dist_file</code></h4><ul>
-<li>-f 建立时，将同档案名删除;</li>
-<li>-i 删除前进行询问;</li>
-<li>ln -s abc cde 建立abc 的软连接;</li>
-<li>ln abc cde 建立abc的硬连接.</li>
-</ul>
-<h4 id="2-__u8F6F_u94FE_u63A5_u4E0E_u786C_u94FE_u63A5_u7684_u533A_u522B_uFF08_u901A_u4FD7_uFF09_uFF1A"><a href="#2-__u8F6F_u94FE_u63A5_u4E0E_u786C_u94FE_u63A5_u7684_u533A_u522B_uFF08_u901A_u4FD7_uFF09_uFF1A" class="headerlink" title="2. 软链接与硬链接的区别（通俗）："></a>2. 软链接与硬链接的区别（通俗）：</h4><ul>
-<li>硬链接可认为是一个文件拥有两个文件名;而软链接则是</li>
-<li>系统新建一个链接文件，此文件指向其所要指的文件</li>
-</ul>
-<h4 id="3-__u8F6F_u94FE_u63A5_u4E0E_u786C_u94FE_u63A5_u7684_u533A_u522B_uFF08_u8BB2_u89E3_uFF09_uFF1A"><a href="#3-__u8F6F_u94FE_u63A5_u4E0E_u786C_u94FE_u63A5_u7684_u533A_u522B_uFF08_u8BB2_u89E3_uFF09_uFF1A" class="headerlink" title="3. 软链接与硬链接的区别（讲解）："></a>3. 软链接与硬链接的区别（讲解）：</h4><h6 id="Linux__u8F6F_u8FDE_u63A5_u4E0E_u786C_u8FDE_u63A5"><a href="#Linux__u8F6F_u8FDE_u63A5_u4E0E_u786C_u8FDE_u63A5" class="headerlink" title="Linux 软连接与硬连接"></a>Linux 软连接与硬连接</h6><ul>
-<li><h6 id="u5BF9_u4E8E_u4E00_u4E2A_u6587_u4EF6_u6765_u8BF4_uFF0C_u6709_u552F_u4E00_u7684_u7D22_u5F15_u63A5_u70B9_u4E0E_u4E4B_u5BF9_u5E94_uFF0C_u800C_u5BF9_u4E8E_u4E00_u4E2A_u7D22_u5F15_u63A5_u70B9_u53F7_uFF0C_u5374_u53EF_u4EE5_u6709_u591A_u4E2A_u6587_u4EF6_u540D_u4E0E_u4E4B_u5BF9_u5E94_u3002_u56E0_u6B64_uFF0C_u5728_u78C1_u76D8_u4E0A_u7684_u540C_u4E00_u4E2A_u6587_u4EF6_u53EF_u4EE5_u901A_u8FC7_u4E0D_u540C_u7684_u8DEF_u5F84_u53BB_u8BBF_u95EE_u8BE5_u6587_u4EF6_u3002_u6CE8_u610F_u5728Linux_u4E0B_u662F_u4E00_u5207_u7686_u6587_u4EF6_u7684_u554A_uFF0C_u6587_u4EF6_u5939_u3001_u65B0_u52A0_u7684_u786C_u76D8__u2026_u90FD_u53EF_u4EE5_u770B_u7740_u6587_u4EF6_u6765_u5904_u7406_u7684_u554A_u3002"><a href="#u5BF9_u4E8E_u4E00_u4E2A_u6587_u4EF6_u6765_u8BF4_uFF0C_u6709_u552F_u4E00_u7684_u7D22_u5F15_u63A5_u70B9_u4E0E_u4E4B_u5BF9_u5E94_uFF0C_u800C_u5BF9_u4E8E_u4E00_u4E2A_u7D22_u5F15_u63A5_u70B9_u53F7_uFF0C_u5374_u53EF_u4EE5_u6709_u591A_u4E2A_u6587_u4EF6_u540D_u4E0E_u4E4B_u5BF9_u5E94_u3002_u56E0_u6B64_uFF0C_u5728_u78C1_u76D8_u4E0A_u7684_u540C_u4E00_u4E2A_u6587_u4EF6_u53EF_u4EE5_u901A_u8FC7_u4E0D_u540C_u7684_u8DEF_u5F84_u53BB_u8BBF_u95EE_u8BE5_u6587_u4EF6_u3002_u6CE8_u610F_u5728Linux_u4E0B_u662F_u4E00_u5207_u7686_u6587_u4EF6_u7684_u554A_uFF0C_u6587_u4EF6_u5939_u3001_u65B0_u52A0_u7684_u786C_u76D8__u2026_u90FD_u53EF_u4EE5_u770B_u7740_u6587_u4EF6_u6765_u5904_u7406_u7684_u554A_u3002" class="headerlink" title="对于一个文件来说，有唯一的索引接点与之对应，而对于一个索引接点号，却可以有多个文件名与之对应。因此，在磁盘上的同一个文件可以通过不同的路径去访问该文件。注意在Linux下是一切皆文件的啊，文件夹、新加的硬盘 …都可以看着文件来处理的啊。"></a>对于一个文件来说，有唯一的索引接点与之对应，而对于一个索引接点号，却可以有多个文件名与之对应。因此，在磁盘上的同一个文件可以通过不同的路径去访问该文件。注意在Linux下是一切皆文件的啊，文件夹、新加的硬盘 …都可以看着文件来处理的啊。</h6></li>
-<li><h6 id="u8FDE_u63A5_u6709_u8F6F_u8FDE_u63A5_u548C_u786C_u8FDE_u63A5_28hard_link_29_u4E4B_u5206_u7684_uFF0C_u8F6F_u8FDE_u63A5_28symbolic_link_29_u53C8_u53EB_u7B26_u53F7_u8FDE_u63A5_u3002_u7B26_u53F7_u8FDE_u63A5_u76F8_u5F53_u4E8EWindows_u4E0B_u7684_u5FEB_u6377_u65B9_u5F0F_u3002"><a href="#u8FDE_u63A5_u6709_u8F6F_u8FDE_u63A5_u548C_u786C_u8FDE_u63A5_28hard_link_29_u4E4B_u5206_u7684_uFF0C_u8F6F_u8FDE_u63A5_28symbolic_link_29_u53C8_u53EB_u7B26_u53F7_u8FDE_u63A5_u3002_u7B26_u53F7_u8FDE_u63A5_u76F8_u5F53_u4E8EWindows_u4E0B_u7684_u5FEB_u6377_u65B9_u5F0F_u3002" class="headerlink" title="连接有软连接和硬连接(hard link)之分的，软连接(symbolic link)又叫符号连接。符号连接相当于Windows下的快捷方式。"></a>连接有软连接和硬连接(hard link)之分的，软连接(symbolic link)又叫符号连接。符号连接相当于Windows下的快捷方式。</h6></li>
-<li><h6 id="u4E0D_u53EF_u4EE5_u5BF9_u6587_u4EF6_u5939_u5EFA_u7ACB_u786C_u8FDE_u63A5_u7684_uFF0C_u6211_u4EEC_u901A_u5E38_u7528_u7684_u8FD8_u662F_u8F6F_u8FDE_u63A5_u6BD4_u8F83_u591A_u3002"><a href="#u4E0D_u53EF_u4EE5_u5BF9_u6587_u4EF6_u5939_u5EFA_u7ACB_u786C_u8FDE_u63A5_u7684_uFF0C_u6211_u4EEC_u901A_u5E38_u7528_u7684_u8FD8_u662F_u8F6F_u8FDE_u63A5_u6BD4_u8F83_u591A_u3002" class="headerlink" title="不可以对文件夹建立硬连接的，我们通常用的还是软连接比较多。"></a>不可以对文件夹建立硬连接的，我们通常用的还是软连接比较多。</h6><h6 id="eg_3A"><a href="#eg_3A" class="headerlink" title="eg:"></a>eg:</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ln <span class="operator">-s</span> <span class="built_in">source</span> dist        <span class="comment"># 建立软连接</span></span><br><span class="line">ln <span class="built_in">source</span> dist            <span class="comment"># 建立硬连接</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<hr>
-<h6 id="u8F6F_u94FE_u63A5_u5B9E_u9645_u4E0A_u53EA_u662F_u4E00_u6BB5_u6587_u5B57_uFF0C_u91CC_u9762_u5305_u542B_u7740_u5B83_u6240_u6307_u5411_u7684_u6587_u4EF6_u7684_u540D_u5B57_uFF0C_u7CFB_u7EDF_u770B_u5230_u8F6F_u94FE_u63A5_u540E_u81EA_u52A8_u8DF3_u5230_u5BF9_u5E94_u7684_u6587_u4EF6_u4F4D_u7F6E_u5904_u8FDB_u884C_u5904_u7406_uFF1B_u76F8_u53CD_uFF0C_u786C_u8054_u63A5_u4E3A_u6587_u4EF6_u5F00_u8BBE_u4E00_u4E2A_u65B0_u7684_u76EE_u5F55__u9879_uFF0C_u786C_u94FE_u63A5_u4E0E_u6587_u4EF6_u539F_u6709_u7684_u540D_u5B57_u662F_u5E73_u6743_u7684_uFF0C_u5728Linux_u770B_u6765_u5B83_u4EEC_u662F_u7B49_u4EF7_u7684_u3002_u7531_u4E8E_u8FD9_u4E2A_u539F_u56E0_uFF0C_u786C_u94FE_u63A5_u4E0D_u80FD_u8FDE_u63A5_u4E24_u4E2A_u4E0D_u540C_u6587_u4EF6_u7CFB_u7EDF_u4E0A_u7684_u6587_u4EF6_u3002"><a href="#u8F6F_u94FE_u63A5_u5B9E_u9645_u4E0A_u53EA_u662F_u4E00_u6BB5_u6587_u5B57_uFF0C_u91CC_u9762_u5305_u542B_u7740_u5B83_u6240_u6307_u5411_u7684_u6587_u4EF6_u7684_u540D_u5B57_uFF0C_u7CFB_u7EDF_u770B_u5230_u8F6F_u94FE_u63A5_u540E_u81EA_u52A8_u8DF3_u5230_u5BF9_u5E94_u7684_u6587_u4EF6_u4F4D_u7F6E_u5904_u8FDB_u884C_u5904_u7406_uFF1B_u76F8_u53CD_uFF0C_u786C_u8054_u63A5_u4E3A_u6587_u4EF6_u5F00_u8BBE_u4E00_u4E2A_u65B0_u7684_u76EE_u5F55__u9879_uFF0C_u786C_u94FE_u63A5_u4E0E_u6587_u4EF6_u539F_u6709_u7684_u540D_u5B57_u662F_u5E73_u6743_u7684_uFF0C_u5728Linux_u770B_u6765_u5B83_u4EEC_u662F_u7B49_u4EF7_u7684_u3002_u7531_u4E8E_u8FD9_u4E2A_u539F_u56E0_uFF0C_u786C_u94FE_u63A5_u4E0D_u80FD_u8FDE_u63A5_u4E24_u4E2A_u4E0D_u540C_u6587_u4EF6_u7CFB_u7EDF_u4E0A_u7684_u6587_u4EF6_u3002" class="headerlink" title="软链接实际上只是一段文字，里面包含着它所指向的文件的名字，系统看到软链接后自动跳到对应的文件位置处进行处理；相反，硬联接为文件开设一个新的目录 项，硬链接与文件原有的名字是平权的，在Linux看来它们是等价的。由于这个原因，硬链接不能连接两个不同文件系统上的文件。"></a>软链接实际上只是一段文字，里面包含着它所指向的文件的名字，系统看到软链接后自动跳到对应的文件位置处进行处理；相反，硬联接为文件开设一个新的目录 项，硬链接与文件原有的名字是平权的，在Linux看来它们是等价的。由于这个原因，硬链接不能连接两个不同文件系统上的文件。</h6><ol>
-<li><h6 id="u8F6F_u8FDE_u63A5_u53EF_u4EE5__u8DE8_u6587_u4EF6_u7CFB_u7EDF__uFF0C_u786C_u8FDE_u63A5_u4E0D_u53EF_u4EE5__u3002_u5B9E_u8DF5_u7684_u65B9_u6CD5_u5C31_u662F_u7528_u5171_u4EAB_u6587_u4EF6_u628Awindows_u4E0B_u7684_aa-txt_u6587_u672C_u6587_u6863_u8FDE_u63A5_u5230linux_u4E0B/root_u76EE_u5F55__u4E0B_bb_2Ccc_-_ln_-s_aa-txt_/root/bb__u8FDE_u63A5_u6210_u529F__u3002ln_aa-txt_/root/bb__u5931_u8D25_u3002"><a href="#u8F6F_u8FDE_u63A5_u53EF_u4EE5__u8DE8_u6587_u4EF6_u7CFB_u7EDF__uFF0C_u786C_u8FDE_u63A5_u4E0D_u53EF_u4EE5__u3002_u5B9E_u8DF5_u7684_u65B9_u6CD5_u5C31_u662F_u7528_u5171_u4EAB_u6587_u4EF6_u628Awindows_u4E0B_u7684_aa-txt_u6587_u672C_u6587_u6863_u8FDE_u63A5_u5230linux_u4E0B/root_u76EE_u5F55__u4E0B_bb_2Ccc_-_ln_-s_aa-txt_/root/bb__u8FDE_u63A5_u6210_u529F__u3002ln_aa-txt_/root/bb__u5931_u8D25_u3002" class="headerlink" title="软连接可以 跨文件系统 ，硬连接不可以 。实践的方法就是用共享文件把windows下的 aa.txt文本文档连接到linux下/root目录 下 bb,cc . ln -s aa.txt /root/bb 连接成功 。ln aa.txt /root/bb 失败。"></a>软连接可以 跨文件系统 ，硬连接不可以 。实践的方法就是用共享文件把windows下的 aa.txt文本文档连接到linux下/root目录 下 bb,cc . ln -s aa.txt /root/bb 连接成功 。ln aa.txt /root/bb 失败。</h6></li>
-<li><h6 id="u5173_u4E8E_I_u8282_u70B9_u7684_u95EE_u9898__u3002_u786C_u8FDE_u63A5_u4E0D_u7BA1_u6709_u591A_u5C11_u4E2A_uFF0C_u90FD_u6307_u5411_u7684_u662F_u540C_u4E00_u4E2AI_u8282_u70B9_uFF0C_u4F1A_u628A__u7ED3_u70B9_u8FDE_u63A5_u6570_u589E_u52A0_uFF0C_u53EA_u8981_u7ED3_u70B9_u7684_u8FDE_u63A5_u6570_u4E0D_u662F_0_uFF0C_u6587_u4EF6_u5C31_u4E00_u76F4_u5B58_u5728_uFF0C_u4E0D_u7BA1_u4F60_u5220_u9664_u7684_u662F_u6E90_u6587_u4EF6_u8FD8_u662F__u8FDE_u63A5_u7684_u6587_u4EF6__u3002_u53EA_u8981_u6709_u4E00_u4E2A_u5B58_u5728__uFF0C_u6587_u4EF6_u5C31__u5B58_u5728__uFF08_u5176_u5B9E_u4E5F_u4E0D_u5206_u4EC0_u4E48_u6E90_u6587_u4EF6_u8FDE_u63A5_u6587_u4EF6_u7684__uFF0C_u56E0_u4E3A_u4ED6_u4EEC_u6307_u5411_u90FD_u662F_u540C_u4E00_u4E2A_I_u8282_u70B9_uFF09_u3002__u5F53_u4F60_u4FEE_u6539_u6E90_u6587_u4EF6_u6216_u8005_u8FDE_u63A5_u6587_u4EF6_u4EFB_u4F55_u4E00_u4E2A_u7684_u65F6_u5019__uFF0C_u5176_u4ED6_u7684_u6587_u4EF6_u90FD_u4F1A_u505A_u540C_u6B65_u7684_u4FEE_u6539_u3002_u8F6F_u94FE_u63A5_u4E0D_u76F4_u63A5_u4F7F_u7528i_u8282_u70B9_u53F7_u4F5C_u4E3A_u6587_u4EF6_u6307_u9488_2C_u800C_u662F_u4F7F_u7528_u6587_u4EF6_u8DEF_u5F84_u540D_u4F5C_u4E3A_u6307_u9488_u3002_u6240_u4EE5__u5220_u9664_u8FDE_u63A5_u6587_u4EF6__u5BF9_u6E90_u6587_u4EF6_u65E0_u5F71_u54CD_uFF0C_u4F46_u662F_u5220_u9664_u6E90_u6587_u4EF6_uFF0C_u8FDE_u63A5_u6587_u4EF6_u5C31_u4F1A_u627E_u4E0D_u5230_u8981_u6307_u5411_u7684_u6587_u4EF6__u3002_u8F6F_u94FE_u63A5_u6709_u81EA_u5DF1_u7684inode_2C_u5E76_u5728_u78C1_u76D8_u4E0A_u6709_u4E00_u5C0F_u7247_u7A7A_u95F4_u5B58_u653E_u8DEF_u5F84_u540D"><a href="#u5173_u4E8E_I_u8282_u70B9_u7684_u95EE_u9898__u3002_u786C_u8FDE_u63A5_u4E0D_u7BA1_u6709_u591A_u5C11_u4E2A_uFF0C_u90FD_u6307_u5411_u7684_u662F_u540C_u4E00_u4E2AI_u8282_u70B9_uFF0C_u4F1A_u628A__u7ED3_u70B9_u8FDE_u63A5_u6570_u589E_u52A0_uFF0C_u53EA_u8981_u7ED3_u70B9_u7684_u8FDE_u63A5_u6570_u4E0D_u662F_0_uFF0C_u6587_u4EF6_u5C31_u4E00_u76F4_u5B58_u5728_uFF0C_u4E0D_u7BA1_u4F60_u5220_u9664_u7684_u662F_u6E90_u6587_u4EF6_u8FD8_u662F__u8FDE_u63A5_u7684_u6587_u4EF6__u3002_u53EA_u8981_u6709_u4E00_u4E2A_u5B58_u5728__uFF0C_u6587_u4EF6_u5C31__u5B58_u5728__uFF08_u5176_u5B9E_u4E5F_u4E0D_u5206_u4EC0_u4E48_u6E90_u6587_u4EF6_u8FDE_u63A5_u6587_u4EF6_u7684__uFF0C_u56E0_u4E3A_u4ED6_u4EEC_u6307_u5411_u90FD_u662F_u540C_u4E00_u4E2A_I_u8282_u70B9_uFF09_u3002__u5F53_u4F60_u4FEE_u6539_u6E90_u6587_u4EF6_u6216_u8005_u8FDE_u63A5_u6587_u4EF6_u4EFB_u4F55_u4E00_u4E2A_u7684_u65F6_u5019__uFF0C_u5176_u4ED6_u7684_u6587_u4EF6_u90FD_u4F1A_u505A_u540C_u6B65_u7684_u4FEE_u6539_u3002_u8F6F_u94FE_u63A5_u4E0D_u76F4_u63A5_u4F7F_u7528i_u8282_u70B9_u53F7_u4F5C_u4E3A_u6587_u4EF6_u6307_u9488_2C_u800C_u662F_u4F7F_u7528_u6587_u4EF6_u8DEF_u5F84_u540D_u4F5C_u4E3A_u6307_u9488_u3002_u6240_u4EE5__u5220_u9664_u8FDE_u63A5_u6587_u4EF6__u5BF9_u6E90_u6587_u4EF6_u65E0_u5F71_u54CD_uFF0C_u4F46_u662F_u5220_u9664_u6E90_u6587_u4EF6_uFF0C_u8FDE_u63A5_u6587_u4EF6_u5C31_u4F1A_u627E_u4E0D_u5230_u8981_u6307_u5411_u7684_u6587_u4EF6__u3002_u8F6F_u94FE_u63A5_u6709_u81EA_u5DF1_u7684inode_2C_u5E76_u5728_u78C1_u76D8_u4E0A_u6709_u4E00_u5C0F_u7247_u7A7A_u95F4_u5B58_u653E_u8DEF_u5F84_u540D" class="headerlink" title="关于 I节点的问题 。硬连接不管有多少个，都指向的是同一个I节点，会把 结点连接数增加，只要结点的连接数不是 0，文件就一直存在，不管你删除的是源文件还是 连接的文件 。只要有一个存在 ，文件就 存在 （其实也不分什么源文件连接文件的 ，因为他们指向都是同一个 I节点）。 当你修改源文件或者连接文件任何一个的时候 ，其他的文件都会做同步的修改。软链接不直接使用i节点号作为文件指针,而是使用文件路径名作为指针。所以 删除连接文件 对源文件无影响，但是删除源文件，连接文件就会找不到要指向的文件 。软链接有自己的inode,并在磁盘上有一小片空间存放路径名."></a>关于 I节点的问题 。硬连接不管有多少个，都指向的是同一个I节点，会把 结点连接数增加，只要结点的连接数不是 0，文件就一直存在，不管你删除的是源文件还是 连接的文件 。只要有一个存在 ，文件就 存在 （其实也不分什么源文件连接文件的 ，因为他们指向都是同一个 I节点）。 当你修改源文件或者连接文件任何一个的时候 ，其他的文件都会做同步的修改。软链接不直接使用i节点号作为文件指针,而是使用文件路径名作为指针。所以 删除连接文件 对源文件无影响，但是删除源文件，连接文件就会找不到要指向的文件 。软链接有自己的inode,并在磁盘上有一小片空间存放路径名.</h6></li>
-<li><h6 id="u8F6F_u8FDE_u63A5_u53EF_u4EE5_u5BF9_u4E00_u4E2A_u4E0D_u5B58_u5728_u7684_u6587_u4EF6_u540D_u8FDB_u884C_u8FDE_u63A5__u3002"><a href="#u8F6F_u8FDE_u63A5_u53EF_u4EE5_u5BF9_u4E00_u4E2A_u4E0D_u5B58_u5728_u7684_u6587_u4EF6_u540D_u8FDB_u884C_u8FDE_u63A5__u3002" class="headerlink" title="软连接可以对一个不存在的文件名进行连接 。"></a>软连接可以对一个不存在的文件名进行连接 。</h6></li>
-<li><h6 id="u8F6F_u8FDE_u63A5_u53EF_u4EE5_u5BF9_u76EE_u5F55_u8FDB_u884C_u8FDE_u63A5_u3002"><a href="#u8F6F_u8FDE_u63A5_u53EF_u4EE5_u5BF9_u76EE_u5F55_u8FDB_u884C_u8FDE_u63A5_u3002" class="headerlink" title="软连接可以对目录进行连接。"></a>软连接可以对目录进行连接。</h6></li>
-</ol>
-<p><em>备 注：</em><br><br><em>I节点 :它是UNIX内部用于描述文件特性的数据结构.我们通常称I节点为文件索引结点(信息结点).</em><br><br><em>i节点含有关于文件的大部分的重要信息,包括文件数据块在 磁盘上的地址.每一个I节点有它自己的标志号,我们称为文件顺序号.</em><br><br><em>I节点包含的信息 1.文件类型 2.文件属主关系 3.文件的访问权限 4.文件的时间截.</em></p>
-<h6 id="u6700_u540E__u5220_u9664_u7B26_u53F7_u94FE_u63A5_uFF0C_u6709_u521B_u5EFA_u5C31_u6709_u5220_u9664"><a href="#u6700_u540E__u5220_u9664_u7B26_u53F7_u94FE_u63A5_uFF0C_u6709_u521B_u5EFA_u5C31_u6709_u5220_u9664" class="headerlink" title="最后 删除符号链接，有创建就有删除"></a>最后 删除符号链接，有创建就有删除</h6><p><code>rm -rf   symbolic_name   注意不是rm -rf   symbolic_name/</code></p>
-<p><a href="http://blog.csdn.net/russle/article/details/4482784" target="_blank" rel="external">本文转自 http://blog.csdn.net/russle/article/details/4482784 非常感谢原作者</a></p>
+        <h2 id="1-__u4F7F_u7528_u65B9_u5F0F__uFF1Aln__5Boption_5D_source_file_dist_file"><a href="#1-__u4F7F_u7528_u65B9_u5F0F__uFF1Aln__5Boption_5D_source_file_dist_file" class="headerlink" title="1. 使用方式 ：ln [option] source_file dist_file"></a>1. 使用方式 ：<code>ln [option] source_file dist_file</code></h2><p><code>-f</code> 建立时，将同档案名删除;<br><code>-i</code> 删除前进行询问;<br><code>ln -s abc cde</code> 建立abc 的软连接;<br><code>ln abc cde</code> 建立abc的硬连接.</p>
+<h2 id="2-__u8F6F_u94FE_u63A5_u4E0E_u786C_u94FE_u63A5_u7684_u533A_u522B_uFF08_u901A_u4FD7_uFF09_uFF1A"><a href="#2-__u8F6F_u94FE_u63A5_u4E0E_u786C_u94FE_u63A5_u7684_u533A_u522B_uFF08_u901A_u4FD7_uFF09_uFF1A" class="headerlink" title="2. 软链接与硬链接的区别（通俗）："></a>2. 软链接与硬链接的区别（通俗）：</h2><p>硬链接可认为是一个文件拥有两个文件名;而软链接则是<br>系统新建一个链接文件，此文件指向其所要指的文件</p>
+<h2 id="3-__u8F6F_u94FE_u63A5_u4E0E_u786C_u94FE_u63A5_u7684_u533A_u522B_uFF08_u8BB2_u89E3_uFF09_uFF1A"><a href="#3-__u8F6F_u94FE_u63A5_u4E0E_u786C_u94FE_u63A5_u7684_u533A_u522B_uFF08_u8BB2_u89E3_uFF09_uFF1A" class="headerlink" title="3. 软链接与硬链接的区别（讲解）："></a>3. 软链接与硬链接的区别（讲解）：</h2><p>Linux 软连接与硬连接</p>
+<p>对于一个文件来说，有唯一的索引接点与之对应，而对于一个索引接点号，却可以有多个文件名与之对应。因此，在磁盘上的同一个文件可以通过不同的路径去访问该文件。注意在Linux下是一切皆文件的啊，文件夹、新加的硬盘 …都可以看着文件来处理的啊。<br>连接有软连接和硬连接(hard link)之分的，软连接(symbolic link)又叫符号连接。符号连接相当于Windows下的快捷方式。<br>不可以对文件夹建立硬连接的，我们通常用的还是软连接比较多。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">eg:</span><br><span class="line">ln <span class="operator">-s</span> <span class="built_in">source</span> dist        <span class="comment"># 建立软连接</span></span><br><span class="line">ln <span class="built_in">source</span> dist            <span class="comment"># 建立硬连接</span></span><br></pre></td></tr></table></figure></p>
+<p>软链接实际上只是一段文字，里面包含着它所指向的文件的名字，系统看到软链接后自动跳到对应的文件位置处进行处理；相反，硬联接为文件开设一个新的目录 项，硬链接与文件原有的名字是平权的，在Linux看来它们是等价的。由于这个原因，硬链接不能连接两个不同文件系统上的文件。</p>
+<p>软连接可以 跨文件系统 ，硬连接不可以 。实践的方法就是用共享文件把windows下的 aa.txt文本文档连接到linux下/root目录 下 bb,cc . ln -s aa.txt /root/bb 连接成功 。ln aa.txt /root/bb 失败。<br>关于 I节点的问题 。硬连接不管有多少个，都指向的是同一个I节点，会把 结点连接数增加，只要结点的连接数不是 0，文件就一直存在，不管你删除的是源文件还是 连接的文件 。只要有一个存在 ，文件就 存在 （其实也不分什么源文件连接文件的 ，因为他们指向都是同一个 I节点）。 当你修改源文件或者连接文件任何一个的时候 ，其他的文件都会做同步的修改。软链接不直接使用i节点号作为文件指针,而是使用文件路径名作为指针。所以 删除连接文件 对源文件无影响，但是删除源文件，连接文件就会找不到要指向的文件 。软链接有自己的inode,并在磁盘上有一小片空间存放路径名.<br>软连接可以对一个不存在的文件名进行连接 。<br>软连接可以对目录进行连接。</p>
+<p>备 注：</p>
+<p>I节点 :它是UNIX内部用于描述文件特性的数据结构.我们通常称I节点为文件索引结点(信息结点).</p>
+<p>i节点含有关于文件的大部分的重要信息,包括文件数据块在 磁盘上的地址.每一个I节点有它自己的标志号,我们称为文件顺序号.</p>
+<p>I节点包含的信息 1.文件类型 2.文件属主关系 3.文件的访问权限 4.文件的时间截.<br>最后 删除符号链接，有创建就有删除<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">rm</span> -rf symbolic_name 注意不是<span class="keyword">rm</span> -rf symbolic_name/</span><br></pre></td></tr></table></figure></p>
+<p><a href="http://blog.csdn.net/russle/article/details/4482784" target="_blank" rel="external">原文链接</a></p>
 
       
     </div>
@@ -441,8 +402,8 @@ ln abc cde 建立abc的硬连接.
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/01/22/iOS/iOS_UITextField增加textDidChange回调功能/" rel="next" title="iOS_UITextField增加textDidChange回调功能">
-                <i class="fa fa-chevron-left"></i> iOS_UITextField增加textDidChange回调功能
+              <a href="/2016/01/22/Mac/Mac_清空废纸篓/" rel="next" title="清空废纸篓">
+                <i class="fa fa-chevron-left"></i> 清空废纸篓
               </a>
             
           </div>
@@ -451,8 +412,8 @@ ln abc cde 建立abc的硬连接.
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/01/22/技术/技术_vim高级用法/" rel="prev" title="技术_vim高级用法">
-                技术_vim高级用法 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/01/22/技术/技术_vim高级用法/" rel="prev" title="vim高级用法">
+                vim高级用法 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -525,7 +486,7 @@ ln abc cde 建立abc的硬连接.
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">59</span>
+                <span class="site-state-item-count">23</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -535,10 +496,10 @@ ln abc cde 建立abc的硬连接.
             
             
             <div class="site-state-item site-state-categories">
-              <a href="/categories/index.html">
-                <span class="site-state-item-count">11</span>
+              
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">分类</span>
-              </a>
+              
             </div>
           
 
@@ -546,10 +507,10 @@ ln abc cde 建立abc的硬连接.
             
             
             <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">47</span>
+              
+                <span class="site-state-item-count">22</span>
                 <span class="site-state-item-name">标签</span>
-              </a>
+              
             </div>
           
 
@@ -582,7 +543,7 @@ ln abc cde 建立abc的硬连接.
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-__u4F7F_u7528_u65B9_u5F0F__uFF1Aln__5Boption_5D_source_file_dist_file"><span class="nav-number">1.</span> <span class="nav-text">1. 使用方式 ：ln [option] source_file dist_file</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-__u8F6F_u94FE_u63A5_u4E0E_u786C_u94FE_u63A5_u7684_u533A_u522B_uFF08_u901A_u4FD7_uFF09_uFF1A"><span class="nav-number">2.</span> <span class="nav-text">2. 软链接与硬链接的区别（通俗）：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-__u8F6F_u94FE_u63A5_u4E0E_u786C_u94FE_u63A5_u7684_u533A_u522B_uFF08_u8BB2_u89E3_uFF09_uFF1A"><span class="nav-number">3.</span> <span class="nav-text">3. 软链接与硬链接的区别（讲解）：</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Linux__u8F6F_u8FDE_u63A5_u4E0E_u786C_u8FDE_u63A5"><span class="nav-number">3.0.1.</span> <span class="nav-text">Linux 软连接与硬连接</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#u5BF9_u4E8E_u4E00_u4E2A_u6587_u4EF6_u6765_u8BF4_uFF0C_u6709_u552F_u4E00_u7684_u7D22_u5F15_u63A5_u70B9_u4E0E_u4E4B_u5BF9_u5E94_uFF0C_u800C_u5BF9_u4E8E_u4E00_u4E2A_u7D22_u5F15_u63A5_u70B9_u53F7_uFF0C_u5374_u53EF_u4EE5_u6709_u591A_u4E2A_u6587_u4EF6_u540D_u4E0E_u4E4B_u5BF9_u5E94_u3002_u56E0_u6B64_uFF0C_u5728_u78C1_u76D8_u4E0A_u7684_u540C_u4E00_u4E2A_u6587_u4EF6_u53EF_u4EE5_u901A_u8FC7_u4E0D_u540C_u7684_u8DEF_u5F84_u53BB_u8BBF_u95EE_u8BE5_u6587_u4EF6_u3002_u6CE8_u610F_u5728Linux_u4E0B_u662F_u4E00_u5207_u7686_u6587_u4EF6_u7684_u554A_uFF0C_u6587_u4EF6_u5939_u3001_u65B0_u52A0_u7684_u786C_u76D8__u2026_u90FD_u53EF_u4EE5_u770B_u7740_u6587_u4EF6_u6765_u5904_u7406_u7684_u554A_u3002"><span class="nav-number">3.0.2.</span> <span class="nav-text">对于一个文件来说，有唯一的索引接点与之对应，而对于一个索引接点号，却可以有多个文件名与之对应。因此，在磁盘上的同一个文件可以通过不同的路径去访问该文件。注意在Linux下是一切皆文件的啊，文件夹、新加的硬盘 …都可以看着文件来处理的啊。</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#u8FDE_u63A5_u6709_u8F6F_u8FDE_u63A5_u548C_u786C_u8FDE_u63A5_28hard_link_29_u4E4B_u5206_u7684_uFF0C_u8F6F_u8FDE_u63A5_28symbolic_link_29_u53C8_u53EB_u7B26_u53F7_u8FDE_u63A5_u3002_u7B26_u53F7_u8FDE_u63A5_u76F8_u5F53_u4E8EWindows_u4E0B_u7684_u5FEB_u6377_u65B9_u5F0F_u3002"><span class="nav-number">3.0.3.</span> <span class="nav-text">连接有软连接和硬连接(hard link)之分的，软连接(symbolic link)又叫符号连接。符号连接相当于Windows下的快捷方式。</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#u4E0D_u53EF_u4EE5_u5BF9_u6587_u4EF6_u5939_u5EFA_u7ACB_u786C_u8FDE_u63A5_u7684_uFF0C_u6211_u4EEC_u901A_u5E38_u7528_u7684_u8FD8_u662F_u8F6F_u8FDE_u63A5_u6BD4_u8F83_u591A_u3002"><span class="nav-number">3.0.4.</span> <span class="nav-text">不可以对文件夹建立硬连接的，我们通常用的还是软连接比较多。</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#eg_3A"><span class="nav-number">3.0.5.</span> <span class="nav-text">eg:</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#u8F6F_u94FE_u63A5_u5B9E_u9645_u4E0A_u53EA_u662F_u4E00_u6BB5_u6587_u5B57_uFF0C_u91CC_u9762_u5305_u542B_u7740_u5B83_u6240_u6307_u5411_u7684_u6587_u4EF6_u7684_u540D_u5B57_uFF0C_u7CFB_u7EDF_u770B_u5230_u8F6F_u94FE_u63A5_u540E_u81EA_u52A8_u8DF3_u5230_u5BF9_u5E94_u7684_u6587_u4EF6_u4F4D_u7F6E_u5904_u8FDB_u884C_u5904_u7406_uFF1B_u76F8_u53CD_uFF0C_u786C_u8054_u63A5_u4E3A_u6587_u4EF6_u5F00_u8BBE_u4E00_u4E2A_u65B0_u7684_u76EE_u5F55__u9879_uFF0C_u786C_u94FE_u63A5_u4E0E_u6587_u4EF6_u539F_u6709_u7684_u540D_u5B57_u662F_u5E73_u6743_u7684_uFF0C_u5728Linux_u770B_u6765_u5B83_u4EEC_u662F_u7B49_u4EF7_u7684_u3002_u7531_u4E8E_u8FD9_u4E2A_u539F_u56E0_uFF0C_u786C_u94FE_u63A5_u4E0D_u80FD_u8FDE_u63A5_u4E24_u4E2A_u4E0D_u540C_u6587_u4EF6_u7CFB_u7EDF_u4E0A_u7684_u6587_u4EF6_u3002"><span class="nav-number">3.0.6.</span> <span class="nav-text">软链接实际上只是一段文字，里面包含着它所指向的文件的名字，系统看到软链接后自动跳到对应的文件位置处进行处理；相反，硬联接为文件开设一个新的目录 项，硬链接与文件原有的名字是平权的，在Linux看来它们是等价的。由于这个原因，硬链接不能连接两个不同文件系统上的文件。</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#u8F6F_u8FDE_u63A5_u53EF_u4EE5__u8DE8_u6587_u4EF6_u7CFB_u7EDF__uFF0C_u786C_u8FDE_u63A5_u4E0D_u53EF_u4EE5__u3002_u5B9E_u8DF5_u7684_u65B9_u6CD5_u5C31_u662F_u7528_u5171_u4EAB_u6587_u4EF6_u628Awindows_u4E0B_u7684_aa-txt_u6587_u672C_u6587_u6863_u8FDE_u63A5_u5230linux_u4E0B/root_u76EE_u5F55__u4E0B_bb_2Ccc_-_ln_-s_aa-txt_/root/bb__u8FDE_u63A5_u6210_u529F__u3002ln_aa-txt_/root/bb__u5931_u8D25_u3002"><span class="nav-number">3.0.7.</span> <span class="nav-text">软连接可以 跨文件系统 ，硬连接不可以 。实践的方法就是用共享文件把windows下的 aa.txt文本文档连接到linux下/root目录 下 bb,cc . ln -s aa.txt /root/bb 连接成功 。ln aa.txt /root/bb 失败。</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#u5173_u4E8E_I_u8282_u70B9_u7684_u95EE_u9898__u3002_u786C_u8FDE_u63A5_u4E0D_u7BA1_u6709_u591A_u5C11_u4E2A_uFF0C_u90FD_u6307_u5411_u7684_u662F_u540C_u4E00_u4E2AI_u8282_u70B9_uFF0C_u4F1A_u628A__u7ED3_u70B9_u8FDE_u63A5_u6570_u589E_u52A0_uFF0C_u53EA_u8981_u7ED3_u70B9_u7684_u8FDE_u63A5_u6570_u4E0D_u662F_0_uFF0C_u6587_u4EF6_u5C31_u4E00_u76F4_u5B58_u5728_uFF0C_u4E0D_u7BA1_u4F60_u5220_u9664_u7684_u662F_u6E90_u6587_u4EF6_u8FD8_u662F__u8FDE_u63A5_u7684_u6587_u4EF6__u3002_u53EA_u8981_u6709_u4E00_u4E2A_u5B58_u5728__uFF0C_u6587_u4EF6_u5C31__u5B58_u5728__uFF08_u5176_u5B9E_u4E5F_u4E0D_u5206_u4EC0_u4E48_u6E90_u6587_u4EF6_u8FDE_u63A5_u6587_u4EF6_u7684__uFF0C_u56E0_u4E3A_u4ED6_u4EEC_u6307_u5411_u90FD_u662F_u540C_u4E00_u4E2A_I_u8282_u70B9_uFF09_u3002__u5F53_u4F60_u4FEE_u6539_u6E90_u6587_u4EF6_u6216_u8005_u8FDE_u63A5_u6587_u4EF6_u4EFB_u4F55_u4E00_u4E2A_u7684_u65F6_u5019__uFF0C_u5176_u4ED6_u7684_u6587_u4EF6_u90FD_u4F1A_u505A_u540C_u6B65_u7684_u4FEE_u6539_u3002_u8F6F_u94FE_u63A5_u4E0D_u76F4_u63A5_u4F7F_u7528i_u8282_u70B9_u53F7_u4F5C_u4E3A_u6587_u4EF6_u6307_u9488_2C_u800C_u662F_u4F7F_u7528_u6587_u4EF6_u8DEF_u5F84_u540D_u4F5C_u4E3A_u6307_u9488_u3002_u6240_u4EE5__u5220_u9664_u8FDE_u63A5_u6587_u4EF6__u5BF9_u6E90_u6587_u4EF6_u65E0_u5F71_u54CD_uFF0C_u4F46_u662F_u5220_u9664_u6E90_u6587_u4EF6_uFF0C_u8FDE_u63A5_u6587_u4EF6_u5C31_u4F1A_u627E_u4E0D_u5230_u8981_u6307_u5411_u7684_u6587_u4EF6__u3002_u8F6F_u94FE_u63A5_u6709_u81EA_u5DF1_u7684inode_2C_u5E76_u5728_u78C1_u76D8_u4E0A_u6709_u4E00_u5C0F_u7247_u7A7A_u95F4_u5B58_u653E_u8DEF_u5F84_u540D"><span class="nav-number">3.0.8.</span> <span class="nav-text">关于 I节点的问题 。硬连接不管有多少个，都指向的是同一个I节点，会把 结点连接数增加，只要结点的连接数不是 0，文件就一直存在，不管你删除的是源文件还是 连接的文件 。只要有一个存在 ，文件就 存在 （其实也不分什么源文件连接文件的 ，因为他们指向都是同一个 I节点）。 当你修改源文件或者连接文件任何一个的时候 ，其他的文件都会做同步的修改。软链接不直接使用i节点号作为文件指针,而是使用文件路径名作为指针。所以 删除连接文件 对源文件无影响，但是删除源文件，连接文件就会找不到要指向的文件 。软链接有自己的inode,并在磁盘上有一小片空间存放路径名.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#u8F6F_u8FDE_u63A5_u53EF_u4EE5_u5BF9_u4E00_u4E2A_u4E0D_u5B58_u5728_u7684_u6587_u4EF6_u540D_u8FDB_u884C_u8FDE_u63A5__u3002"><span class="nav-number">3.0.9.</span> <span class="nav-text">软连接可以对一个不存在的文件名进行连接 。</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#u8F6F_u8FDE_u63A5_u53EF_u4EE5_u5BF9_u76EE_u5F55_u8FDB_u884C_u8FDE_u63A5_u3002"><span class="nav-number">3.0.10.</span> <span class="nav-text">软连接可以对目录进行连接。</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#u6700_u540E__u5220_u9664_u7B26_u53F7_u94FE_u63A5_uFF0C_u6709_u521B_u5EFA_u5C31_u6709_u5220_u9664"><span class="nav-number">3.0.11.</span> <span class="nav-text">最后 删除符号链接，有创建就有删除</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-__u4F7F_u7528_u65B9_u5F0F__uFF1Aln__5Boption_5D_source_file_dist_file"><span class="nav-number">1.</span> <span class="nav-text">1. 使用方式 ：ln [option] source_file dist_file</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-__u8F6F_u94FE_u63A5_u4E0E_u786C_u94FE_u63A5_u7684_u533A_u522B_uFF08_u901A_u4FD7_uFF09_uFF1A"><span class="nav-number">2.</span> <span class="nav-text">2. 软链接与硬链接的区别（通俗）：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-__u8F6F_u94FE_u63A5_u4E0E_u786C_u94FE_u63A5_u7684_u533A_u522B_uFF08_u8BB2_u89E3_uFF09_uFF1A"><span class="nav-number">3.</span> <span class="nav-text">3. 软链接与硬链接的区别（讲解）：</span></a></li></ol></div>
             
 
           </div>

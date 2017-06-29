@@ -250,7 +250,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/01/iOS/iOS_Xcode环境变量/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/05/22/技术/技术_班瓦工/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="203Monitor">
@@ -272,8 +272,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/06/01/iOS/iOS_Xcode环境变量/" itemprop="url">
-                  iOS_Xcode环境变量
+                <a class="post-title-link" href="/2016/05/22/技术/技术_班瓦工/" itemprop="url">
+                  班瓦工
                 </a>
               
             
@@ -289,8 +289,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-01T10:47:43+08:00">
-                2017-06-01
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-05-22T00:00:00+08:00">
+                2016-05-22
               </time>
             
 
@@ -312,8 +312,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/iOS/" itemprop="url" rel="index">
-                    <span itemprop="name">iOS</span>
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
                   </a>
                 </span>
 
@@ -349,17 +349,9 @@
       
         
           
-            <p><a href="http://www.2cto.com/kf/201302/191830.html" target="_blank" rel="external">原文地址</a></p>
-<p>$(BUILT_PRODUCTS_DIR)<br>build成功后的，最终产品路径－－即build/Debug-iphoneos路径下<br>$(TARGET_NAME)<br>目标工程名称<br>$(SRCROOT)<br>工程文件（比如Nuno.xcodeproj）的路径<br>$(CURRENT_PROJECT_VERSION)<br>当前工程版本号<br>当编译静态库，设备选模拟器(iPhone 5.0 Simulator)，未设置任何Build Settings参数时，默认的基础路径：</p>
-<p>/Users/xxx/Library/Developer/Xcode/DerivedData/xxxWorkspace-caepeadwrerdcrftijaolkkagbjf</p>
-<p>下面用$()代替上面一长串东东<br>$(SYMROOT) = $()/Build/Products<br>$(BUILD_DIR) = $()/Build/Products<br>$(BUILD_ROOT) =  $()/Build/Products</p>
-<p>这三个变量中的$()不会随着Build Settings参数的设置而改变。相反，以下可以通过设置而改变<br>$(CONFIGURATION_BUILD_DIR) = $()/Build/Products/Debug-iphonesimulator<br>$(BUILT_PRODUCTS_DIR) = $()/Build/Products/Debug-iphonesimulator<br>$(CONFIGURATION_TEMP_DIR) = $()/Build/Intermediates/UtilLib.build/Debug-iphonesimulator<br>$(TARGET_BUILD_DIR) = $()/Build/Products/Debug-iphonesimulator<br>$(SDK_NAME) = iphonesimulator5.0<br>$(PLATFORM_NAME) = iphonesimulator<br>$(CONFIGURATION) = Debug<br>$(TARGET_NAME) = UtilLib<br>$(EXECUTABLE_NAME) = libUtilLib.a 可执行文件名<br>${IPHONEOS_DEPLOYMENT_TARGET} 5.0<br>$(ACTION) = build<br>$(CURRENTCONFIG_SIMULATOR_DIR) 当前模拟器路径<br>$(CURRENTCONFIG_DEVICE_DIR) 当前设备路径</p>
-<p>$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME =</p>
-<p>$()/Build/Products/Debug-iphonesimulator</p>
-<p>$(PROJECT_TEMP_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) = $()/Build/Intermediates/UtilLib.build/Debug-iphonesimulator</p>
-<p>自定义变量<br>${CONFIGURATION}-iphoneos 表示：Debug-iphoneos<br>${CONFIGURATION}-iphonesimulator 表示：Debug-iphonesimulator<br>$(CURRENTCONFIG_DEVICE_DIR) = ${SYMROOT}/${CONFIGURATION}-iphoneos<br>$(CURRENTCONFIG_SIMULATOR_DIR) = ${SYMROOT}/${CONFIGURATION}-iphonesimulator</p>
-<p>自定义一个设备无关的路径（用来存放各种架构arm6/arm7/i386输出的产品）<br>$(CREATING_UNIVERSAL_DIR) = ${SYMROOT}/${CONFIGURATION}-universal</p>
-<p>自定义变量代表的值<br>$(CURRENTCONFIG_DEVICE_DIR) ＝ $()/Build/Products/Debug-iphoneos<br>$(CURRENTCONFIG_SIMULATOR_DIR) = $()/Build/Products/Debug-iphonesimulator<br>$(CREATING_UNIVERSAL_DIR) = $()/Build/Products/Debug-universal</p>
+            <p>介绍一个scp吧<br>首先在你的服务器新建目录<code>／root/.ssh</code><br>然后执行<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp -<span class="constant">P </span>ssh端口号 .ssh/id_rsa.pub 用户<span class="variable">@IP</span>地址<span class="symbol">:/root/</span>.ssh/authorized_keys</span><br></pre></td></tr></table></figure></p>
+<p>然后就可以不用密码远程连接啦<br>获取pip安装包<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http<span class="variable">s:</span>//bootstrap.pypa.io/<span class="built_in">get</span>-pip.<span class="keyword">py</span> --<span class="keyword">no</span>-check-certificate</span><br></pre></td></tr></table></figure></p>
+<p>然后执行<code>python get-pip.py</code> ,<code>pip install shadowsocks</code></p>
 
           
         
@@ -403,7 +395,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/11/Mac/Mac_一个电脑多个ssh-key/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/05/21/技术/技术_科学上网大教程(持续更新)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="203Monitor">
@@ -425,8 +417,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/05/11/Mac/Mac_一个电脑多个ssh-key/" itemprop="url">
-                  Mac_一个电脑多个ssh-key
+                <a class="post-title-link" href="/2016/05/21/技术/技术_科学上网大教程(持续更新)/" itemprop="url">
+                  科学上网大教程(持续更新)
                 </a>
               
             
@@ -442,8 +434,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-11T10:32:30+08:00">
-                2017-05-11
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-05-21T00:00:00+08:00">
+                2016-05-21
               </time>
             
 
@@ -465,8 +457,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Mac/" itemprop="url" rel="index">
-                    <span itemprop="name">Mac</span>
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
                   </a>
                 </span>
 
@@ -502,600 +494,78 @@
       
         
           
-            <h3 id="u4E00_u4E2A_u7535_u8111_u591A_u4E2Assh-key_u53EF_u4EE5_u901A_u8FC7config_u6587_u4EF6_u6765_u7BA1_u7406"><a href="#u4E00_u4E2A_u7535_u8111_u591A_u4E2Assh-key_u53EF_u4EE5_u901A_u8FC7config_u6587_u4EF6_u6765_u7BA1_u7406" class="headerlink" title="一个电脑多个ssh-key可以通过config文件来管理"></a>一个电脑多个ssh-key可以通过config文件来管理</h3><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Host aaa</span><br><span class="line">HostName github.com</span><br><span class="line"><span class="keyword">User</span> <span class="title">git</span></span><br><span class="line">IdentityFile ~/.ssh/id_rsa_aaa</span><br><span class="line"></span><br><span class="line">Host bbb</span><br><span class="line">HostName github.com</span><br><span class="line"><span class="keyword">User</span> <span class="title">git</span></span><br><span class="line">IdentityFile ~/.ssh/id_rsa_bbb</span><br></pre></td></tr></table></figure>
-<h3 id="u914D_u7F6E_u5B8C_u6210_u5373_u53EF_u901A_u8FC7ssh_-T_aaa_u6216bbb_u6765_u9A8C_u8BC1"><a href="#u914D_u7F6E_u5B8C_u6210_u5373_u53EF_u901A_u8FC7ssh_-T_aaa_u6216bbb_u6765_u9A8C_u8BC1" class="headerlink" title="配置完成即可通过ssh -T aaa或bbb来验证"></a>配置完成即可通过ssh -T aaa或bbb来验证</h3><h3 id="u4E4B_u540E_u518Dclone_u9879_u76EE_u5C31_u53EF_u4EE5_u76F4_u63A5_u4F7F_u7528_u914D_u7F6E_u7684_u522B_u540D"><a href="#u4E4B_u540E_u518Dclone_u9879_u76EE_u5C31_u53EF_u4EE5_u76F4_u63A5_u4F7F_u7528_u914D_u7F6E_u7684_u522B_u540D" class="headerlink" title="之后再clone项目就可以直接使用配置的别名"></a>之后再clone项目就可以直接使用配置的别名</h3><h3 id="u4F8B_u5982_git_clone_git@aaa_3Axxxxx/xxxx-git"><a href="#u4F8B_u5982_git_clone_git@aaa_3Axxxxx/xxxx-git" class="headerlink" title="例如 git clone git@aaa:xxxxx/xxxx.git"></a>例如 git clone git@aaa:xxxxx/xxxx.git</h3><h3 id="u5982_u679C_u662F_u5DF2_u7ECFclone_u8FC7_u7684_u9879_u76EE_uFF0C_u53EF_u4EE5_u5207_u6362_u8FDC_u7A0B_u4ED3_u5E93_u5730_u5740_uFF0C_u8FDB_u5165-git_u76EE_u5F55_uFF0C_u4FEE_u6539config_u6587_u4EF6_u4E2D_u7684_u5730_u5740_u5373_u53EF"><a href="#u5982_u679C_u662F_u5DF2_u7ECFclone_u8FC7_u7684_u9879_u76EE_uFF0C_u53EF_u4EE5_u5207_u6362_u8FDC_u7A0B_u4ED3_u5E93_u5730_u5740_uFF0C_u8FDB_u5165-git_u76EE_u5F55_uFF0C_u4FEE_u6539config_u6587_u4EF6_u4E2D_u7684_u5730_u5740_u5373_u53EF" class="headerlink" title="如果是已经clone过的项目，可以切换远程仓库地址，进入.git目录，修改config文件中的地址即可"></a>如果是已经clone过的项目，可以切换远程仓库地址，进入.git目录，修改config文件中的地址即可</h3><h3 id="u6216_u8005_u7528git_u547D_u4EE4_u4E5F_u53EF_u4EE5_28_u81EA_u884C_u767E_u5EA6_u5427_29"><a href="#u6216_u8005_u7528git_u547D_u4EE4_u4E5F_u53EF_u4EE5_28_u81EA_u884C_u767E_u5EA6_u5427_29" class="headerlink" title="或者用git命令也可以(自行百度吧)"></a>或者用git命令也可以(自行百度吧)</h3>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/11/Mac/Mac_AppleDoc/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="203Monitor">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="203Monitor">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/05/11/Mac/Mac_AppleDoc/" itemprop="url">
-                  Mac_AppleDoc
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-11T10:27:30+08:00">
-                2017-05-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Mac/" itemprop="url" rel="index">
-                    <span itemprop="name">Mac</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="u7ED3_u9879_u76EE_u524D_u90FD_u8981_u505A_u6587_u6863_uFF0C_u8FD9_u4E2A_u5DE5_u5177_u771F_u662F_u7528_u5904_u5927_u5927_u7684_u3002"><a href="#u7ED3_u9879_u76EE_u524D_u90FD_u8981_u505A_u6587_u6863_uFF0C_u8FD9_u4E2A_u5DE5_u5177_u771F_u662F_u7528_u5904_u5927_u5927_u7684_u3002" class="headerlink" title="结项目前都要做文档，这个工具真是用处大大的。"></a>结项目前都要做文档，这个工具真是用处大大的。</h3><h3 id="/Users/wuguobin/Library/Developer/Shared/Documentation/DocSets__u8BB0_u4F4F_u8FD9_u4E2A_u76EE_u5F55"><a href="#/Users/wuguobin/Library/Developer/Shared/Documentation/DocSets__u8BB0_u4F4F_u8FD9_u4E2A_u76EE_u5F55" class="headerlink" title="/Users/wuguobin/Library/Developer/Shared/Documentation/DocSets 记住这个目录"></a><code>/Users/wuguobin/Library/Developer/Shared/Documentation/DocSets</code> 记住这个目录</h3><h3 id="u4E0B_u8F7DappleDoc_uFF0C_u5B89_u88C5_u540E_u5373_u53EF_u751F_u6210_u6587_u6863_uFF0Cxxx-docset_2C_u7136_u540E_u5C06_u8FD9_u4E9B_u6587_u4EF6_u5939_u653E_u5165_u4E0A_u9762_u90A3_u4E2A_u76EE_u5F55_u5C31_u53EF_u4EE5_u4E86"><a href="#u4E0B_u8F7DappleDoc_uFF0C_u5B89_u88C5_u540E_u5373_u53EF_u751F_u6210_u6587_u6863_uFF0Cxxx-docset_2C_u7136_u540E_u5C06_u8FD9_u4E9B_u6587_u4EF6_u5939_u653E_u5165_u4E0A_u9762_u90A3_u4E2A_u76EE_u5F55_u5C31_u53EF_u4EE5_u4E86" class="headerlink" title="下载appleDoc，安装后即可生成文档，xxx.docset,然后将这些文件夹放入上面那个目录就可以了"></a>下载appleDoc，安装后即可生成文档，xxx.docset,然后将这些文件夹放入上面那个目录就可以了</h3>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/02/Mac/Mac_在openshift部署war包/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="203Monitor">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="203Monitor">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/05/02/Mac/Mac_在openshift部署war包/" itemprop="url">
-                  Mac_在openshift部署war包
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-02T11:52:30+08:00">
-                2017-05-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Mac/" itemprop="url" rel="index">
-                    <span itemprop="name">Mac</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="u83B7_u53D6_u5230_u9879_u76EE_u7684ssh_u94FE_u63A5_uFF0C_u4F7F_u7528_scp_ROOT-war_ssh_u94FE_u63A5_3A/tmp__u5C06war_u5305_u4E0A_u4F20_u81F3openshift"><a href="#u83B7_u53D6_u5230_u9879_u76EE_u7684ssh_u94FE_u63A5_uFF0C_u4F7F_u7528_scp_ROOT-war_ssh_u94FE_u63A5_3A/tmp__u5C06war_u5305_u4E0A_u4F20_u81F3openshift" class="headerlink" title="获取到项目的ssh链接，使用 scp ROOT.war ssh链接:/tmp 将war包上传至openshift"></a>获取到项目的ssh链接，使用 scp ROOT.war ssh链接:/tmp 将war包上传至openshift</h3><h3 id="u901A_u8FC7ssh_u8FDE_u63A5_u5230openshift_uFF0Ccd_jbossews/webapps__26amp_3B_26amp_3B_mv_/tmp/ROOT-war_ROOT-war"><a href="#u901A_u8FC7ssh_u8FDE_u63A5_u5230openshift_uFF0Ccd_jbossews/webapps__26amp_3B_26amp_3B_mv_/tmp/ROOT-war_ROOT-war" class="headerlink" title="通过ssh连接到openshift，cd jbossews/webapps &amp;&amp; mv /tmp/ROOT.war ROOT.war"></a>通过ssh连接到openshift，<code>cd jbossews/webapps &amp;&amp; mv /tmp/ROOT.war ROOT.war</code></h3><h3 id="u7136_u540E_u5230openshift_u5E94_u7528_u4E3B_u9875_restart_application_u5C31_u53EF_u4EE5_u4E86"><a href="#u7136_u540E_u5230openshift_u5E94_u7528_u4E3B_u9875_restart_application_u5C31_u53EF_u4EE5_u4E86" class="headerlink" title="然后到openshift应用主页 restart application就可以了"></a>然后到openshift应用主页 restart application就可以了</h3><p><code>scp ROOT.war 58e5a9f889f5cf3f5f000185@jbossews-0513.rhcloud.com:/tmp</code><br><code>ssh 58e5a9f889f5cf3f5f000185@jbossews-0513.rhcloud.com</code></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/28/iOS/iOS_Reactive Cocoa/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="203Monitor">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="203Monitor">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/28/iOS/iOS_Reactive Cocoa/" itemprop="url">
-                  iOS_Reactive Cocoa
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-28T12:00:23+08:00">
-                2017-03-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/iOS/" itemprop="url" rel="index">
-                    <span itemprop="name">iOS</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="Reactive_Cocoa_u5E38_u89C1_u7C7B_u4ECB_u7ECD"><a href="#Reactive_Cocoa_u5E38_u89C1_u7C7B_u4ECB_u7ECD" class="headerlink" title="Reactive Cocoa常见类介绍"></a>Reactive Cocoa常见类介绍</h3><hr>
-<h3 id="3C_21-_uFFFC0-_3E"><a href="#3C_21-_uFFFC0-_3E" class="headerlink" title="<figure class=" highlight"=""><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#### &#20449;&#21495;&#31867;,&#19968;&#33324;&#34920;&#31034;&#23558;&#26469;&#26377;&#25968;&#25454;&#20256;&#36882;&#65292;&#21482;&#35201;&#26377;&#25968;&#25454;&#25913;&#21464;&#65292;&#20449;&#21495;&#20869;&#37096;&#25509;&#25910;&#21040;&#25968;&#25454;&#65292;&#23601;&#20250;&#39532;&#19978;&#21457;&#20986;&#25968;&#25454;&#10;&#62; &#27880;&#24847;&#65306;&#10;* &#20449;&#21495;&#31867;(RACSiganl)&#65292;&#21482;&#26159;&#34920;&#31034;&#24403;&#25968;&#25454;&#25913;&#21464;&#26102;&#65292;&#20449;&#21495;&#20869;&#37096;&#20250;&#21457;&#20986;&#25968;&#25454;&#65292;&#23427;&#26412;&#36523;&#19981;&#20855;&#22791;&#21457;&#36865;&#20449;&#21495;&#30340;&#33021;&#21147;&#65292;&#32780;&#26159;&#20132;&#32473;&#20869;&#37096;&#19968;&#20010;&#35746;&#38405;&#32773;&#21435;&#21457;&#20986;&#12290;\&#10;* &#40664;&#35748;&#19968;&#20010;&#20449;&#21495;&#37117;&#26159;&#20919;&#20449;&#21495;&#65292;&#20063;&#23601;&#26159;&#20540;&#25913;&#21464;&#20102;&#65292;&#20063;&#19981;&#20250;&#35302;&#21457;&#65292;&#21482;&#26377;&#35746;&#38405;&#20102;&#36825;&#20010;&#20449;&#21495;&#65292;&#36825;&#20010;&#20449;&#21495;&#25165;&#20250;&#21464;&#20026;&#28909;&#20449;&#21495;&#65292;&#20540;&#25913;&#21464;&#20102;&#25165;&#20250;&#35302;&#21457;&#10;* &#22914;&#20309;&#35746;&#38405;&#20449;&#21495;&#65306;&#35843;&#29992;&#20449;&#21495;RACSignal&#30340;subscribeNext&#23601;&#33021;&#35746;&#38405;&#10;&#10;### ```RACSubscriber</span><br></pre></td></tr></table>"></a><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#### &#20449;&#21495;&#31867;,&#19968;&#33324;&#34920;&#31034;&#23558;&#26469;&#26377;&#25968;&#25454;&#20256;&#36882;&#65292;&#21482;&#35201;&#26377;&#25968;&#25454;&#25913;&#21464;&#65292;&#20449;&#21495;&#20869;&#37096;&#25509;&#25910;&#21040;&#25968;&#25454;&#65292;&#23601;&#20250;&#39532;&#19978;&#21457;&#20986;&#25968;&#25454;&#10;&#62; &#27880;&#24847;&#65306;&#10;* &#20449;&#21495;&#31867;(RACSiganl)&#65292;&#21482;&#26159;&#34920;&#31034;&#24403;&#25968;&#25454;&#25913;&#21464;&#26102;&#65292;&#20449;&#21495;&#20869;&#37096;&#20250;&#21457;&#20986;&#25968;&#25454;&#65292;&#23427;&#26412;&#36523;&#19981;&#20855;&#22791;&#21457;&#36865;&#20449;&#21495;&#30340;&#33021;&#21147;&#65292;&#32780;&#26159;&#20132;&#32473;&#20869;&#37096;&#19968;&#20010;&#35746;&#38405;&#32773;&#21435;&#21457;&#20986;&#12290;\&#10;* &#40664;&#35748;&#19968;&#20010;&#20449;&#21495;&#37117;&#26159;&#20919;&#20449;&#21495;&#65292;&#20063;&#23601;&#26159;&#20540;&#25913;&#21464;&#20102;&#65292;&#20063;&#19981;&#20250;&#35302;&#21457;&#65292;&#21482;&#26377;&#35746;&#38405;&#20102;&#36825;&#20010;&#20449;&#21495;&#65292;&#36825;&#20010;&#20449;&#21495;&#25165;&#20250;&#21464;&#20026;&#28909;&#20449;&#21495;&#65292;&#20540;&#25913;&#21464;&#20102;&#25165;&#20250;&#35302;&#21457;&#10;* &#22914;&#20309;&#35746;&#38405;&#20449;&#21495;&#65306;&#35843;&#29992;&#20449;&#21495;RACSignal&#30340;subscribeNext&#23601;&#33021;&#35746;&#38405;&#10;&#10;### ```RACSubscriber</span><br></pre></td></tr></table></figure></h3><h4 id="u8868_u793A_u8BA2_u9605_u8005_u7684_u610F_u601D_uFF0C_u7528_u4E8E_u53D1_u9001_u4FE1_u53F7_uFF0C_u8FD9_u662F_u4E00_u4E2A_u534F_u8BAE_uFF0C_u4E0D_u662F_u4E00_u4E2A_u7C7B_uFF0C_u53EA_u8981_u9075_u5B88_u8FD9_u4E2A_u534F_u8BAE_uFF0C_u5E76_u4E14_u5B9E_u73B0_u65B9_u6CD5_u624D_u80FD_u6210_u4E3A_u8BA2_u9605_u8005_u3002_u901A_u8FC7create_u521B_u5EFA_u7684_u4FE1_u53F7_uFF0C_u90FD_u6709_u4E00_u4E2A_u8BA2_u9605_u8005_uFF0C_u5E2E_u52A9_u4ED6_u53D1_u9001_u6570_u636E"><a href="#u8868_u793A_u8BA2_u9605_u8005_u7684_u610F_u601D_uFF0C_u7528_u4E8E_u53D1_u9001_u4FE1_u53F7_uFF0C_u8FD9_u662F_u4E00_u4E2A_u534F_u8BAE_uFF0C_u4E0D_u662F_u4E00_u4E2A_u7C7B_uFF0C_u53EA_u8981_u9075_u5B88_u8FD9_u4E2A_u534F_u8BAE_uFF0C_u5E76_u4E14_u5B9E_u73B0_u65B9_u6CD5_u624D_u80FD_u6210_u4E3A_u8BA2_u9605_u8005_u3002_u901A_u8FC7create_u521B_u5EFA_u7684_u4FE1_u53F7_uFF0C_u90FD_u6709_u4E00_u4E2A_u8BA2_u9605_u8005_uFF0C_u5E2E_u52A9_u4ED6_u53D1_u9001_u6570_u636E" class="headerlink" title="表示订阅者的意思，用于发送信号，这是一个协议，不是一个类，只要遵守这个协议，并且实现方法才能成为订阅者。通过create创建的信号，都有一个订阅者，帮助他发送数据"></a>表示订阅者的意思，用于发送信号，这是一个协议，不是一个类，只要遵守这个协议，并且实现方法才能成为订阅者。通过create创建的信号，都有一个订阅者，帮助他发送数据</h4><h3 id="3C_21-_uFFFC1-_3E"><a href="#3C_21-_uFFFC1-_3E" class="headerlink" title="<figure class=" highlight"=""><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#### &#29992;&#20110;&#21462;&#28040;&#35746;&#38405;&#25110;&#32773;&#28165;&#29702;&#36164;&#28304;&#65292;&#24403;&#20449;&#21495;&#21457;&#36865;&#23436;&#25104;&#25110;&#32773;&#21457;&#36865;&#38169;&#35823;&#30340;&#26102;&#20505;&#65292;&#23601;&#20250;&#33258;&#21160;&#35302;&#21457;&#23427;&#10;&#62; &#20351;&#29992;&#22330;&#26223;&#10;* &#19981;&#24819;&#30417;&#21548;&#26576;&#20010;&#20449;&#21495;&#26102;&#65292;&#21487;&#20197;&#36890;&#36807;&#23427;&#20027;&#21160;&#21462;&#28040;&#35746;&#38405;&#20449;&#21495;&#10;&#10;### ```RACSubject</span><br></pre></td></tr></table>"></a><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#### &#29992;&#20110;&#21462;&#28040;&#35746;&#38405;&#25110;&#32773;&#28165;&#29702;&#36164;&#28304;&#65292;&#24403;&#20449;&#21495;&#21457;&#36865;&#23436;&#25104;&#25110;&#32773;&#21457;&#36865;&#38169;&#35823;&#30340;&#26102;&#20505;&#65292;&#23601;&#20250;&#33258;&#21160;&#35302;&#21457;&#23427;&#10;&#62; &#20351;&#29992;&#22330;&#26223;&#10;* &#19981;&#24819;&#30417;&#21548;&#26576;&#20010;&#20449;&#21495;&#26102;&#65292;&#21487;&#20197;&#36890;&#36807;&#23427;&#20027;&#21160;&#21462;&#28040;&#35746;&#38405;&#20449;&#21495;&#10;&#10;### ```RACSubject</span><br></pre></td></tr></table></figure></h3><h4 id="RACSubject_u4FE1_u53F7_u63D0_u4F9B_u8005_uFF0C_u81EA_u5DF1_u53EF_u4EE5_u5145_u5F53_u4FE1_u53F7_uFF0C_u53C8_u80FD_u53D1_u9001_u4FE1_u53F7"><a href="#RACSubject_u4FE1_u53F7_u63D0_u4F9B_u8005_uFF0C_u81EA_u5DF1_u53EF_u4EE5_u5145_u5F53_u4FE1_u53F7_uFF0C_u53C8_u80FD_u53D1_u9001_u4FE1_u53F7" class="headerlink" title="RACSubject信号提供者，自己可以充当信号，又能发送信号"></a>RACSubject信号提供者，自己可以充当信号，又能发送信号</h4><blockquote>
-<p>使用场景</p>
+            <p>GFW的日益强大，使国内的网络日益安全。不过真心苦了我们这帮程序员，要知道，看一个程序员是否优秀就看他如何使用Google。喜欢折腾的我当然是一直以优秀程序员自居，所以一定要做出些样子。这就总结了一些科学上网的小招子，望与各位想成为优秀程序员的人们共勉。</p>
+<h2 id="SSH_Socks5"><a href="#SSH_Socks5" class="headerlink" title="SSH Socks5"></a>SSH Socks5</h2><p>这是个很犀利的招式，windows怎么使用网上太多了，我就不说了，mac的用法更是简单，不过这一招并不在于怎么使用，前期攒起来才是最重要的。<br>原料：Mac电脑一台，openshift／koding帐号一个</p>
 <ul>
-<li>通常用来代替代理，有了它，就不必要定义代理了</li>
+<li><code>ssh  -qTfnN -D port xxx@xxx.xx.x</code></li>
+<li>打开浏览器，使用socks5代理，地址127.0.0.1:port</li>
 </ul>
-</blockquote>
-<h3 id="3C_21-_uFFFC2-_3E"><a href="#3C_21-_uFFFC2-_3E" class="headerlink" title="<figure class=" highlight"=""><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#### &#37325;&#22797;&#25552;&#20379;&#20449;&#21495;&#31867;&#65292;RACSubject&#30340;&#23376;&#31867;&#10;&#62;    RACReplaySubject&#19982;RACSubject&#21306;&#21035;:&#10;* RACReplaySubject&#21487;&#20197;&#20808;&#21457;&#36865;&#20449;&#21495;&#65292;&#22312;&#35746;&#38405;&#20449;&#21495;&#65292;RACSubject&#23601;&#19981;&#21487;&#20197;&#10;&#62; &#20351;&#29992;&#22330;&#26223;&#19968;&#10;* &#22914;&#26524;&#19968;&#20010;&#20449;&#21495;&#27599;&#34987;&#35746;&#38405;&#19968;&#27425;&#65292;&#23601;&#38656;&#35201;&#25226;&#20043;&#21069;&#30340;&#20540;&#37325;&#22797;&#21457;&#36865;&#19968;&#36941;&#65292;&#20351;&#29992;&#37325;&#22797;&#25552;&#20379;&#20449;&#21495;&#31867;&#10;&#62; &#20351;&#29992;&#22330;&#26223;&#20108;&#10;* &#21487;&#20197;&#35774;&#32622;capacity&#25968;&#37327;&#26469;&#38480;&#21046;&#32531;&#23384;&#30340;value&#30340;&#25968;&#37327;,&#21363;&#21482;&#32531;&#20805;&#26368;&#26032;&#30340;&#20960;&#20010;&#20540;&#10;&#10;### ```RACTuple</span><br></pre></td></tr></table>"></a><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#### &#37325;&#22797;&#25552;&#20379;&#20449;&#21495;&#31867;&#65292;RACSubject&#30340;&#23376;&#31867;&#10;&#62;    RACReplaySubject&#19982;RACSubject&#21306;&#21035;:&#10;* RACReplaySubject&#21487;&#20197;&#20808;&#21457;&#36865;&#20449;&#21495;&#65292;&#22312;&#35746;&#38405;&#20449;&#21495;&#65292;RACSubject&#23601;&#19981;&#21487;&#20197;&#10;&#62; &#20351;&#29992;&#22330;&#26223;&#19968;&#10;* &#22914;&#26524;&#19968;&#20010;&#20449;&#21495;&#27599;&#34987;&#35746;&#38405;&#19968;&#27425;&#65292;&#23601;&#38656;&#35201;&#25226;&#20043;&#21069;&#30340;&#20540;&#37325;&#22797;&#21457;&#36865;&#19968;&#36941;&#65292;&#20351;&#29992;&#37325;&#22797;&#25552;&#20379;&#20449;&#21495;&#31867;&#10;&#62; &#20351;&#29992;&#22330;&#26223;&#20108;&#10;* &#21487;&#20197;&#35774;&#32622;capacity&#25968;&#37327;&#26469;&#38480;&#21046;&#32531;&#23384;&#30340;value&#30340;&#25968;&#37327;,&#21363;&#21482;&#32531;&#20805;&#26368;&#26032;&#30340;&#20960;&#20010;&#20540;&#10;&#10;### ```RACTuple</span><br></pre></td></tr></table></figure></h3><h4 id="u5143_u7EC4_u7C7B_2C_u7C7B_u4F3CNSArray_2C_u7528_u6765_u5305_u88C5_u503C"><a href="#u5143_u7EC4_u7C7B_2C_u7C7B_u4F3CNSArray_2C_u7528_u6765_u5305_u88C5_u503C" class="headerlink" title="元组类,类似NSArray,用来包装值"></a>元组类,类似NSArray,用来包装值</h4><h3 id="3C_21-_uFFFC3-_3E"><a href="#3C_21-_uFFFC3-_3E" class="headerlink" title="<figure class=" highlight"=""><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#### RAC&#20013;&#30340;&#38598;&#21512;&#31867;&#65292;&#29992;&#20110;&#20195;&#26367;NSArray,NSDictionary,&#21487;&#20197;&#20351;&#29992;&#23427;&#26469;&#24555;&#36895;&#36941;&#21382;&#25968;&#32452;&#21644;&#23383;&#20856;&#10;&#10;### ```RACCommand</span><br></pre></td></tr></table>"></a><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#### RAC&#20013;&#30340;&#38598;&#21512;&#31867;&#65292;&#29992;&#20110;&#20195;&#26367;NSArray,NSDictionary,&#21487;&#20197;&#20351;&#29992;&#23427;&#26469;&#24555;&#36895;&#36941;&#21382;&#25968;&#32452;&#21644;&#23383;&#20856;&#10;&#10;### ```RACCommand</span><br></pre></td></tr></table></figure></h3><h4 id="RAC_u4E2D_u7528_u4E8E_u5904_u7406_u4E8B_u4EF6_u7684_u7C7B_uFF0C_u53EF_u4EE5_u628A_u4E8B_u4EF6_u5982_u4F55_u5904_u7406_2C_u4E8B_u4EF6_u4E2D_u7684_u6570_u636E_u5982_u4F55_u4F20_u9012_uFF0C_u5305_u88C5_u5230_u8FD9_u4E2A_u7C7B_u4E2D_uFF0C_u4ED6_u53EF_u4EE5_u5F88_u65B9_u4FBF_u7684_u76D1_u63A7_u4E8B_u4EF6_u7684_u6267_u884C_u8FC7_u7A0B"><a href="#RAC_u4E2D_u7528_u4E8E_u5904_u7406_u4E8B_u4EF6_u7684_u7C7B_uFF0C_u53EF_u4EE5_u628A_u4E8B_u4EF6_u5982_u4F55_u5904_u7406_2C_u4E8B_u4EF6_u4E2D_u7684_u6570_u636E_u5982_u4F55_u4F20_u9012_uFF0C_u5305_u88C5_u5230_u8FD9_u4E2A_u7C7B_u4E2D_uFF0C_u4ED6_u53EF_u4EE5_u5F88_u65B9_u4FBF_u7684_u76D1_u63A7_u4E8B_u4EF6_u7684_u6267_u884C_u8FC7_u7A0B" class="headerlink" title="RAC中用于处理事件的类，可以把事件如何处理,事件中的数据如何传递，包装到这个类中，他可以很方便的监控事件的执行过程"></a>RAC中用于处理事件的类，可以把事件如何处理,事件中的数据如何传递，包装到这个类中，他可以很方便的监控事件的执行过程</h4><blockquote>
-<p>使用场景</p>
+<blockquote>
+<p>注：关闭步骤</p>
 <ul>
-<li>监听按钮点击，网络请求</li>
+<li><code>lsof -i tcp:端口号</code></li>
+<li><code>sudo kill -9 PID</code></li>
 </ul>
+<p>此招式缺点：一小时断一次，不过别太沉迷于墙外的世界可以规避这个风险</p>
 </blockquote>
-<h3 id="3C_21-_uFFFC4-_3E"><a href="#3C_21-_uFFFC4-_3E" class="headerlink" title="<figure class=" highlight"=""><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#### &#29992;&#20110;&#24403;&#19968;&#20010;&#20449;&#21495;&#65292;&#34987;&#22810;&#27425;&#35746;&#38405;&#26102;&#65292;&#20026;&#20102;&#20445;&#35777;&#21019;&#24314;&#20449;&#21495;&#26102;&#65292;&#36991;&#20813;&#22810;&#27425;&#35843;&#29992;&#21019;&#24314;&#20449;&#21495;&#20013;&#30340;block&#65292;&#36896;&#25104;&#21103;&#20316;&#29992;&#65292;&#21487;&#20197;&#20351;&#29992;&#36825;&#20010;&#31867;&#22788;&#29702;&#10;&#62; &#20351;&#29992;&#27880;&#24847;:&#10;* RACMulticastConnection&#36890;&#36807;RACSignal&#30340;-publish&#25110;&#32773;-muticast:&#26041;&#27861;&#21019;&#24314;&#10;&#10;### ```RACScheduler</span><br></pre></td></tr></table>"></a><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#### &#29992;&#20110;&#24403;&#19968;&#20010;&#20449;&#21495;&#65292;&#34987;&#22810;&#27425;&#35746;&#38405;&#26102;&#65292;&#20026;&#20102;&#20445;&#35777;&#21019;&#24314;&#20449;&#21495;&#26102;&#65292;&#36991;&#20813;&#22810;&#27425;&#35843;&#29992;&#21019;&#24314;&#20449;&#21495;&#20013;&#30340;block&#65292;&#36896;&#25104;&#21103;&#20316;&#29992;&#65292;&#21487;&#20197;&#20351;&#29992;&#36825;&#20010;&#31867;&#22788;&#29702;&#10;&#62; &#20351;&#29992;&#27880;&#24847;:&#10;* RACMulticastConnection&#36890;&#36807;RACSignal&#30340;-publish&#25110;&#32773;-muticast:&#26041;&#27861;&#21019;&#24314;&#10;&#10;### ```RACScheduler</span><br></pre></td></tr></table></figure></h3><h4 id="RAC_u4E2D_u7684_u961F_u5217_uFF0C_u7528GCD_u5C01_u88C5_u7684"><a href="#RAC_u4E2D_u7684_u961F_u5217_uFF0C_u7528GCD_u5C01_u88C5_u7684" class="headerlink" title="RAC中的队列，用GCD封装的"></a>RAC中的队列，用GCD封装的</h4><h3 id="3C_21-_uFFFC5-_3E"><a href="#3C_21-_uFFFC5-_3E" class="headerlink" title="<figure class=" highlight"=""><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#### &#34920;&#12144;stream&#19981;&#21253;&#21547;&#26377;&#24847;&#20041;&#30340;&#20540;,&#20063;&#23601;&#26159;&#30475;&#21040;&#36825;&#20010;&#65292;&#21487;&#20197;&#30452;&#25509;&#29702;&#35299;&#20026;nil&#10;&#10;### ```RACEvent</span><br></pre></td></tr></table>"></a><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#### &#34920;&#12144;stream&#19981;&#21253;&#21547;&#26377;&#24847;&#20041;&#30340;&#20540;,&#20063;&#23601;&#26159;&#30475;&#21040;&#36825;&#20010;&#65292;&#21487;&#20197;&#30452;&#25509;&#29702;&#35299;&#20026;nil&#10;&#10;### ```RACEvent</span><br></pre></td></tr></table></figure></h3><h4 id="u628A_u6570_u636E_u5305_u88C5_u6210_u4FE1_u53F7_u4E8B_u4EF6_28signal_event_29_u3002_u5B83_u4E3B_u8981_u901A_u8FC7RACSignal_u7684-materialize_u6765_u4F7F_u7528_uFF0C_u7136_u5E76_u5375"><a href="#u628A_u6570_u636E_u5305_u88C5_u6210_u4FE1_u53F7_u4E8B_u4EF6_28signal_event_29_u3002_u5B83_u4E3B_u8981_u901A_u8FC7RACSignal_u7684-materialize_u6765_u4F7F_u7528_uFF0C_u7136_u5E76_u5375" class="headerlink" title="把数据包装成信号事件(signal event)。它主要通过RACSignal的-materialize来使用，然并卵"></a>把数据包装成信号事件(signal event)。它主要通过RACSignal的-materialize来使用，然并卵</h4><h3 id="Reactive_Cocoa_u5E38_u89C1_u7528_u6CD5"><a href="#Reactive_Cocoa_u5E38_u89C1_u7528_u6CD5" class="headerlink" title="Reactive Cocoa常见用法"></a>Reactive Cocoa常见用法</h3><hr>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/10/iOS/iOS_TTTAttributedLabel使用心得/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="203Monitor">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="203Monitor">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/10/iOS/iOS_TTTAttributedLabel使用心得/" itemprop="url">
-                  iOS_TTTAttributedLabel使用心得
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-10T14:56:46+08:00">
-                2017-03-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/iOS/" itemprop="url" rel="index">
-                    <span itemprop="name">iOS</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h6 id="TTTAttributedLabel_u5B9E_u73B0_u4E86_u5728label_u4E0A_u6DFB_u52A0_u94FE_u63A5_u7B49_u70B9_u51FB_u4E8B_u4EF6_u7684_u529F_u80FD"><a href="#TTTAttributedLabel_u5B9E_u73B0_u4E86_u5728label_u4E0A_u6DFB_u52A0_u94FE_u63A5_u7B49_u70B9_u51FB_u4E8B_u4EF6_u7684_u529F_u80FD" class="headerlink" title="TTTAttributedLabel实现了在label上添加链接等点击事件的功能"></a>TTTAttributedLabel实现了在label上添加链接等点击事件的功能</h6><h6 id="u70B9_u51FB_u4E8B_u4EF6TTT_u7684_u5B9E_u73B0_u65B9_u6CD5_u662F_u5728-__28void_29touchesBegan_3A_28NSSet_*_29touches_withEvent_3A_28UIEvent_*_29event_u65B9_u6CD5_u4E2D_u83B7_u53D6_u5230touch_u7684_u70B9_uFF0C_u968F_u540E_u5C06_u8FD9_u4E2A_u70B9_u4F20_u5165-__28TTTAttributedLabelLink_*_29linkAtPoint_3A_28CGPoint_29point_u65B9_u6CD5_u4E2D_uFF0C_u627E_u5230_u70B9_u51FB_u4F4D_u7F6E_u7684_u94FE_u63A5_u6587_u672C_uFF0C_u5982_u679C_u6709_u5219_u8FDB_u5165_u56DE_u8C03_uFF0C_u6CA1_u6709_u5219_u4E8B_u4EF6_u7ED3_u675F_u3002"><a href="#u70B9_u51FB_u4E8B_u4EF6TTT_u7684_u5B9E_u73B0_u65B9_u6CD5_u662F_u5728-__28void_29touchesBegan_3A_28NSSet_*_29touches_withEvent_3A_28UIEvent_*_29event_u65B9_u6CD5_u4E2D_u83B7_u53D6_u5230touch_u7684_u70B9_uFF0C_u968F_u540E_u5C06_u8FD9_u4E2A_u70B9_u4F20_u5165-__28TTTAttributedLabelLink_*_29linkAtPoint_3A_28CGPoint_29point_u65B9_u6CD5_u4E2D_uFF0C_u627E_u5230_u70B9_u51FB_u4F4D_u7F6E_u7684_u94FE_u63A5_u6587_u672C_uFF0C_u5982_u679C_u6709_u5219_u8FDB_u5165_u56DE_u8C03_uFF0C_u6CA1_u6709_u5219_u4E8B_u4EF6_u7ED3_u675F_u3002" class="headerlink" title="点击事件TTT的实现方法是在- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event方法中获取到touch的点，随后将这个点传入- (TTTAttributedLabelLink *)linkAtPoint:(CGPoint)point方法中，找到点击位置的链接文本，如果有则进入回调，没有则事件结束。"></a>点击事件TTT的实现方法是在<code>- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event</code>方法中获取到touch的点，随后将这个点传入<code>- (TTTAttributedLabelLink *)linkAtPoint:(CGPoint)point</code>方法中，找到点击位置的链接文本，如果有则进入回调，没有则事件结束。</h6><h6 id="TTT_u63D0_u4F9B_u4E86-__28CFIndex_29characterIndexAtPoint_3A_28CGPoint_29p_u65B9_u6CD5_u6765_u8BA1_u7B97_u3001_u786E_u5B9A_u70B9_u51FB_u5230_u7684_u94FE_u63A5_u6587_u672C_u3002"><a href="#TTT_u63D0_u4F9B_u4E86-__28CFIndex_29characterIndexAtPoint_3A_28CGPoint_29p_u65B9_u6CD5_u6765_u8BA1_u7B97_u3001_u786E_u5B9A_u70B9_u51FB_u5230_u7684_u94FE_u63A5_u6587_u672C_u3002" class="headerlink" title="TTT提供了- (CFIndex)characterIndexAtPoint:(CGPoint)p方法来计算、确定点击到的链接文本。"></a>TTT提供了<code>- (CFIndex)characterIndexAtPoint:(CGPoint)p</code>方法来计算、确定点击到的链接文本。</h6><h6 id="u65B9_u6CD5_u7684_u5B9E_u73B0_u987A_u5E8F"><a href="#u65B9_u6CD5_u7684_u5B9E_u73B0_u987A_u5E8F" class="headerlink" title="方法的实现顺序"></a>方法的实现顺序</h6><ul>
-<li><h6 id="u5148_u5224_u65AD_u4E86_u4E00_u4E0B_u70B9_u51FB_u7684_u70B9_u662F_u5426_u5728label_u7684rect_u4E2D"><a href="#u5148_u5224_u65AD_u4E86_u4E00_u4E0B_u70B9_u51FB_u7684_u70B9_u662F_u5426_u5728label_u7684rect_u4E2D" class="headerlink" title="先判断了一下点击的点是否在label的rect中"></a>先判断了一下点击的点是否在label的rect中</h6></li>
-<li><h6 id="u7136_u540E_u53D6_u4E86_u5168_u90E8_u6587_u5B57_u5728label_u4E0A_u7684rect"><a href="#u7136_u540E_u53D6_u4E86_u5168_u90E8_u6587_u5B57_u5728label_u4E0A_u7684rect" class="headerlink" title="然后取了全部文字在label上的rect"></a>然后取了全部文字在label上的rect</h6></li>
-<li><h6 id="u8F6C_u6362_u5750_u6807_u7CFB_uFF0C_u4EE5_u4FBF_u4E8E_u4F7F_u7528coreText"><a href="#u8F6C_u6362_u5750_u6807_u7CFB_uFF0C_u4EE5_u4FBF_u4E8E_u4F7F_u7528coreText" class="headerlink" title="转换坐标系，以便于使用coreText"></a>转换坐标系，以便于使用coreText</h6></li>
-<li><h6 id="u4F7F_u7528_u4E86CGPathCreateMutable_28_29_u521B_u5EFA_u4E86_u4E00_u4E2A_u53EF_u53D8_u8DEF_u5F84"><a href="#u4F7F_u7528_u4E86CGPathCreateMutable_28_29_u521B_u5EFA_u4E86_u4E00_u4E2A_u53EF_u53D8_u8DEF_u5F84" class="headerlink" title="使用了CGPathCreateMutable()创建了一个可变路径"></a>使用了<code>CGPathCreateMutable()</code>创建了一个可变路径</h6></li>
-<li><h6 id="u7528_u94FE_u63A5_u6587_u672C_u7684_u533A_u57DF_u5728label_u4E0A_u6DFB_u52A0_u4E86_u4E00_u4E2A_u77E9_u5F62_u8DEF_u5F84"><a href="#u7528_u94FE_u63A5_u6587_u672C_u7684_u533A_u57DF_u5728label_u4E0A_u6DFB_u52A0_u4E86_u4E00_u4E2A_u77E9_u5F62_u8DEF_u5F84" class="headerlink" title="用链接文本的区域在label上添加了一个矩形路径"></a>用链接文本的区域在label上添加了一个矩形路径</h6></li>
-<li><h6 id="u83B7_u53D6_u77E9_u5F62_u8DEF_u5F84_u8303_u56F4_u5185_u5236_u5B9A_u957F_u5EA6_u7684_u5B57_u7B26_u4E32_u7684_u7684CTFrame"><a href="#u83B7_u53D6_u77E9_u5F62_u8DEF_u5F84_u8303_u56F4_u5185_u5236_u5B9A_u957F_u5EA6_u7684_u5B57_u7B26_u4E32_u7684_u7684CTFrame" class="headerlink" title="获取矩形路径范围内制定长度的字符串的的CTFrame"></a>获取矩形路径范围内制定长度的字符串的的CTFrame</h6></li>
-<li><h6 id="u901A_u8FC7CTFrame_u83B7_u53D6CFArray_uFF0C_u83B7_u53D6_u533A_u57DF_u5185_u6587_u5B57_u7684_u884C_u6570"><a href="#u901A_u8FC7CTFrame_u83B7_u53D6CFArray_uFF0C_u83B7_u53D6_u533A_u57DF_u5185_u6587_u5B57_u7684_u884C_u6570" class="headerlink" title="通过CTFrame获取CFArray，获取区域内文字的行数"></a>通过CTFrame获取CFArray，获取区域内文字的行数</h6></li>
-<li><h6 id="u904D_u5386_u6BCF_u4E00_u884C_2C_u83B7_u53D6_u6BCF_u4E00_u884C_u7684_u77E9_u5F62_u5750_u6807_uFF0C_u4E0E_u5F53_u524D_u70B9_u51FB_u4F4D_u7F6E_u505A_u6BD4_u8F83_uFF0C_u5224_u65AD_u662F_u5426_u70B9_u5728_u6587_u5B57_u8303_u56F4_u5185_uFF0C_u5982_u679C_u5728_u8303_u56F4_u5185_u5219_u518D_u5224_u65AD_u662F_u8303_u56F4_u5185_u90A3_u4E2A_u5B57_u7B26_u4E32"><a href="#u904D_u5386_u6BCF_u4E00_u884C_2C_u83B7_u53D6_u6BCF_u4E00_u884C_u7684_u77E9_u5F62_u5750_u6807_uFF0C_u4E0E_u5F53_u524D_u70B9_u51FB_u4F4D_u7F6E_u505A_u6BD4_u8F83_uFF0C_u5224_u65AD_u662F_u5426_u70B9_u5728_u6587_u5B57_u8303_u56F4_u5185_uFF0C_u5982_u679C_u5728_u8303_u56F4_u5185_u5219_u518D_u5224_u65AD_u662F_u8303_u56F4_u5185_u90A3_u4E2A_u5B57_u7B26_u4E32" class="headerlink" title="遍历每一行,获取每一行的矩形坐标，与当前点击位置做比较，判断是否点在文字范围内，如果在范围内则再判断是范围内那个字符串"></a>遍历每一行,获取每一行的矩形坐标，与当前点击位置做比较，判断是否点在文字范围内，如果在范围内则再判断是范围内那个字符串</h6></li>
+<h2 id="SSH_Socks5_+_polipo__u7EC8_u7AEF_u79D1_u5B66_u4E0A_u7F51"><a href="#SSH_Socks5_+_polipo__u7EC8_u7AEF_u79D1_u5B66_u4E0A_u7F51" class="headerlink" title="SSH Socks5 + polipo 终端科学上网"></a>SSH Socks5 + polipo 终端科学上网</h2><p>为终端设置Shadowsocks代理</p>
+<ul>
+<li>准备工作<br>配置好一个可用的shadowsocks</li>
+<li><p>安装<br>Mac下使用Homebrew安装</p>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">brew </span>install polipo</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改配置(Mac)<br>设置每次登陆启动polipo</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -sfv <span class="regexp">/usr/</span>local<span class="regexp">/opt/</span>polipo<span class="comment">/*.plist ~/Library/LaunchAgents</span></span><br></pre></td></tr></table></figure>
+</li>
 </ul>
+<p>修改文件<code>/usr/local/opt/polipo/homebrew.mxcl.polipo.plist</code>设置parentProxy<br><figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">...</span><span class="attribute">...</span></span><br><span class="line">&lt;key&gt;ProgramArguments&lt;/key&gt;</span><br><span class="line">&lt;<span class="built_in">array</span>&gt;</span><br><span class="line">&lt;<span class="built_in">string</span>&gt;/usr/<span class="built_in">local</span>/opt/polipo/bin/polipo&lt;/<span class="built_in">string</span>&gt;</span><br><span class="line">&lt;<span class="built_in">string</span>&gt;socksParentProxy=localhost:<span class="number">1080</span>&lt;/<span class="built_in">string</span>&gt;</span><br><span class="line">&lt;/<span class="built_in">array</span>&gt;</span><br><span class="line"><span class="attribute">...</span><span class="attribute">...</span></span><br></pre></td></tr></table></figure></p>
+<p>修改的地方是增加了<string>socksParentProxy=localhost:1080</string>。</p>
+<ul>
+<li>启动(Mac)<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">launchctl unload ~/Library/LaunchAgents/homebrew<span class="class">.mxcl</span><span class="class">.polipo</span><span class="class">.plist</span></span><br><span class="line">launchctl load ~/Library/LaunchAgents/homebrew<span class="class">.mxcl</span><span class="class">.polipo</span><span class="class">.plis</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<p>注意：请确保Shadowsocks正常工作。</p>
+</blockquote>
+<ul>
+<li>验证及使用<br>安装完成就需要进行验证是否work。这里展示一个最简单的验证方法，打开终端，如下执行<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">07</span>:<span class="number">56</span>:<span class="number">24</span>-androidyue/var/<span class="built_in">log</span>$ curl ip.gs</span><br><span class="line">当前 IP：<span class="number">125.39</span><span class="number">.112</span><span class="number">.15</span> 来自：中国天津天津 联通</span><br><span class="line"><span class="number">08</span>:<span class="number">09</span>:<span class="number">23</span>-androidyue/var/<span class="built_in">log</span>$ http_proxy=http:<span class="comment">//localhost:8123 curl ip.gs</span></span><br><span class="line">当前 IP：<span class="number">210.140</span><span class="number">.193</span><span class="number">.128</span> 来自：日本日本</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>如上所示，为某个命令设置代理，前面加上<code>http_proxy=http://localhost:8123</code><br>后接命令即可。</p>
+<blockquote>
+<p>注：8123是polipo的默认端口，如有需要，可以修改成其他有效端口。</p>
+</blockquote>
+<ul>
+<li>设置别名<br><code>bash</code>中有一个很好的东西，就是别名<code>alias</code>. Linux用户修改<code>~/.bashrc</code>，Mac用户修改<code>~/.bash_profile</code>文件，增加如下设置<figure class="highlight monkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alias</span> <span class="title">hp</span>=<span class="string">"http_proxy=http://localhost:8123"</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>然后Linux用户执行<code>source ~/.bashrc</code>，Mac用户执行<code>source ~/.bash_profile</code></p>
+<ul>
+<li>测试使用<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">20</span>:<span class="number">39</span>:<span class="number">39</span>-androidyue~$ curl ip.gs</span><br><span class="line">当前 IP：<span class="number">125.39</span><span class="number">.112</span><span class="number">.14</span> 来自：中国天津天津 联通</span><br><span class="line"><span class="number">20</span>:<span class="number">39</span>:<span class="number">44</span>-androidyue~$ hp curl ip.gs</span><br><span class="line">当前 IP：<span class="number">210.140</span><span class="number">.193</span><span class="number">.128</span> 来自：日本日本</span><br><span class="line"><span class="number">20</span>:<span class="number">39</span>:<span class="number">48</span>-androidyue~$</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>当前会话全局设置<br>如果嫌每次为每一个命令设置代理比较麻烦，可以为当前会话设置全局的代理。即使用export http_proxy=<a href="http://localhost:8123即可。" target="_blank" rel="external">http://localhost:8123即可。</a> 如果想撤销当前会话的http_proxy代理，使用unset http_proxy即可。 示例效果如下<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">21</span>:<span class="number">29</span>:<span class="number">49</span>-androidyue~$ curl ip.gs</span><br><span class="line">当前 IP：<span class="number">125.39</span><span class="number">.112</span><span class="number">.14</span> 来自：中国天津天津 联通</span><br><span class="line"><span class="number">21</span>:<span class="number">29</span>:<span class="number">52</span>-androidyue~$ <span class="keyword">export</span> http_proxy=http:<span class="comment">//localhost:8123</span></span><br><span class="line"><span class="number">21</span>:<span class="number">30</span>:<span class="number">07</span>-androidyue~$ curl ip.gs</span><br><span class="line">当前 IP：<span class="number">210.140</span><span class="number">.193</span><span class="number">.128</span> 来自：日本日本</span><br><span class="line"><span class="number">21</span>:<span class="number">30</span>:<span class="number">12</span>-androidyue~$ unset http_proxy</span><br><span class="line"><span class="number">21</span>:<span class="number">30</span>:<span class="number">37</span>-androidyue~$ curl ip.gs</span><br><span class="line">当前 IP：<span class="number">125.39</span><span class="number">.112</span><span class="number">.14</span> 来自：中国天津天津 联通</span><br></pre></td></tr></table></figure></p>
+<p>如果想要更长久的设置代理，可以将export http_proxy=<a href="http://localhost:8123加入.bashrc或者.bash_profile文件" target="_blank" rel="external">http://localhost:8123加入.bashrc或者.bash_profile文件</a></p>
+<ul>
+<li>设置Git代理<br>复杂一些的设置Git代理<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">git clone <span class="string">https:</span><span class="comment">//android.googlesource.com/tools/repo --config http.proxy=localhost:8123</span></span><br><span class="line"></span><br><span class="line">Cloning into <span class="string">'repo'</span>...</span><br><span class="line"><span class="string">remote:</span> Counting <span class="string">objects:</span> <span class="number">135</span>, done</span><br><span class="line"><span class="string">remote:</span> Finding <span class="string">sources:</span> <span class="number">100</span>% (<span class="number">135</span>/<span class="number">135</span>)</span><br><span class="line"><span class="string">remote:</span> Total <span class="number">3483</span> (delta <span class="number">1956</span>), reused <span class="number">3483</span> (delta <span class="number">1956</span>)</span><br><span class="line">Receiving <span class="string">objects:</span> <span class="number">100</span>% (<span class="number">3483</span><span class="regexp">/3483), 2.63 MiB | 492 KiB/</span>s, done.</span><br><span class="line">Resolving <span class="string">deltas:</span> <span class="number">100</span>% (<span class="number">1956</span>/<span class="number">1956</span>), done.</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>其实这样还是比较复杂，因为需要记忆的东西比较多，下面是一个更简单的实现<br>首先，在<code>.bashrc</code>或者<code>.bash_profile</code>文件加入这一句。<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="setting">gp=<span class="value"><span class="string">" --config http.proxy=localhost:8123"</span></span></span></span><br></pre></td></tr></table></figure></p>
+<p>然后执行<code>source</code>操作，更新当前bash配置。<br>更简单的使用git的方法<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">git clone  <span class="string">https:</span><span class="comment">//android.googlesource.com/tools/repo $gp</span></span><br><span class="line"></span><br><span class="line">Cloning into <span class="string">'repo'</span>...</span><br><span class="line"><span class="string">remote:</span> Counting <span class="string">objects:</span> <span class="number">135</span>, done</span><br><span class="line"><span class="string">remote:</span> Finding <span class="string">sources:</span> <span class="number">100</span>% (<span class="number">135</span>/<span class="number">135</span>)</span><br><span class="line"><span class="string">remote:</span> Total <span class="number">3483</span> (delta <span class="number">1956</span>), reused <span class="number">3483</span> (delta <span class="number">1956</span>)</span><br><span class="line">Receiving <span class="string">objects:</span> <span class="number">100</span>% (<span class="number">3483</span><span class="regexp">/3483), 2.63 MiB | 483 KiB/</span>s, done.</span><br><span class="line">Resolving <span class="string">deltas:</span> <span class="number">100</span>% (<span class="number">1956</span>/<span class="number">1956</span>), done.</span><br></pre></td></tr></table></figure></p>
+<h2 id="3-_SSH_Socks5_+_proxychains_u5B89_u88C5__u7EC8_u7AEF_u79D1_u5B66_u4E0A_u7F51"><a href="#3-_SSH_Socks5_+_proxychains_u5B89_u88C5__u7EC8_u7AEF_u79D1_u5B66_u4E0A_u7F51" class="headerlink" title="3. SSH Socks5 + proxychains安装 终端科学上网"></a>3. SSH Socks5 + proxychains安装 终端科学上网</h2><ul>
+<li><p>proxychains安装</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git clone http<span class="variable">s:</span>//github.<span class="keyword">com</span>/rofl0r/proxychains-ng.git</span><br><span class="line"><span class="keyword">cd</span> proxychains-ng</span><br><span class="line">./configure</span><br><span class="line"><span class="keyword">make</span> &amp;&amp; <span class="keyword">make</span> install</span><br><span class="line"><span class="keyword">cp</span> ./src/proxychains.<span class="keyword">conf</span> /etc/proxychains.<span class="keyword">conf</span></span><br><span class="line"><span class="keyword">cd</span> .. &amp;&amp; rm -rf proxychains-ng</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>编辑proxychains配置</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">vim</span> /etc/proxychains.<span class="keyword">conf</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>将<code>socks4 127.0.0.1 9095</code>改为<code>socks5 127.0.0.1 1080</code><br>1080改为你自己的端口</p>
+<ul>
+<li>使用方法<br>在需要代理的命令前加上<code>proxychains4</code> ，如：<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">proxychains4</span> curl <span class="literal">ip</span>.gs</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>未完待续～～～</p>
 
           
         
@@ -1139,7 +609,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/10/iOS/iOS_UIButton切换selected状态标题闪烁问题/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/05/17/iOS/iOS_UIAlertController选项字体修改/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="203Monitor">
@@ -1161,8 +631,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/03/10/iOS/iOS_UIButton切换selected状态标题闪烁问题/" itemprop="url">
-                  iOS_UIButton切换selected状态标题闪烁问题
+                <a class="post-title-link" href="/2016/05/17/iOS/iOS_UIAlertController选项字体修改/" itemprop="url">
+                  UIAlertController选项字体修改
                 </a>
               
             
@@ -1178,8 +648,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-10T10:16:16+08:00">
-                2017-03-10
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-05-17T00:00:00+08:00">
+                2016-05-17
               </time>
             
 
@@ -1238,7 +708,7 @@
       
         
           
-            <h6 id="u5728_u4F7F_u7528UIButton_u65F6_u4F1A_u9047_u5230_u5207_u6362selected_u72B6_u6001_u7136_u540E_u66F4_u6362_u6807_u9898_uFF0C_u8FD9_u65F6_u5019_u6807_u9898_u4F1A_u95EA_uFF0C_u56E0_u6B64_u53EA_u4FEE_u6539normal_u72B6_u6001_u7684_u6587_u5B57_u5C31_u597D_u4E86_uFF0C_u50CF_u8FD9_u6837"><a href="#u5728_u4F7F_u7528UIButton_u65F6_u4F1A_u9047_u5230_u5207_u6362selected_u72B6_u6001_u7136_u540E_u66F4_u6362_u6807_u9898_uFF0C_u8FD9_u65F6_u5019_u6807_u9898_u4F1A_u95EA_uFF0C_u56E0_u6B64_u53EA_u4FEE_u6539normal_u72B6_u6001_u7684_u6587_u5B57_u5C31_u597D_u4E86_uFF0C_u50CF_u8FD9_u6837" class="headerlink" title="在使用UIButton时会遇到切换selected状态然后更换标题，这时候标题会闪，因此只修改normal状态的文字就好了，像这样"></a>在使用UIButton时会遇到切换selected状态然后更换标题，这时候标题会闪，因此只修改normal状态的文字就好了，像这样</h6><figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="name">WS</span>(<span class="atom">weakSelf</span>);</span><br><span class="line">[<span class="atom">self</span>.<span class="atom">joinButton</span> <span class="atom">addAction</span>:^(<span class="name">UIButton</span> *<span class="atom">button</span>) &#123;</span><br><span class="line">    <span class="atom">weakSelf</span>.<span class="atom">callBack</span>(<span class="atom">weakSelf</span>.<span class="atom">data</span>,<span class="atom">weakSelf</span>.<span class="atom">joinButton</span>.<span class="atom">isSelected</span>);</span><br><span class="line">    [<span class="atom">weakSelf</span>.<span class="atom">joinButton</span> <span class="atom">setSelected</span>:!<span class="atom">weakSelf</span>.<span class="atom">joinButton</span>.<span class="atom">isSelected</span>];</span><br><span class="line">&#125;];</span><br><span class="line">[<span class="name">RACObserve</span>(<span class="atom">self</span>.<span class="atom">joinButton</span>, <span class="atom">selected</span>) <span class="atom">subscribeNext</span>:^(<span class="atom">id</span> <span class="atom">x</span>) &#123;</span><br><span class="line">    [<span class="atom">weakSelf</span>.<span class="atom">joinButton</span> <span class="atom">setTitleWithoutAnimate</span>:![<span class="atom">x</span> <span class="atom">boolValue</span>] ? @<span class="string">"加入"</span> : @<span class="string">"已加入"</span> <span class="atom">forState</span>:<span class="name">UIControlStateNormal</span>];</span><br><span class="line">    [<span class="atom">weakSelf</span>.<span class="atom">joinButton</span> <span class="atom">setBackgroundColor</span>:[<span class="atom">x</span> <span class="atom">boolValue</span>] ? <span class="atom">kSetColor_Hex</span>(@<span class="string">"C9C9C9"</span>) : <span class="atom">kColorBlue</span>];</span><br><span class="line">&#125;];</span><br></pre></td></tr></table></figure>
+            <figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">_addMateAlert = [UIAlertController <span class="string">alertControllerWithTitle:</span>@<span class="string">"快加入你的另一半吧"</span> <span class="string">message:</span>@<span class="string">"在此功能内，你的另一半可以提醒你去完成计划，在你计划完成到一定阶段时你还可以向他许愿，以资鼓励～"</span> <span class="string">preferredStyle:</span> UIAlertControllerStyleAlert];</span><br><span class="line">UIAlertAction *cancelAction = [UIAlertAction <span class="string">actionWithTitle:</span>@<span class="string">"以后提醒我"</span> <span class="string">style:</span>UIAlertActionStyleCancel <span class="string">handler:</span>^(UIAlertAction * _Nonnull action) &#123;</span><br><span class="line">    NSLog(@<span class="string">"以后提醒我～"</span>);</span><br><span class="line">&#125;];</span><br><span class="line">UIAlertAction *deleteAction = [UIAlertAction <span class="string">actionWithTitle:</span>@<span class="string">"邀请你的另一半"</span> <span class="string">style:</span>UIAlertActionStyleDestructive <span class="string">handler:</span>^(UIAlertAction * _Nonnull action) &#123;</span><br><span class="line">    NSLog(@<span class="string">"邀请你的另一半"</span>);</span><br><span class="line">&#125;];</span><br><span class="line"></span><br><span class="line">[cancelAction <span class="string">setValue:</span>[UIColor cyanColor] <span class="string">forKey:</span>@<span class="string">"titleTextColor"</span>];</span><br><span class="line">[deleteAction <span class="string">setValue:</span>kSetColor_Hex(@<span class="string">"ff134a"</span>) <span class="string">forKey:</span>@<span class="string">"titleTextColor"</span>];</span><br><span class="line">[deleteAction <span class="string">setValue:</span>[UIColor yellowColor] <span class="string">forKey:</span>@<span class="string">"titleTextColor"</span>];</span><br><span class="line"></span><br><span class="line">[_addMateAlert <span class="string">addAction:</span>cancelAction];</span><br><span class="line">[_addMateAlert <span class="string">addAction:</span>deleteAction];</span><br></pre></td></tr></table></figure>
 
           
         
@@ -1282,7 +752,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/07/一年战争/一年战争_高数:线数_1/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/05/16/iOS/iOS_9.3真机测试/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="203Monitor">
@@ -1304,8 +774,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/03/07/一年战争/一年战争_高数:线数_1/" itemprop="url">
-                  一年战争_高数/线数_1
+                <a class="post-title-link" href="/2016/05/16/iOS/iOS_9.3真机测试/" itemprop="url">
+                  9.3真机测试
                 </a>
               
             
@@ -1321,8 +791,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-07T14:08:16+08:00">
-                2017-03-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-05-16T00:00:00+08:00">
+                2016-05-16
               </time>
             
 
@@ -1344,8 +814,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/一年战争/" itemprop="url" rel="index">
-                    <span itemprop="name">一年战争</span>
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
                   </a>
                 </span>
 
@@ -1381,7 +851,9 @@
       
         
           
-            <p>######</p>
+            <p>不更新Xcode就得费点脑子…</p>
+<p>链接:<a href="http://pan.baidu.com/s/1pK8yOFD" target="_blank" rel="external">百度云</a> 密码:i82x</p>
+<p>加油吧，同志们…</p>
 
           
         
@@ -1425,7 +897,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/07/一年战争/一年战争_php_1/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/03/03/技术/技术_curl访问接口/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="203Monitor">
@@ -1447,8 +919,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/03/07/一年战争/一年战争_php_1/" itemprop="url">
-                  一年战争_php_1
+                <a class="post-title-link" href="/2016/03/03/技术/技术_curl访问接口/" itemprop="url">
+                  curl访问接口
                 </a>
               
             
@@ -1464,8 +936,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-07T14:08:16+08:00">
-                2017-03-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-03-03T00:00:00+08:00">
+                2016-03-03
               </time>
             
 
@@ -1487,8 +959,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/一年战争/" itemprop="url" rel="index">
-                    <span itemprop="name">一年战争</span>
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
                   </a>
                 </span>
 
@@ -1524,7 +996,8 @@
       
         
           
-            <p>######</p>
+            <p>今天给自己的app写接口，写了接口就得调试，可是真的很不想为了测个接口把xcode打开，于是去找了一些软件，发现还真有许多很好的接口测试软件，可以发送各种请求，例如Paw等等。<br>但是问题来了，这些软件是付费的，只能自己去找一些破解版，不过破解版自己又不放心，于是又想起来一个东西－－－curl。<br>以前也没接触过这货，只是上次在安装php的时候使用过一次curl命令。这次调试接口事件终于让我有机会接触到了这货。具体的东西自行Google吧，太多了，我也不招人烦在这再说一次，直接上代码吧。<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -X GET -H <span class="string">"header"</span> -<span class="tag">i</span> <span class="string">"interface"</span></span><br></pre></td></tr></table></figure></p>
+<p>简单明了吧，加油啊，骚年们！！！</p>
 
           
         
@@ -1568,7 +1041,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/07/一年战争/一年战争_黑科技_1/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/02/23/iOS/iOS_不走脑产生的Linker_Error/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="203Monitor">
@@ -1590,8 +1063,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/03/07/一年战争/一年战争_黑科技_1/" itemprop="url">
-                  一年战争_黑科技_1
+                <a class="post-title-link" href="/2016/02/23/iOS/iOS_不走脑产生的Linker_Error/" itemprop="url">
+                  不走脑产生的Linker_Error
                 </a>
               
             
@@ -1607,8 +1080,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-07T14:08:16+08:00">
-                2017-03-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-02-23T00:00:00+08:00">
+                2016-02-23
               </time>
             
 
@@ -1630,8 +1103,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/一年战争/" itemprop="url" rel="index">
-                    <span itemprop="name">一年战争</span>
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
                   </a>
                 </span>
 
@@ -1667,7 +1140,608 @@
       
         
           
-            <p>######</p>
+            <p>昨晚被一个问题搞得心神不宁，眼见着就要成功的代码突然出来了个Linker Error，脑瓜子都大了。仗着自己曾经解决过一些Linker Error，开始一行一行的读错误信息，不过跟我之前遇到的丝毫不一样啊，为了不影响今天的工作，带着疑问只好先睡觉了。<br>早上又浏览了一遍stackoverflow，终于找到了一篇文章－－链接。看完之后,问题解决了，不过我也狠狠抽了自己一个大嘴巴。TMD，import文件的时候竟然引用了.m文件，也是醉了…<br>写代码要小心啊！！！小心驶得万年船！！！ 人间正道是沧桑啊！！！</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/02/18/iOS/iOS_使用自定义字体/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="203Monitor">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="203Monitor">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/02/18/iOS/iOS_使用自定义字体/" itemprop="url">
+                  使用自定义字体
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-02-18T00:00:00+08:00">
+                2016-02-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ul>
+<li>下载字体资源文件（.ttf或.otf格式的文件）</li>
+<li>添加对应的字体(.ttf或.otf格式的文件)到工程的resource</li>
+<li>在info.plist中添加一项 Fonts provided by application (item0对应的value为simkai.ttf，添加多个字体依次添加就可以了)<br><img src="http://7xqedu.com1.z0.glb.clouddn.com/YmxvZ18%3DMTYwMjE4MDE%3D.png_s" alt=""></li>
+<li>在代码中使用自定义字体</li>
+</ul>
+<p>使用示例如下：<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">UITextView</span> *msg = [[<span class="built_in">UITextView</span> alloc] init];</span><br><span class="line">msg<span class="variable">.font</span> = [<span class="built_in">UIFont</span> fontWithName:<span class="string">@"MicrosoftYaHei"</span> size:<span class="number">18.0</span>f];<span class="comment">//MicrosoftYaHei为字体的名称，此处为微软雅黑字体</span></span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/02/18/技术/技术_小脚本解决大问题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="203Monitor">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="203Monitor">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/02/18/技术/技术_小脚本解决大问题/" itemprop="url">
+                  小脚本解决大问题
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-02-18T00:00:00+08:00">
+                2016-02-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>就在写上一篇博客的时候，由于我的这个模版不是很完善，所以上传到服务器之后还需要自己处理一些事，最近心情不好，一下子就犯懒了，突然想到了脚本这个东西，我一下精神起来，捅咕了一会总算是好用了，上传到服务器，运行一个脚本，就全都搞定了。后来更懒了，直接把本地博客生成也写成了脚本，灰常棒…<br>下面说一下这玩意咋写。<br>1.打开终端,并使用vim新建文件todo.sh<br><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim todo.sh <span class="comment">(i)</span></span><br></pre></td></tr></table></figure></p>
+<p>2.输入以下代码<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#! /bin/bash</span></span><br><span class="line">mkdir newFolder</span><br></pre></td></tr></table></figure></p>
+<p>3.<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod <span class="number">777</span> todo.sh</span><br></pre></td></tr></table></figure></p>
+<p>4.<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./todo.<span class="keyword">sh</span></span><br></pre></td></tr></table></figure></p>
+<p>5.ok</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/02/08/技术/技术_终端彩色显示/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="203Monitor">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="203Monitor">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/02/08/技术/技术_终端彩色显示/" itemprop="url">
+                  终端彩色显示
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-02-08T00:00:00+08:00">
+                2016-02-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>修改.bash_profile文件<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="id">#enables</span> colorin the terminal bash shell export</span><br><span class="line"><span class="id">#sets</span> up thecolor scheme <span class="keyword">for</span> list export</span><br><span class="line"><span class="id">#sets</span> up theprompt <span class="attribute">color</span> (currently <span class="tag">a</span> green similar to linux terminal)</span><br><span class="line"><span class="id">#enables</span> colorfor iTerm</span><br><span class="line"></span><br><span class="line">export CLICOLOR=<span class="number">1</span></span><br><span class="line">export LSCOLORS=gxfxcxdxbxegedabagacad</span><br><span class="line">export PS1=<span class="string">'\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;36m\]\w\[\033[00m\]\$ '</span></span><br><span class="line">export TERM=xterm-<span class="attribute">color</span></span><br></pre></td></tr></table></figure></p>
+<p>alias 自定义命令 = 原命令<br>unalias 自定义命令</p>
+<p>source xxx和. xxx是在当前shell环境中执行xxx文件中的内容，而sh xxx或./xxx则开启子进程（子shell）执行，故要使.bash_profile中的修改立即生效，只能使用source .bash_profile 和. .bash_profile</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/01/27/iOS/iOS_AFNetworking_3.0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="203Monitor">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="203Monitor">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/01/27/iOS/iOS_AFNetworking_3.0/" itemprop="url">
+                  AFNetworking 3.0
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-01-27T00:00:00+08:00">
+                2016-01-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>AFNetworking是一款在OS X和iOS下都令人喜爱的网络库。为了迎合iOS新版本的升级, AFNetworking在3.0版本中删除了基于 NSURLConnection API的所有支持。如果你的项目以前使用过这些API，建议您立即升级到基于 NSURLSession 的API的AFNetworking的版本。本指南将引导您完成这个过程。<br>本指南是为了引导使用AFNetworking 2.x升级到最新的版本API，以达到过渡的目的，并且解释了新增和更改的设计结构。<br>新设备要求: iOS 7, Mac OS X 10.9, watchOS 2, tvOS 9, &amp; Xcode 7<br>AFNetworking 3.0正式支持的iOS 7， Mac OS X的10.9， watchOS 2 ， tvOS 9 和Xcode 7。如果你想使用AFNetworking在针对较旧版本的SDK项目，请检查README的兼容性信息。#### NSURLConnection的API已废弃<br>AFNetworking 1.0建立在NSURLConnection的基础API之上 ，AFNetworking 2.0开始使用NSURLConnection的基础API ，以及较新基于NSURLSession的API的选项。 AFNetworking 3.0现已完全基于NSURLSession的API，这降低了维护的负担，同时支持苹果增强关于NSURLSession提供的任何额外功能。由于Xcode 7中，NSURLConnection的API已经正式被苹果弃用。虽然该API将继续运行，但将没有新功能将被添加，并且苹果已经通知所有基于网络的功能，以充分使NSURLSession向前发展。<br>AFNetworking 2.X将继续获得关键的隐患和安全补丁，但没有新的功能将被添加。Alamofire(Swift下的网络请求)软件基金会建议，所有的项目迁移到基于NSURLSession的API。<br>弃用的类<br>下面的类已从AFNetworking 3.0中废弃：</p>
+<pre><code>AFURLConnectionOperation
+AFHTTPRequestOperation
+AFHTTPRequestOperationManager
+</code></pre><p>修改的类<br>下面的类包含基于NSURLConnection的API的内部实现。他们已经被使用NSURLSession重构:</p>
+<pre><code>UIImageView+AFNetworking
+UIWebView+AFNetworking
+UIButton+AFNetworking
+</code></pre><p>迁移<br>AFHTTPRequestOperationManager 核心代码<br>如果你以前使用 AFHTTPRequestOperationManager ， 你将需要迁移去使用 AFHTTPSessionManager。 以下的类在两者过渡间并没有变化：</p>
+<pre><code>securityPolicy
+requestSerializer
+responseSerializer
+</code></pre><p>接下来举一个关于AFHTTPSessionManager的简单例子。注意HTTP网络请求返回的不再是AFHTTPRequestOperation, 修改成为了NSURLSessionTask，并且成功和失败的Block块中的参数也变更为了NSURLSessionTask，而不再是AFHTTPRequestOperation。<br>AFNetworking 2.x<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];</span><br><span class="line">[manager GET:<span class="string">@"请求的url"</span> parameters:<span class="literal">nil</span> success:^(AFHTTPRequestOperation *operation, <span class="keyword">id</span> responseObject) &#123;</span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"成功"</span>);</span><br><span class="line">&#125; failure:^(AFHTTPRequestOperation *operation, <span class="built_in">NSError</span>*error) &#123;</span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"失败"</span>);</span><br><span class="line">&#125;];</span><br></pre></td></tr></table></figure></p>
+<p>AFNetworking 3.0<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">AFHTTPSessionManager *session = [AFHTTPSessionManager manager];</span><br><span class="line">[session GET:<span class="string">@"请求的url"</span> parameters:<span class="literal">nil</span> success:^(<span class="built_in">NSURLSessionDataTask</span> *task, <span class="keyword">id</span> responseObject) &#123;</span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"成功"</span>);</span><br><span class="line">&#125; failure:^(<span class="built_in">NSURLSessionDataTask</span> *task, <span class="built_in">NSError</span> *error) &#123;</span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"失败"</span>);        </span><br><span class="line">&#125;];</span><br></pre></td></tr></table></figure></p>
+<p>AFHTTPRequestOperation 核心代码<br>与NSURLConnection对象不同，每个共享应用范围的设置如会话管理、缓存策略、Cookie存储以及URL协议等，这些NSURLSession对象都可以单独进行配置。使用特定的配置来初始化会话，它可以发送任务来获取数据，并上传或下载文件。<br>在AFNetworking 2.0中，使用AFHTTPRequestOperation，有可能创建一个没有额外开销的独立的网络请求来获取数据。NSURLSession则需要更多的开销，为了获得所要请求的数据。<br>接下来，将要通过AFHTTPSessionManager创建一个对象，并创建一个任务和启动它。<br>AFNetworking 2.x<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSURL</span> *URL = [<span class="built_in">NSURL</span> URLWithString:<span class="string">@""</span>];</span><br><span class="line"><span class="built_in">NSURLRequest</span> *request = [<span class="built_in">NSURLRequest</span> requestWithURL:URL];</span><br><span class="line">AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];</span><br><span class="line">op<span class="variable">.responseSerializer</span> = [AFJSONResponseSerializer serializer];</span><br><span class="line">[op setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, <span class="keyword">id</span> responseObject) &#123;</span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"JSON: %@"</span>, responseObject);</span><br><span class="line">&#125; failure:^(AFHTTPRequestOperation *operation, <span class="built_in">NSError</span> *error) &#123;</span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"Error: %@"</span>, error);</span><br><span class="line">&#125;];</span><br><span class="line">[[<span class="built_in">NSOperationQueue</span> mainQueue] addOperation:op];</span><br></pre></td></tr></table></figure></p>
+<p>AFNetworking 3.0<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSURL</span> *URL = [<span class="built_in">NSURL</span> URLWithString:<span class="string">@""</span>];</span><br><span class="line">AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];</span><br><span class="line">[manager GET:URL<span class="variable">.absoluteString</span> parameters:<span class="literal">nil</span> success:^(<span class="built_in">NSURLSessionTask</span> *task, <span class="keyword">id</span> responseObject) &#123;</span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"JSON: %@"</span>, responseObject);</span><br><span class="line">&#125; failure:^(<span class="built_in">NSURLSessionTask</span> *operation, <span class="built_in">NSError</span> *error) &#123;</span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"Error: %@"</span>, error);</span><br><span class="line">&#125;];</span><br></pre></td></tr></table></figure></p>
+<p>UIKit的迁移<br>图片下载已经被重构，以遵循AlamofireImage架构与新的AFImageDownloader类。这个类的图片下载职责的代理人是UIButton与UIImageView的类目，并且提供了一些方法，在必要时可以自定义。类别中，下载远程图片的实际方法没有改变。<br>UIWebView的类目被重构为使用AFHTTPSessionManager作为其网络请求。<br>UIAlertView的类目被废弃<br>从AFNetworking 3.0后UIAlertView的类目因过时而被废弃。并没有提供UIAlertController类目的计划，因为这是应用程序应处理的逻辑，而不是这个库。</p>
+<p><a href="https://github.com/AFNetworking/AFNetworking/wiki/AFNetworking-3.0-Migration-Guide#new-requirements-ios-7-mac-os-x-109-watchos-2-tvos-9--xcode-7" target="_blank" rel="external">原文链接</a></p>
 
           
         
@@ -1706,7 +1780,7 @@
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1751,7 +1825,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">59</span>
+                <span class="site-state-item-count">23</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1761,10 +1835,10 @@
             
             
             <div class="site-state-item site-state-categories">
-              <a href="/categories/index.html">
-                <span class="site-state-item-count">11</span>
+              
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">分类</span>
-              </a>
+              
             </div>
           
 
@@ -1772,10 +1846,10 @@
             
             
             <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">47</span>
+              
+                <span class="site-state-item-count">22</span>
                 <span class="site-state-item-name">标签</span>
-              </a>
+              
             </div>
           
 
