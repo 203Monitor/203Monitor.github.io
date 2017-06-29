@@ -1,57 +1,199 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-  <title>软连接与硬连接 | Yucapri</title>
-  <meta name="description" content="code made the world" />
-  <meta name="HandheldFriendly" content="True" />
-  <meta name="MobileOptimized" content="320" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
-  <link rel="stylesheet" type="text/css" href="/css/screen.css" />
-  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400" />
+    
 
-  <meta name="generator" content="Yucapri">
+    <title>
+      软连接与硬连接 | Yucapri 
+    </title>
 
-  
-  
-  
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="Yucapri">
+    
+    
 
-  
+    <meta name="description" content="1. 使用方式 ：ln [option] source_file dist_file-f 建立时，将同档案名删除;-i 删除前进行询问;ln -s abc cde 建立abc 的软连接;ln abc cde 建立abc的硬连接.
+2. 软链接与硬链接的区别（通俗）：硬链接可认为是一个文件拥有两个文件名;而软链接则是系统新建一个链接文件，此文件指向其所要指的文件
+3. 软链接与硬链接的区别（讲解）：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="软连接与硬连接 | Yucapri">
+<meta property="og:url" content="http://yoursite.com/2016/01/22/Linux/Linux_软连接与硬连接/index.html">
+<meta property="og:site_name" content="Yucapri">
+<meta property="og:description" content="1. 使用方式 ：ln [option] source_file dist_file-f 建立时，将同档案名删除;-i 删除前进行询问;ln -s abc cde 建立abc 的软连接;ln abc cde 建立abc的硬连接.
+2. 软链接与硬链接的区别（通俗）：硬链接可认为是一个文件拥有两个文件名;而软链接则是系统新建一个链接文件，此文件指向其所要指的文件
+3. 软链接与硬链接的区别（讲解）：">
+<meta property="og:updated_time" content="2017-06-29T06:22:09.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="软连接与硬连接 | Yucapri">
+<meta name="twitter:description" content="1. 使用方式 ：ln [option] source_file dist_file-f 建立时，将同档案名删除;-i 删除前进行询问;ln -s abc cde 建立abc 的软连接;ln abc cde 建立abc的硬连接.
+2. 软链接与硬链接的区别（通俗）：硬链接可认为是一个文件拥有两个文件名;而软链接则是系统新建一个链接文件，此文件指向其所要指的文件
+3. 软链接与硬链接的区别（讲解）：">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css" type="text/css">
+    <link rel="stylesheet" href="/css/highlight.css" type="text/css">
+    <link rel="stylesheet" href="/css/archive.css" type="text/css">
+    <link rel="stylesheet" href="/css/china-social-icon.css" type="text/css">
+
 </head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
 
 
-<body class="post-template">
+  <div class="panel-main">
 
-  <header class="site-head"  style="background-image: url(http://7xs2qm.com1.z0.glb.clouddn.com/03013.png)" >
-    <div class="vertical">
-        <div class="site-head-content inner">
-             <a class="blog-logo" href="/"><img src="http://7xqedu.com1.z0.glb.clouddn.com/avator.png" alt="Blog Logo"/></a> 
-            <h1 class="blog-title">Yucapri</h1>
-            <h2 class="blog-description">code made the world</h2>
-        </div>
-    </div>
-</header>
   
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
 
-<main class="content" role="main">
-  <article class="post">
-    <span class="post-meta">
-      <time datetime="2016-01-21T16:00:00.000Z" itemprop="datePublished">
-          2016-01-22
-      </time>
+        
+        <a href="/" title="link to homepage for Yucapri"><img src="/avatar.jpeg" width="80" alt="Yucapri logo" class="panel-cover__logo logo" /></a>
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">Yucapri</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+        <p class="panel-cover__description">
+          code made the world
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#" title="" class="">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
     
-    
-    | 
-    <a href='/tags/软连接与硬连接/'>软连接与硬连接</a>
-    
-    
-</span>
     <h1 class="post-title">软连接与硬连接</h1>
-    <section class="post-content">
-      <h2 id="1-__u4F7F_u7528_u65B9_u5F0F__uFF1Aln__5Boption_5D_source_file_dist_file"><a href="#1-__u4F7F_u7528_u65B9_u5F0F__uFF1Aln__5Boption_5D_source_file_dist_file" class="headerlink" title="1. 使用方式 ：ln [option] source_file dist_file"></a>1. 使用方式 ：<code>ln [option] source_file dist_file</code></h2><p><code>-f</code> 建立时，将同档案名删除;<br><code>-i</code> 删除前进行询问;<br><code>ln -s abc cde</code> 建立abc 的软连接;<br><code>ln abc cde</code> 建立abc的硬连接.</p>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2016-01-22" class="post-meta__date date">2016-01-22</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+            <font class="categories">
+            &#8226; 分类:
+            <a class="categories-link" href="/categories/Linux/">Linux</a>
+            </font>
+          
+
+          
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/软连接与硬连接/">软连接与硬连接</a>
+            </font>
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <h2 id="1-__u4F7F_u7528_u65B9_u5F0F__uFF1Aln__5Boption_5D_source_file_dist_file"><a href="#1-__u4F7F_u7528_u65B9_u5F0F__uFF1Aln__5Boption_5D_source_file_dist_file" class="headerlink" title="1. 使用方式 ：ln [option] source_file dist_file"></a>1. 使用方式 ：<code>ln [option] source_file dist_file</code></h2><p><code>-f</code> 建立时，将同档案名删除;<br><code>-i</code> 删除前进行询问;<br><code>ln -s abc cde</code> 建立abc 的软连接;<br><code>ln abc cde</code> 建立abc的硬连接.</p>
 <h2 id="2-__u8F6F_u94FE_u63A5_u4E0E_u786C_u94FE_u63A5_u7684_u533A_u522B_uFF08_u901A_u4FD7_uFF09_uFF1A"><a href="#2-__u8F6F_u94FE_u63A5_u4E0E_u786C_u94FE_u63A5_u7684_u533A_u522B_uFF08_u901A_u4FD7_uFF09_uFF1A" class="headerlink" title="2. 软链接与硬链接的区别（通俗）："></a>2. 软链接与硬链接的区别（通俗）：</h2><p>硬链接可认为是一个文件拥有两个文件名;而软链接则是<br>系统新建一个链接文件，此文件指向其所要指的文件</p>
 <h2 id="3-__u8F6F_u94FE_u63A5_u4E0E_u786C_u94FE_u63A5_u7684_u533A_u522B_uFF08_u8BB2_u89E3_uFF09_uFF1A"><a href="#3-__u8F6F_u94FE_u63A5_u4E0E_u786C_u94FE_u63A5_u7684_u533A_u522B_uFF08_u8BB2_u89E3_uFF09_uFF1A" class="headerlink" title="3. 软链接与硬链接的区别（讲解）："></a>3. 软链接与硬链接的区别（讲解）：</h2><p>Linux 软连接与硬连接</p>
 <p>对于一个文件来说，有唯一的索引接点与之对应，而对于一个索引接点号，却可以有多个文件名与之对应。因此，在磁盘上的同一个文件可以通过不同的路径去访问该文件。注意在Linux下是一切皆文件的啊，文件夹、新加的硬盘 …都可以看着文件来处理的啊。<br>连接有软连接和硬连接(hard link)之分的，软连接(symbolic link)又叫符号连接。符号连接相当于Windows下的快捷方式。<br>不可以对文件夹建立硬连接的，我们通常用的还是软连接比较多。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">eg:</span><br><span class="line">ln <span class="operator">-s</span> <span class="built_in">source</span> dist        <span class="comment"># 建立软连接</span></span><br><span class="line">ln <span class="built_in">source</span> dist            <span class="comment"># 建立硬连接</span></span><br></pre></td></tr></table></figure></p>
@@ -63,68 +205,63 @@
 <p>I节点包含的信息 1.文件类型 2.文件属主关系 3.文件的访问权限 4.文件的时间截.<br>最后 删除符号链接，有创建就有删除<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">rm</span> -rf symbolic_name 注意不是<span class="keyword">rm</span> -rf symbolic_name/</span><br></pre></td></tr></table></figure></p>
 <p><a href="http://blog.csdn.net/russle/article/details/4482784" target="_blank" rel="external">原文链接</a></p>
 
-    </section>
-    <footer class="post-footer">
-      <section class="author">
-    <h4>Yucapri</h4>
-    <p>code made the world</p>
+  </section>
+
+  <section class="post-comments">
+
+    <!-- 将评论系统（例如Disqus、多说、友言、畅言等）提供的代码片段粘贴在这里 -->
+    
 </section>
-      <section class="share">
-    <h4>Share this post</h4>
-    <a class="icon-twitter" href="http://twitter.com/share?url=http://yoursite.com/2016/01/22/Linux/Linux_软连接与硬连接/"
-       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-        <span class="hidden">Twitter</span>
-    </a>
-    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2016/01/22/Linux/Linux_软连接与硬连接/"
-       onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-        <span class="hidden">Facebook</span>
-    </a>
-    <a class="icon-google-plus" href="https://plus.google.com/share?url=http://yoursite.com/2016/01/22/Linux/Linux_软连接与硬连接/"
-       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-        <span class="hidden">Google+</span>
-    </a>
-</section>
-    </footer>
-  </article>
-  <nav class="pagination" role="pagination">
-    
-    <a class="newer-posts" href="/2016/01/22/技术/技术_vim高级用法/">
-        ← vim高级用法
-    </a>
-    
-    <span class="page-number">•</span>
-    
-    <a class="older-posts" href="/2016/01/22/Mac/Mac_清空废纸篓/">
-        清空废纸篓 →
-    </a>
-    
-</nav>
-  <div id="comment" class="comments-area">
-    <h1 class="title"><a href="#disqus_comments" name="disqus_comments">Comments</a></h1>
-
-    
-</div>
-</main>
 
 
-  
-<footer class="site-footer">
-  
-  <div class="inner">
-     <section class="copyright">All content copyright <a href="/">Yucapri</a> &copy; 2014 &bull; All rights reserved.</section>
-     <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://zespia.tw/hexo/">Hexo</a></section>
-  </div>
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
 </footer>
+        </div>
+    </div>
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
 
-<script type="text/javascript" src="/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="/js/index.js"></script>
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
 
 
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
 
 
-
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
 
 </body>
 </html>
