@@ -1,0 +1,746 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="cocoapods," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="CocoaPods安装与使用摘要 本文将介绍CocoaPods从安装到使用过程。CocoaPods是一个负责管理iOS项目中第三方开源代码的工具。使用CocoaPods可以为我们节省设置和更新第三方开源库的时间。 下面将分为两部分来讲述如何安装和使用CocoaPods。一、安装CocoaPods先使用下面命令升级Ruby版本：gem update --system
+
+sudo gem update">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS_Cocoapods安装与使用">
+<meta property="og:url" content="http://yoursite.com/2016/01/25/iOS/iOS_Cocoapods安装与使用/index.html">
+<meta property="og:site_name" content="203Monitor">
+<meta property="og:description" content="CocoaPods安装与使用摘要 本文将介绍CocoaPods从安装到使用过程。CocoaPods是一个负责管理iOS项目中第三方开源代码的工具。使用CocoaPods可以为我们节省设置和更新第三方开源库的时间。 下面将分为两部分来讲述如何安装和使用CocoaPods。一、安装CocoaPods先使用下面命令升级Ruby版本：gem update --system
+
+sudo gem update">
+<meta property="og:image" content="http://7xqedu.com1.z0.glb.clouddn.com/YmxvZ18%3DMTYwMTI1MDE%3D.png_s">
+<meta property="og:image" content="http://7xqedu.com1.z0.glb.clouddn.com/YmxvZ18%3DMTYwMTI1MDI%3D.png_s">
+<meta property="og:image" content="http://7xqedu.com1.z0.glb.clouddn.com/YmxvZ18%3DMTYwMTI1MDM%3D.png_s">
+<meta property="og:updated_time" content="2017-01-25T10:57:16.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="iOS_Cocoapods安装与使用">
+<meta name="twitter:description" content="CocoaPods安装与使用摘要 本文将介绍CocoaPods从安装到使用过程。CocoaPods是一个负责管理iOS项目中第三方开源代码的工具。使用CocoaPods可以为我们节省设置和更新第三方开源库的时间。 下面将分为两部分来讲述如何安装和使用CocoaPods。一、安装CocoaPods先使用下面命令升级Ruby版本：gem update --system
+
+sudo gem update">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/01/25/iOS/iOS_Cocoapods安装与使用/"/>
+
+
+
+
+
+  <title> iOS_Cocoapods安装与使用 | 203Monitor </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">203Monitor</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">code made the world</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/01/25/iOS/iOS_Cocoapods安装与使用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="203Monitor">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="203Monitor">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                iOS_Cocoapods安装与使用
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-01-25T14:03:32+08:00">
+                2016-01-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h4 id="CocoaPods_u5B89_u88C5_u4E0E_u4F7F_u7528"><a href="#CocoaPods_u5B89_u88C5_u4E0E_u4F7F_u7528" class="headerlink" title="CocoaPods安装与使用"></a>CocoaPods安装与使用</h4><h4 id="u6458_u8981__u672C_u6587_u5C06_u4ECB_u7ECDCocoaPods_u4ECE_u5B89_u88C5_u5230_u4F7F_u7528_u8FC7_u7A0B_u3002"><a href="#u6458_u8981__u672C_u6587_u5C06_u4ECB_u7ECDCocoaPods_u4ECE_u5B89_u88C5_u5230_u4F7F_u7528_u8FC7_u7A0B_u3002" class="headerlink" title="摘要 本文将介绍CocoaPods从安装到使用过程。"></a>摘要 本文将介绍CocoaPods从安装到使用过程。</h4><h4 id="CocoaPods_u662F_u4E00_u4E2A_u8D1F_u8D23_u7BA1_u7406iOS_u9879_u76EE_u4E2D_u7B2C_u4E09_u65B9_u5F00_u6E90_u4EE3_u7801_u7684_u5DE5_u5177_u3002_u4F7F_u7528CocoaPods_u53EF_u4EE5_u4E3A_u6211_u4EEC_u8282_u7701_u8BBE_u7F6E_u548C_u66F4_u65B0_u7B2C_u4E09_u65B9_u5F00_u6E90_u5E93_u7684_u65F6_u95F4_u3002__u4E0B_u9762_u5C06_u5206_u4E3A_u4E24_u90E8_u5206_u6765_u8BB2_u8FF0_u5982_u4F55_u5B89_u88C5_u548C_u4F7F_u7528CocoaPods_u3002"><a href="#CocoaPods_u662F_u4E00_u4E2A_u8D1F_u8D23_u7BA1_u7406iOS_u9879_u76EE_u4E2D_u7B2C_u4E09_u65B9_u5F00_u6E90_u4EE3_u7801_u7684_u5DE5_u5177_u3002_u4F7F_u7528CocoaPods_u53EF_u4EE5_u4E3A_u6211_u4EEC_u8282_u7701_u8BBE_u7F6E_u548C_u66F4_u65B0_u7B2C_u4E09_u65B9_u5F00_u6E90_u5E93_u7684_u65F6_u95F4_u3002__u4E0B_u9762_u5C06_u5206_u4E3A_u4E24_u90E8_u5206_u6765_u8BB2_u8FF0_u5982_u4F55_u5B89_u88C5_u548C_u4F7F_u7528CocoaPods_u3002" class="headerlink" title="CocoaPods是一个负责管理iOS项目中第三方开源代码的工具。使用CocoaPods可以为我们节省设置和更新第三方开源库的时间。 下面将分为两部分来讲述如何安装和使用CocoaPods。"></a>CocoaPods是一个负责管理iOS项目中第三方开源代码的工具。使用CocoaPods可以为我们节省设置和更新第三方开源库的时间。 下面将分为两部分来讲述如何安装和使用CocoaPods。</h4><h4 id="u4E00_u3001_u5B89_u88C5CocoaPods"><a href="#u4E00_u3001_u5B89_u88C5CocoaPods" class="headerlink" title="一、安装CocoaPods"></a>一、安装CocoaPods</h4><h6 id="u5148_u4F7F_u7528_u4E0B_u9762_u547D_u4EE4_u5347_u7EA7Ruby_u7248_u672C_uFF1A"><a href="#u5148_u4F7F_u7528_u4E0B_u9762_u547D_u4EE4_u5347_u7EA7Ruby_u7248_u672C_uFF1A" class="headerlink" title="先使用下面命令升级Ruby版本："></a>先使用下面命令升级Ruby版本：</h6><pre><code>gem update --system
+
+sudo gem update -n /usr/local/bin --system(更新到新 Mac系统后pod的安装路径变为这个)
+
+国内ruby源更新为 http://gems.ruby-china.org
+更新命令
+gem source --remove https://gems.ruby-china.org
+gem source -a http://gems.ruby-china.org
+</code></pre><h6 id="u7B49_u5F85_u66F4_u65B0_u5B8C_u6210_u540E_uFF0C_u7136_u540E_u901A_u8FC7gem_u547D_u4EE4_u6765_u4E0B_u8F7D_u5B89_u88C5CocoaPods_uFF1A"><a href="#u7B49_u5F85_u66F4_u65B0_u5B8C_u6210_u540E_uFF0C_u7136_u540E_u901A_u8FC7gem_u547D_u4EE4_u6765_u4E0B_u8F7D_u5B89_u88C5CocoaPods_uFF1A" class="headerlink" title="等待更新完成后，然后通过gem命令来下载安装CocoaPods："></a>等待更新完成后，然后通过gem命令来下载安装CocoaPods：</h6><pre><code>gem install cocoapods
+
+sudo gem install -n /usr/local/bin cocoapods(更新到新 Mac系统后pod的安装路径变为这个)
+
+sudo gem install -n /usr/local/bin cocoapods --pre(安装最新测试版)
+</code></pre><h6 id="u5B89_u88C5_u5B8C_u6BD5_u540E_u8C03_u7528_u4E0B_u9762_u547D_u4EE4_uFF0C_u8FDB_u884CCocoaPods_u8BBE_u7F6E_uFF1A"><a href="#u5B89_u88C5_u5B8C_u6BD5_u540E_u8C03_u7528_u4E0B_u9762_u547D_u4EE4_uFF0C_u8FDB_u884CCocoaPods_u8BBE_u7F6E_uFF1A" class="headerlink" title="安装完毕后调用下面命令，进行CocoaPods设置："></a>安装完毕后调用下面命令，进行CocoaPods设置：</h6><pre><code>pod setup
+</code></pre><h6 id="u6267_u884C_u5B8C_u6210_u4E0A_u8FF0_u547D_u4EE4_u540E_uFF0C_u8868_u793A_u5B89_u88C5_u6210_u529F_uFF01_u4E0B_u9762_u5C06_u8BB2_u8FF0_u5982_u4F55_u4F7F_u7528CocoaPods_u3002"><a href="#u6267_u884C_u5B8C_u6210_u4E0A_u8FF0_u547D_u4EE4_u540E_uFF0C_u8868_u793A_u5B89_u88C5_u6210_u529F_uFF01_u4E0B_u9762_u5C06_u8BB2_u8FF0_u5982_u4F55_u4F7F_u7528CocoaPods_u3002" class="headerlink" title="执行完成上述命令后，表示安装成功！下面将讲述如何使用CocoaPods。"></a>执行完成上述命令后，表示安装成功！下面将讲述如何使用CocoaPods。</h6><h4 id="u4E8C_u3001_u4F7F_u7528CocoaPods"><a href="#u4E8C_u3001_u4F7F_u7528CocoaPods" class="headerlink" title="二、使用CocoaPods"></a>二、使用CocoaPods</h4><h6 id="u6253_u5F00_u7EC8_u7AEF_uFF0C_u4F7F_u7528cd_u547D_u4EE4_u5B9A_u4F4D_u5230_u9700_u8981_u4F7F_u7528CocoaPods_u7684_u9879_u76EE_u6839_u8DEF_u5F84_u3002_u5982_uFF1A"><a href="#u6253_u5F00_u7EC8_u7AEF_uFF0C_u4F7F_u7528cd_u547D_u4EE4_u5B9A_u4F4D_u5230_u9700_u8981_u4F7F_u7528CocoaPods_u7684_u9879_u76EE_u6839_u8DEF_u5F84_u3002_u5982_uFF1A" class="headerlink" title="打开终端，使用cd命令定位到需要使用CocoaPods的项目根路径。如："></a>打开终端，使用cd命令定位到需要使用CocoaPods的项目根路径。如：</h6><pre><code>cd /Users/username/Documents/Projects/Demo
+</code></pre><h6 id="u5148_u8003_u8651_u9879_u76EE_u4E2D_u9700_u8981_u5F15_u7528_u54EA_u4E9B_u5E93_uFF0C_u7136_u540E_u5728_u901A_u8FC7search_u547D_u4EE4_u6765_u67E5_u627E_u5E93_u7684_u4FE1_u606F_uFF0C_u5982_u9700_u8981_u52A0_u5165JSONKit_uFF0C_u90A3_u53EF_u4EE5_u5982_u4E0B_u5199_u6CD5_uFF1A"><a href="#u5148_u8003_u8651_u9879_u76EE_u4E2D_u9700_u8981_u5F15_u7528_u54EA_u4E9B_u5E93_uFF0C_u7136_u540E_u5728_u901A_u8FC7search_u547D_u4EE4_u6765_u67E5_u627E_u5E93_u7684_u4FE1_u606F_uFF0C_u5982_u9700_u8981_u52A0_u5165JSONKit_uFF0C_u90A3_u53EF_u4EE5_u5982_u4E0B_u5199_u6CD5_uFF1A" class="headerlink" title="先考虑项目中需要引用哪些库，然后在通过search命令来查找库的信息，如需要加入JSONKit，那可以如下写法："></a>先考虑项目中需要引用哪些库，然后在通过search命令来查找库的信息，如需要加入JSONKit，那可以如下写法：</h6><pre><code>pod search JSONKit
+</code></pre><h6 id="u547D_u4EE4_u6267_u884C_u540E_u4F1A_u5F97_u5230_u5982_u4E0B_u7ED3_u679C_uFF1A"><a href="#u547D_u4EE4_u6267_u884C_u540E_u4F1A_u5F97_u5230_u5982_u4E0B_u7ED3_u679C_uFF1A" class="headerlink" title="命令执行后会得到如下结果："></a>命令执行后会得到如下结果：</h6><pre><code>-&gt; JSONKit (1.5pre)
+A Very High Performance Objective-C JSON Library.
+pod &apos;JSONKit&apos;, &apos;~&gt; 1.5pre&apos;
+- Homepage: https://github.com/johnezang/JSONKit
+- Source:   https://github.com/johnezang/JSONKit.git
+- Versions: 1.5pre, 1.4 [master repo]
+</code></pre><h6 id="u5176_u4E2D_u7684pod__u2018JSONKit_u2019_2C__u2018_7E_26gt_3B_1-5pre_u2019_u662F_u5F85_u4F1A_u8981_u5199_u5165_u5230Podfile_u4E2D_u7684_u4FE1_u606F_u3002_u5982_u679C_u5DF2_u7ECF_u77E5_u9053_u8FD9_u4E9B_u4FE1_u606F_uFF0C_u90A3_u53EF_u4EE5_u76F4_u63A5_u7701_u7565_u6B64_u6B65_u3002_u76F4_u63A5_u8FDB_u884C_u4E0B_u9762_u7684_u6B65_u9AA4_u3002"><a href="#u5176_u4E2D_u7684pod__u2018JSONKit_u2019_2C__u2018_7E_26gt_3B_1-5pre_u2019_u662F_u5F85_u4F1A_u8981_u5199_u5165_u5230Podfile_u4E2D_u7684_u4FE1_u606F_u3002_u5982_u679C_u5DF2_u7ECF_u77E5_u9053_u8FD9_u4E9B_u4FE1_u606F_uFF0C_u90A3_u53EF_u4EE5_u76F4_u63A5_u7701_u7565_u6B64_u6B65_u3002_u76F4_u63A5_u8FDB_u884C_u4E0B_u9762_u7684_u6B65_u9AA4_u3002" class="headerlink" title="其中的pod ‘JSONKit’, ‘~&gt; 1.5pre’是待会要写入到Podfile中的信息。如果已经知道这些信息，那可以直接省略此步。直接进行下面的步骤。"></a>其中的pod ‘JSONKit’, ‘~&gt; 1.5pre’是待会要写入到Podfile中的信息。如果已经知道这些信息，那可以直接省略此步。直接进行下面的步骤。</h6><h6 id="u5F97_u5230_u5FC5_u8981_u7684_u5E93_u4FE1_u606F_u540E_uFF0C_u73B0_u5728_u9700_u8981_u5728_u9879_u76EE_u4E2D_u5EFA_u7ACBPodfile_u6587_u4EF6_u3002_u901A_u8FC7_u4E0B_u9762_u7684_u547D_u4EE4_uFF1A"><a href="#u5F97_u5230_u5FC5_u8981_u7684_u5E93_u4FE1_u606F_u540E_uFF0C_u73B0_u5728_u9700_u8981_u5728_u9879_u76EE_u4E2D_u5EFA_u7ACBPodfile_u6587_u4EF6_u3002_u901A_u8FC7_u4E0B_u9762_u7684_u547D_u4EE4_uFF1A" class="headerlink" title="得到必要的库信息后，现在需要在项目中建立Podfile文件。通过下面的命令："></a>得到必要的库信息后，现在需要在项目中建立Podfile文件。通过下面的命令：</h6><pre><code>touch Podfile
+</code></pre><h6 id="u7136_u540E_u7F16_u8F91Podfile_u6587_u4EF6_uFF0C_u547D_u4EE4_u5982_u4E0B_uFF1A"><a href="#u7136_u540E_u7F16_u8F91Podfile_u6587_u4EF6_uFF0C_u547D_u4EE4_u5982_u4E0B_uFF1A" class="headerlink" title="然后编辑Podfile文件，命令如下："></a>然后编辑Podfile文件，命令如下：</h6><pre><code>open -e Podfile
+</code></pre><h6 id="u5728_u5F39_u51FA_u7684_u7F16_u8F91_u754C_u9762_u4E2D_u8F93_u5165_u4E0B_u9762_u5185_u5BB9_uFF1A"><a href="#u5728_u5F39_u51FA_u7684_u7F16_u8F91_u754C_u9762_u4E2D_u8F93_u5165_u4E0B_u9762_u5185_u5BB9_uFF1A" class="headerlink" title="在弹出的编辑界面中输入下面内容："></a>在弹出的编辑界面中输入下面内容：</h6><pre><code>platform :ios
+pod &apos;JSONKit&apos;, &apos;~&gt; 1.5pre&apos;
+</code></pre><h6 id="u7136_u540E_u8C03_u7528_u4E0B_u9762_u547D_u4EE4_u6765_u8FDB_u884C_u521D_u59CB_u5316_uFF1A"><a href="#u7136_u540E_u8C03_u7528_u4E0B_u9762_u547D_u4EE4_u6765_u8FDB_u884C_u521D_u59CB_u5316_uFF1A" class="headerlink" title="然后调用下面命令来进行初始化："></a>然后调用下面命令来进行初始化：</h6><pre><code>pod install
+</code></pre><h6 id="u8FD0_u884C_u5B8C_u6BD5_u540E_uFF0C_u539F_u672C_u7684_u9879_u76EE_u76EE_u5F55_u4F1A_u591A_u51FA_u4E00_u4E9B_u6587_u4EF6_u3002_u5982_u56FE_uFF1A"><a href="#u8FD0_u884C_u5B8C_u6BD5_u540E_uFF0C_u539F_u672C_u7684_u9879_u76EE_u76EE_u5F55_u4F1A_u591A_u51FA_u4E00_u4E9B_u6587_u4EF6_u3002_u5982_u56FE_uFF1A" class="headerlink" title="运行完毕后，原本的项目目录会多出一些文件。如图："></a>运行完毕后，原本的项目目录会多出一些文件。如图：</h6><div align="center"><br>    <img src="http://7xqedu.com1.z0.glb.clouddn.com/YmxvZ18%3DMTYwMTI1MDE%3D.png_s" width="700" height="400" alt="图片名称" align="center"><br></div><br>###### 多了*.xcworkspace  pod等文件。这是pod生成的项目管理文件，打开LibDemo.xcworkspace 项目文件，在Xcode里看到是这样的目录结构：<br><div align="center"><br>    <img src="http://7xqedu.com1.z0.glb.clouddn.com/YmxvZ18%3DMTYwMTI1MDI%3D.png_s" width="700" height="400" alt="图片名称" align="center"><br></div>
+
+<h6 id="u8FD9_u91CC_u8981_u6CE8_u610F_u7684_u4E00_u70B9_u662F_uFF0C_u5982_u679C_u4E0D_u8C03_u7528_u521B_u5EFAPodfile_u547D_u4EE4_u5C31_u76F4_u63A5_u8C03_u7528pod_install_u547D_u4EE4_u3002_u5C06_u4F1A_u63D0_u793A"><a href="#u8FD9_u91CC_u8981_u6CE8_u610F_u7684_u4E00_u70B9_u662F_uFF0C_u5982_u679C_u4E0D_u8C03_u7528_u521B_u5EFAPodfile_u547D_u4EE4_u5C31_u76F4_u63A5_u8C03_u7528pod_install_u547D_u4EE4_u3002_u5C06_u4F1A_u63D0_u793A" class="headerlink" title="这里要注意的一点是，如果不调用创建Podfile命令就直接调用pod install命令。将会提示"></a>这里要注意的一点是，如果不调用创建Podfile命令就直接调用pod install命令。将会提示</h6><figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[!] <span class="name">No</span> <span class="string">'Podfile'</span> <span class="atom">found</span> <span class="atom">in</span> <span class="atom">the</span> <span class="atom">current</span> <span class="atom">working</span> <span class="atom">directory</span>.</span><br></pre></td></tr></table></figure>
+<h6 id="u5982_u679CPodfile_u4E2D_u6DFB_u52A0_u4E86_u65B0_u5E93_uFF0C_u53EF_u4EE5_u4F7F_u7528_u4E0B_u9762_u547D_u4EE4_u8FDB_u884C_u66F4_u65B0_uFF1A"><a href="#u5982_u679CPodfile_u4E2D_u6DFB_u52A0_u4E86_u65B0_u5E93_uFF0C_u53EF_u4EE5_u4F7F_u7528_u4E0B_u9762_u547D_u4EE4_u8FDB_u884C_u66F4_u65B0_uFF1A" class="headerlink" title="如果Podfile中添加了新库，可以使用下面命令进行更新："></a>如果Podfile中添加了新库，可以使用下面命令进行更新：</h6><pre><code>pod update
+</code></pre><h6 id="u73B0_u5728_uFF0C_u4F60_u7684_u6240_u6709_u7B2C_u4E09_u65B9_u5E93_u90FD_u5DF2_u7ECF_u4E0B_u8F7D_u5B8C_u6210_u5E76_u4E14_u8BBE_u7F6E_u597D_u4E86_u7F16_u8BD1_u53C2_u6570_u548C_u4F9D_u8D56_uFF0C_u4F60_u53EA_u9700_u8981_u8BB0_u4F4F_u5982_u4E0B2_u70B9_u5373_u53EF_uFF1A"><a href="#u73B0_u5728_uFF0C_u4F60_u7684_u6240_u6709_u7B2C_u4E09_u65B9_u5E93_u90FD_u5DF2_u7ECF_u4E0B_u8F7D_u5B8C_u6210_u5E76_u4E14_u8BBE_u7F6E_u597D_u4E86_u7F16_u8BD1_u53C2_u6570_u548C_u4F9D_u8D56_uFF0C_u4F60_u53EA_u9700_u8981_u8BB0_u4F4F_u5982_u4E0B2_u70B9_u5373_u53EF_uFF1A" class="headerlink" title="现在，你的所有第三方库都已经下载完成并且设置好了编译参数和依赖，你只需要记住如下2点即可："></a>现在，你的所有第三方库都已经下载完成并且设置好了编译参数和依赖，你只需要记住如下2点即可：</h6><h6 id="1__u4F7F_u7528CocoaPods_u751F_u6210_u7684_-xcworkspace__u6587_u4EF6_u6765_u6253_u5F00_u5DE5_u7A0B_uFF0C_u800C_u4E0D_u662F_u4EE5_u524D_u7684_-xcodeproj__u6587_u4EF6_u3002"><a href="#1__u4F7F_u7528CocoaPods_u751F_u6210_u7684_-xcworkspace__u6587_u4EF6_u6765_u6253_u5F00_u5DE5_u7A0B_uFF0C_u800C_u4E0D_u662F_u4EE5_u524D_u7684_-xcodeproj__u6587_u4EF6_u3002" class="headerlink" title="1 使用CocoaPods生成的 .xcworkspace 文件来打开工程，而不是以前的 .xcodeproj 文件。"></a>1 使用CocoaPods生成的 .xcworkspace 文件来打开工程，而不是以前的 .xcodeproj 文件。</h6><h6 id="2__u6BCF_u6B21_u66F4_u6539_u4E86Podfile_u6587_u4EF6_uFF0C_u4F60_u9700_u8981_u91CD_u65B0_u6267_u884C_u4E00_u6B21pod_install_u6216_u8005pod_update_u547D_u4EE4__u3002"><a href="#2__u6BCF_u6B21_u66F4_u6539_u4E86Podfile_u6587_u4EF6_uFF0C_u4F60_u9700_u8981_u91CD_u65B0_u6267_u884C_u4E00_u6B21pod_install_u6216_u8005pod_update_u547D_u4EE4__u3002" class="headerlink" title="2 每次更改了Podfile文件，你需要重新执行一次pod install或者pod update命令 。"></a>2 每次更改了Podfile文件，你需要重新执行一次<code>pod install</code>或者<code>pod update</code>命令 。</h6><h6 id="cocoapods_u81F3_u6B64_u914D_u7F6E_u5B8C_u6BD5_uFF0C_u4F46_u662F_u4F60_u4F1A_u53D1_u73B0_u4F60_u5E76_u4E0D_u80FD_u5728_u9879_u76EE_u4E2D_u627E_u5230_u4F60_u5BFC_u5165_u7684_u5E93_uFF0C_u4F60_u9700_u8981_u5728Build_Settings-_26gt_3BSearch_Header_u7684_u6700_u540E_u4E00_u9879_u4E2D_u6DFB_u52A0_24_28PODS_ROOT_29_2C_u540E_u9762_u9009_u62E9recursive_u5C31_u53EF_u4EE5_u4E86_u3002"><a href="#cocoapods_u81F3_u6B64_u914D_u7F6E_u5B8C_u6BD5_uFF0C_u4F46_u662F_u4F60_u4F1A_u53D1_u73B0_u4F60_u5E76_u4E0D_u80FD_u5728_u9879_u76EE_u4E2D_u627E_u5230_u4F60_u5BFC_u5165_u7684_u5E93_uFF0C_u4F60_u9700_u8981_u5728Build_Settings-_26gt_3BSearch_Header_u7684_u6700_u540E_u4E00_u9879_u4E2D_u6DFB_u52A0_24_28PODS_ROOT_29_2C_u540E_u9762_u9009_u62E9recursive_u5C31_u53EF_u4EE5_u4E86_u3002" class="headerlink" title="cocoapods至此配置完毕，但是你会发现你并不能在项目中找到你导入的库，你需要在Build Settings-&gt;Search Header的最后一项中添加$(PODS_ROOT),后面选择recursive就可以了。"></a>cocoapods至此配置完毕，但是你会发现你并不能在项目中找到你导入的库，你需要在Build Settings-&gt;Search Header的最后一项中添加<code>$(PODS_ROOT)</code>,后面选择<code>recursive</code>就可以了。</h6><div align="center"><br>    <img src="http://7xqedu.com1.z0.glb.clouddn.com/YmxvZ18%3DMTYwMTI1MDM%3D.png_s" width="700" height="400" alt="图片名称" align="center"><br></div>
+
+<h3 id="u5982_u679Cpod_setup_u592A_u6162_uFF0C_u53EF_u4EE5_u76F4_u63A5"><a href="#u5982_u679Cpod_setup_u592A_u6162_uFF0C_u53EF_u4EE5_u76F4_u63A5" class="headerlink" title="如果pod setup太慢，可以直接"></a>如果pod setup太慢，可以直接</h3><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">clone</span> <span class="title">https</span>://github.com/CocoaPods/Specs.git</span><br></pre></td></tr></table></figure>
+<h6 id="clone_u6210_u529F_u4E4B_u540E_u5C06_u6587_u4EF6_u5939_u5916_u5C42_u6539_u540D_u4E3Amaster_uFF0C_u79FB_u52A8_u81F3_uFF5E/-cocoapods/repos/"><a href="#clone_u6210_u529F_u4E4B_u540E_u5C06_u6587_u4EF6_u5939_u5916_u5C42_u6539_u540D_u4E3Amaster_uFF0C_u79FB_u52A8_u81F3_uFF5E/-cocoapods/repos/" class="headerlink" title="clone成功之后将文件夹外层改名为master，移动至～/.cocoapods/repos/"></a>clone成功之后将文件夹外层改名为master，移动至～/.cocoapods/repos/</h6><h3 id="u5982_u679Cpod_search_u5931_u8D25_uFF0C_u53EF_u6267_u884C"><a href="#u5982_u679Cpod_search_u5931_u8D25_uFF0C_u53EF_u6267_u884C" class="headerlink" title="如果pod search失败，可执行"></a>如果pod search失败，可执行</h3><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm ~<span class="regexp">/Library/</span>Caches<span class="regexp">/CocoaPods/</span>search_index.json</span><br></pre></td></tr></table></figure>
+<h6 id="u7136_u540E_u518D_u5C1D_u8BD5pod_search"><a href="#u7136_u540E_u518D_u5C1D_u8BD5pod_search" class="headerlink" title="然后再尝试pod search"></a>然后再尝试pod search</h6>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/cocoapods/" rel="tag"># cocoapods</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/01/24/Mac/Mac_查看隐藏文件/" rel="next" title="Mac_查看隐藏文件">
+                <i class="fa fa-chevron-left"></i> Mac_查看隐藏文件
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/01/25/Mac/Mac_接入移动硬盘废纸篓会有删不掉的文件/" rel="prev" title="Mac_接入移动硬盘废纸篓会有删不掉的文件">
+                Mac_接入移动硬盘废纸篓会有删不掉的文件 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="203Monitor" />
+          <p class="site-author-name" itemprop="name">203Monitor</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">59</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">47</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#CocoaPods_u5B89_u88C5_u4E0E_u4F7F_u7528"><span class="nav-number">1.</span> <span class="nav-text">CocoaPods安装与使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u6458_u8981__u672C_u6587_u5C06_u4ECB_u7ECDCocoaPods_u4ECE_u5B89_u88C5_u5230_u4F7F_u7528_u8FC7_u7A0B_u3002"><span class="nav-number">2.</span> <span class="nav-text">摘要 本文将介绍CocoaPods从安装到使用过程。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CocoaPods_u662F_u4E00_u4E2A_u8D1F_u8D23_u7BA1_u7406iOS_u9879_u76EE_u4E2D_u7B2C_u4E09_u65B9_u5F00_u6E90_u4EE3_u7801_u7684_u5DE5_u5177_u3002_u4F7F_u7528CocoaPods_u53EF_u4EE5_u4E3A_u6211_u4EEC_u8282_u7701_u8BBE_u7F6E_u548C_u66F4_u65B0_u7B2C_u4E09_u65B9_u5F00_u6E90_u5E93_u7684_u65F6_u95F4_u3002__u4E0B_u9762_u5C06_u5206_u4E3A_u4E24_u90E8_u5206_u6765_u8BB2_u8FF0_u5982_u4F55_u5B89_u88C5_u548C_u4F7F_u7528CocoaPods_u3002"><span class="nav-number">3.</span> <span class="nav-text">CocoaPods是一个负责管理iOS项目中第三方开源代码的工具。使用CocoaPods可以为我们节省设置和更新第三方开源库的时间。 下面将分为两部分来讲述如何安装和使用CocoaPods。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u4E00_u3001_u5B89_u88C5CocoaPods"><span class="nav-number">4.</span> <span class="nav-text">一、安装CocoaPods</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#u5148_u4F7F_u7528_u4E0B_u9762_u547D_u4EE4_u5347_u7EA7Ruby_u7248_u672C_uFF1A"><span class="nav-number">4.0.1.</span> <span class="nav-text">先使用下面命令升级Ruby版本：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#u7B49_u5F85_u66F4_u65B0_u5B8C_u6210_u540E_uFF0C_u7136_u540E_u901A_u8FC7gem_u547D_u4EE4_u6765_u4E0B_u8F7D_u5B89_u88C5CocoaPods_uFF1A"><span class="nav-number">4.0.2.</span> <span class="nav-text">等待更新完成后，然后通过gem命令来下载安装CocoaPods：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#u5B89_u88C5_u5B8C_u6BD5_u540E_u8C03_u7528_u4E0B_u9762_u547D_u4EE4_uFF0C_u8FDB_u884CCocoaPods_u8BBE_u7F6E_uFF1A"><span class="nav-number">4.0.3.</span> <span class="nav-text">安装完毕后调用下面命令，进行CocoaPods设置：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#u6267_u884C_u5B8C_u6210_u4E0A_u8FF0_u547D_u4EE4_u540E_uFF0C_u8868_u793A_u5B89_u88C5_u6210_u529F_uFF01_u4E0B_u9762_u5C06_u8BB2_u8FF0_u5982_u4F55_u4F7F_u7528CocoaPods_u3002"><span class="nav-number">4.0.4.</span> <span class="nav-text">执行完成上述命令后，表示安装成功！下面将讲述如何使用CocoaPods。</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u4E8C_u3001_u4F7F_u7528CocoaPods"><span class="nav-number">5.</span> <span class="nav-text">二、使用CocoaPods</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#u6253_u5F00_u7EC8_u7AEF_uFF0C_u4F7F_u7528cd_u547D_u4EE4_u5B9A_u4F4D_u5230_u9700_u8981_u4F7F_u7528CocoaPods_u7684_u9879_u76EE_u6839_u8DEF_u5F84_u3002_u5982_uFF1A"><span class="nav-number">5.0.1.</span> <span class="nav-text">打开终端，使用cd命令定位到需要使用CocoaPods的项目根路径。如：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#u5148_u8003_u8651_u9879_u76EE_u4E2D_u9700_u8981_u5F15_u7528_u54EA_u4E9B_u5E93_uFF0C_u7136_u540E_u5728_u901A_u8FC7search_u547D_u4EE4_u6765_u67E5_u627E_u5E93_u7684_u4FE1_u606F_uFF0C_u5982_u9700_u8981_u52A0_u5165JSONKit_uFF0C_u90A3_u53EF_u4EE5_u5982_u4E0B_u5199_u6CD5_uFF1A"><span class="nav-number">5.0.2.</span> <span class="nav-text">先考虑项目中需要引用哪些库，然后在通过search命令来查找库的信息，如需要加入JSONKit，那可以如下写法：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#u547D_u4EE4_u6267_u884C_u540E_u4F1A_u5F97_u5230_u5982_u4E0B_u7ED3_u679C_uFF1A"><span class="nav-number">5.0.3.</span> <span class="nav-text">命令执行后会得到如下结果：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#u5176_u4E2D_u7684pod__u2018JSONKit_u2019_2C__u2018_7E_26gt_3B_1-5pre_u2019_u662F_u5F85_u4F1A_u8981_u5199_u5165_u5230Podfile_u4E2D_u7684_u4FE1_u606F_u3002_u5982_u679C_u5DF2_u7ECF_u77E5_u9053_u8FD9_u4E9B_u4FE1_u606F_uFF0C_u90A3_u53EF_u4EE5_u76F4_u63A5_u7701_u7565_u6B64_u6B65_u3002_u76F4_u63A5_u8FDB_u884C_u4E0B_u9762_u7684_u6B65_u9AA4_u3002"><span class="nav-number">5.0.4.</span> <span class="nav-text">其中的pod ‘JSONKit’, ‘~> 1.5pre’是待会要写入到Podfile中的信息。如果已经知道这些信息，那可以直接省略此步。直接进行下面的步骤。</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#u5F97_u5230_u5FC5_u8981_u7684_u5E93_u4FE1_u606F_u540E_uFF0C_u73B0_u5728_u9700_u8981_u5728_u9879_u76EE_u4E2D_u5EFA_u7ACBPodfile_u6587_u4EF6_u3002_u901A_u8FC7_u4E0B_u9762_u7684_u547D_u4EE4_uFF1A"><span class="nav-number">5.0.5.</span> <span class="nav-text">得到必要的库信息后，现在需要在项目中建立Podfile文件。通过下面的命令：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#u7136_u540E_u7F16_u8F91Podfile_u6587_u4EF6_uFF0C_u547D_u4EE4_u5982_u4E0B_uFF1A"><span class="nav-number">5.0.6.</span> <span class="nav-text">然后编辑Podfile文件，命令如下：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#u5728_u5F39_u51FA_u7684_u7F16_u8F91_u754C_u9762_u4E2D_u8F93_u5165_u4E0B_u9762_u5185_u5BB9_uFF1A"><span class="nav-number">5.0.7.</span> <span class="nav-text">在弹出的编辑界面中输入下面内容：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#u7136_u540E_u8C03_u7528_u4E0B_u9762_u547D_u4EE4_u6765_u8FDB_u884C_u521D_u59CB_u5316_uFF1A"><span class="nav-number">5.0.8.</span> <span class="nav-text">然后调用下面命令来进行初始化：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#u8FD0_u884C_u5B8C_u6BD5_u540E_uFF0C_u539F_u672C_u7684_u9879_u76EE_u76EE_u5F55_u4F1A_u591A_u51FA_u4E00_u4E9B_u6587_u4EF6_u3002_u5982_u56FE_uFF1A"><span class="nav-number">5.0.9.</span> <span class="nav-text">运行完毕后，原本的项目目录会多出一些文件。如图：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#u8FD9_u91CC_u8981_u6CE8_u610F_u7684_u4E00_u70B9_u662F_uFF0C_u5982_u679C_u4E0D_u8C03_u7528_u521B_u5EFAPodfile_u547D_u4EE4_u5C31_u76F4_u63A5_u8C03_u7528pod_install_u547D_u4EE4_u3002_u5C06_u4F1A_u63D0_u793A"><span class="nav-number">5.0.10.</span> <span class="nav-text">这里要注意的一点是，如果不调用创建Podfile命令就直接调用pod install命令。将会提示</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#u5982_u679CPodfile_u4E2D_u6DFB_u52A0_u4E86_u65B0_u5E93_uFF0C_u53EF_u4EE5_u4F7F_u7528_u4E0B_u9762_u547D_u4EE4_u8FDB_u884C_u66F4_u65B0_uFF1A"><span class="nav-number">5.0.11.</span> <span class="nav-text">如果Podfile中添加了新库，可以使用下面命令进行更新：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#u73B0_u5728_uFF0C_u4F60_u7684_u6240_u6709_u7B2C_u4E09_u65B9_u5E93_u90FD_u5DF2_u7ECF_u4E0B_u8F7D_u5B8C_u6210_u5E76_u4E14_u8BBE_u7F6E_u597D_u4E86_u7F16_u8BD1_u53C2_u6570_u548C_u4F9D_u8D56_uFF0C_u4F60_u53EA_u9700_u8981_u8BB0_u4F4F_u5982_u4E0B2_u70B9_u5373_u53EF_uFF1A"><span class="nav-number">5.0.12.</span> <span class="nav-text">现在，你的所有第三方库都已经下载完成并且设置好了编译参数和依赖，你只需要记住如下2点即可：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#1__u4F7F_u7528CocoaPods_u751F_u6210_u7684_-xcworkspace__u6587_u4EF6_u6765_u6253_u5F00_u5DE5_u7A0B_uFF0C_u800C_u4E0D_u662F_u4EE5_u524D_u7684_-xcodeproj__u6587_u4EF6_u3002"><span class="nav-number">5.0.13.</span> <span class="nav-text">1 使用CocoaPods生成的 .xcworkspace 文件来打开工程，而不是以前的 .xcodeproj 文件。</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2__u6BCF_u6B21_u66F4_u6539_u4E86Podfile_u6587_u4EF6_uFF0C_u4F60_u9700_u8981_u91CD_u65B0_u6267_u884C_u4E00_u6B21pod_install_u6216_u8005pod_update_u547D_u4EE4__u3002"><span class="nav-number">5.0.14.</span> <span class="nav-text">2 每次更改了Podfile文件，你需要重新执行一次pod install或者pod update命令 。</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#cocoapods_u81F3_u6B64_u914D_u7F6E_u5B8C_u6BD5_uFF0C_u4F46_u662F_u4F60_u4F1A_u53D1_u73B0_u4F60_u5E76_u4E0D_u80FD_u5728_u9879_u76EE_u4E2D_u627E_u5230_u4F60_u5BFC_u5165_u7684_u5E93_uFF0C_u4F60_u9700_u8981_u5728Build_Settings-_26gt_3BSearch_Header_u7684_u6700_u540E_u4E00_u9879_u4E2D_u6DFB_u52A0_24_28PODS_ROOT_29_2C_u540E_u9762_u9009_u62E9recursive_u5C31_u53EF_u4EE5_u4E86_u3002"><span class="nav-number">5.0.15.</span> <span class="nav-text">cocoapods至此配置完毕，但是你会发现你并不能在项目中找到你导入的库，你需要在Build Settings->Search Header的最后一项中添加$(PODS_ROOT),后面选择recursive就可以了。</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u5982_u679Cpod_setup_u592A_u6162_uFF0C_u53EF_u4EE5_u76F4_u63A5"><span class="nav-number"></span> <span class="nav-text">如果pod setup太慢，可以直接</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#clone_u6210_u529F_u4E4B_u540E_u5C06_u6587_u4EF6_u5939_u5916_u5C42_u6539_u540D_u4E3Amaster_uFF0C_u79FB_u52A8_u81F3_uFF5E/-cocoapods/repos/"><span class="nav-number">0.0.1.</span> <span class="nav-text">clone成功之后将文件夹外层改名为master，移动至～/.cocoapods/repos/</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u5982_u679Cpod_search_u5931_u8D25_uFF0C_u53EF_u6267_u884C"><span class="nav-number"></span> <span class="nav-text">如果pod search失败，可执行</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#u7136_u540E_u518D_u5C1D_u8BD5pod_search"><span class="nav-number">0.0.1.</span> <span class="nav-text">然后再尝试pod search</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">203Monitor</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
