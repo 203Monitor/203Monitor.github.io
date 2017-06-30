@@ -1,230 +1,57 @@
-
 <!DOCTYPE html>
-<html lang="zh-Hans">
-    
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="generator" content="Yucapri">
-    <title>Reactive Cocoa - Yucapri</title>
-    <meta name="author" content="Yucapri">
-    
-    
-        <link rel="icon" href="http://yoursite.com/assets/images/favicon.ico">
-    
-    
-    <meta name="description" content="Reactive Cocoa常见类介绍
-RACSiganl信号类,一般表示将来有数据传递，只要有数据改变，信号内部接收到数据，就会马上发出数据
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <title>Reactive Cocoa | Yucapri</title>
+  <meta name="description" content="code made the world" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-注意：
+  <link rel="stylesheet" type="text/css" href="/css/screen.css" />
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400" />
 
-信号类(RACSiganl)，只是表示当数据改变时，信号内部会发出数据，它本身不具备发送信号的能力，而是交给内部一个订阅者去发出。\
-默认一个信号都是冷信号，也就是值改变了，也不会触发，只有订阅了这个信号，这个信号才会变为热信号，值改变了才会触">
-<meta property="og:type" content="blog">
-<meta property="og:title" content="Reactive Cocoa">
-<meta property="og:url" content="http://yoursite.com/2017/03/28/iOS/iOS_Reactive Cocoa/index.html">
-<meta property="og:site_name" content="Yucapri">
-<meta property="og:description" content="Reactive Cocoa常见类介绍
-RACSiganl信号类,一般表示将来有数据传递，只要有数据改变，信号内部接收到数据，就会马上发出数据
+  <meta name="generator" content="Yucapri">
 
-注意：
+  
+  
+  
 
-信号类(RACSiganl)，只是表示当数据改变时，信号内部会发出数据，它本身不具备发送信号的能力，而是交给内部一个订阅者去发出。\
-默认一个信号都是冷信号，也就是值改变了，也不会触发，只有订阅了这个信号，这个信号才会变为热信号，值改变了才会触">
-<meta property="og:updated_time" content="2017-06-30T04:24:59.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Reactive Cocoa">
-<meta name="twitter:description" content="Reactive Cocoa常见类介绍
-RACSiganl信号类,一般表示将来有数据传递，只要有数据改变，信号内部接收到数据，就会马上发出数据
-
-注意：
-
-信号类(RACSiganl)，只是表示当数据改变时，信号内部会发出数据，它本身不具备发送信号的能力，而是交给内部一个订阅者去发出。\
-默认一个信号都是冷信号，也就是值改变了，也不会触发，只有订阅了这个信号，这个信号才会变为热信号，值改变了才会触">
-    
-    
-        
-    
-    
-        <meta property="og:image" content="http://7xqedu.com1.z0.glb.clouddn.com/avator.png"/>
-    
-    
-    
-    
-    <!--STYLES-->
-    <link rel="stylesheet" href="/assets/css/style-sxklfps8ywgfyyjcowvnb4gxdgt0zjts3hsguljmv9uqanxjbnitrovtbrek.min.css" type="text/css">
-    <!--STYLES END-->
-    
-    
+  
 </head>
 
-    <body>
-        <div id="blog">
-            <!-- Define author's picture -->
 
+<body class="post-template">
 
-    
-        
-            
-        
-    
-
-<header id="header" data-behavior="4">
-    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
-    <div class="header-title">
-        <a class="header-title-link" href="/ ">Yucapri</a>
+  <header class="site-head"  style="background-image: url(http://7xs2qm.com1.z0.glb.clouddn.com/03013.png)" >
+    <div class="vertical">
+        <div class="site-head-content inner">
+             <a class="blog-logo" href="/"><img src="http://7xqedu.com1.z0.glb.clouddn.com/avator.png" alt="Blog Logo"/></a> 
+            <h1 class="blog-title">Yucapri</h1>
+            <h2 class="blog-description">code made the world</h2>
+        </div>
     </div>
-    
-        
-            <a  class="header-right-picture "
-                href="/#about">
-        
-        
-            <img class="header-picture" src="http://7xqedu.com1.z0.glb.clouddn.com/avator.png" alt="作者的图片"/>
-        
-        </a>
-    
 </header>
+  
 
-            <!-- Define author's picture -->
-
-
-
-        
-    
-
-<nav id="sidebar" data-behavior="4">
-    <div class="sidebar-container">
-        
-            <div class="sidebar-profile">
-                <a href="/#about">
-                    <img class="sidebar-profile-picture" src="http://7xqedu.com1.z0.glb.clouddn.com/avator.png" alt="作者的图片"/>
-                </a>
-                <h4 class="sidebar-profile-name">Yucapri</h4>
-                
-                    <h5 class="sidebar-profile-bio"><p>MY BIO</p>
-</h5>
-                
-            </div>
-        
-        
-            <ul class="sidebar-buttons">
-            
-                <li class="sidebar-button">
-                    
-                        <a  class="sidebar-button-link "
-                             href="/ "
-                            
-                        >
-                    
-                        <i class="sidebar-button-icon fa fa-lg fa-home"></i>
-                        <span class="sidebar-button-desc">首页</span>
-                    </a>
-            </li>
-            
-                <li class="sidebar-button">
-                    
-                        <a  class="sidebar-button-link "
-                             href="/all-categories"
-                            
-                        >
-                    
-                        <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
-                        <span class="sidebar-button-desc">分类</span>
-                    </a>
-            </li>
-            
-                <li class="sidebar-button">
-                    
-                        <a  class="sidebar-button-link "
-                             href="/all-tags"
-                            
-                        >
-                    
-                        <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
-                        <span class="sidebar-button-desc">标签</span>
-                    </a>
-            </li>
-            
-                <li class="sidebar-button">
-                    
-                        <a  class="sidebar-button-link "
-                             href="/all-archives"
-                            
-                        >
-                    
-                        <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
-                        <span class="sidebar-button-desc">归档</span>
-                    </a>
-            </li>
-            
-                <li class="sidebar-button">
-                    
-                        <a  class="sidebar-button-link "
-                             href="/#about"
-                            
-                        >
-                    
-                        <i class="sidebar-button-icon fa fa-lg fa-user"></i>
-                        <span class="sidebar-button-desc">关于</span>
-                    </a>
-            </li>
-            
-        </ul>
-        
-            <ul class="sidebar-buttons">
-            
-                <li class="sidebar-button">
-                    
-                        <a  class="sidebar-button-link " href="https://github.com/203Monitor" target="_blank" rel="noopener">
-                    
-                        <i class="sidebar-button-icon fa fa-lg fa-github"></i>
-                        <span class="sidebar-button-desc">GitHub</span>
-                    </a>
-            </li>
-            
-        </ul>
-        
-    </div>
-</nav>
-
-            
-            <div id="main" data-behavior="4"
-                 class="
-                        hasCoverMetaIn
-                        ">
-                
-<article class="post" itemscope itemType="http://schema.org/BlogPosting">
+<main class="content" role="main">
+  <article class="post">
+    <span class="post-meta">
+      <time datetime="2017-03-27T16:00:00.000Z" itemprop="datePublished">
+          2017-03-28
+      </time>
     
     
-        <div class="post-header main-content-wrap text-left">
-    
-        <h1 class="post-title" itemprop="headline">
-            Reactive Cocoa
-        </h1>
+    | 
+    <a href='/tags/Reactive-Cocoa/'>Reactive Cocoa</a>
     
     
-        <div class="post-meta">
-    <time itemprop="datePublished" datetime="2017-03-28T00:00:00+08:00">
-	
-		    Mar 28, 2017
-    	
-    </time>
-    
-        <span>发布在 </span>
-        
-    <a class="category-link" href="/categories/iOS/">iOS</a>
-
-
-    
-</div>
-
-    
-</div>
-    
-    <div class="post-content markdown" itemprop="articleBody">
-        <div class="main-content-wrap">
-            <p>Reactive Cocoa常见类介绍</p>
+</span>
+    <h1 class="post-title">Reactive Cocoa</h1>
+    <section class="post-content">
+      <p>Reactive Cocoa常见类介绍</p>
 <p><code>RACSiganl</code><br>信号类,一般表示将来有数据传递，只要有数据改变，信号内部接收到数据，就会马上发出数据</p>
 <blockquote>
 <p>注意：</p>
@@ -310,467 +137,64 @@ RACSiganl信号类,一般表示将来有数据传递，只要有数据改变，�
 <p><code>RACEvent</code><br>表⽰stream不包含有意义的值,也就是看到这个，可以直接理解为nil</p>
 <p><code>RACEvent</code><br>把数据包装成信号事件(signal event)。它主要通过RACSignal的-materialize来使用，然并卵</p>
 
-            
-        </div>
-    </div>
-    <div id="post-footer" class="post-footer main-content-wrap">
-        
-            <div class="post-footer-tags">
-                <span class="text-color-light text-small">标签</span><br/>
-                
-    <a class="tag tag--primary tag--small t-link" href="/tags/Reactive-Cocoa/">Reactive Cocoa</a>
+    </section>
+    <footer class="post-footer">
+      <section class="author">
+    <h4>Yucapri</h4>
+    <p>code made the world</p>
+</section>
+      <section class="share">
+    <h4>Share this post</h4>
+    <a class="icon-twitter" href="http://twitter.com/share?url=http://yoursite.com/2017/03/28/iOS/iOS_Reactive Cocoa/"
+       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+        <span class="hidden">Twitter</span>
+    </a>
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/03/28/iOS/iOS_Reactive Cocoa/"
+       onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+        <span class="hidden">Facebook</span>
+    </a>
+    <a class="icon-google-plus" href="https://plus.google.com/share?url=http://yoursite.com/2017/03/28/iOS/iOS_Reactive Cocoa/"
+       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+        <span class="hidden">Google+</span>
+    </a>
+</section>
+    </footer>
+  </article>
+  <nav class="pagination" role="pagination">
+    
+    <span class="page-number">•</span>
+    
+    <a class="older-posts" href="/2016/09/18/React-Native/React Native_模拟器/">
+        RN 模拟器小问题 →
+    </a>
+    
+</nav>
+  <div id="comment" class="comments-area">
+    <h1 class="title"><a href="#disqus_comments" name="disqus_comments">Comments</a></h1>
 
-            </div>
-        
-        
-            <div class="post-actions-wrap">
-    <nav>
-        <ul class="post-actions post-action-nav">
-            <li class="post-action">
-                
-                    <a class="post-action-btn btn btn--disabled">
-                
-                    <i class="fa fa-angle-left"></i>
-                    <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
-                </a>
-            </li>
-            <li class="post-action">
-                
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/09/18/React-Native/React Native_模拟器/" data-tooltip="RN 模拟器小问题">
-                
-                    <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
-                    <i class="fa fa-angle-right"></i>
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <ul class="post-actions post-action-share">
-        <li class="post-action hide-lg hide-md hide-sm">
-            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
-                <i class="fa fa-share-alt"></i>
-            </a>
-        </li>
-        
-            
-            
-            <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/03/28/iOS/iOS_Reactive Cocoa/">
-                    <i class="fa fa-facebook-official"></i>
-                </a>
-            </li>
-        
-            
-            
-            <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2017/03/28/iOS/iOS_Reactive Cocoa/">
-                    <i class="fa fa-twitter"></i>
-                </a>
-            </li>
-        
-            
-            
-            <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2017/03/28/iOS/iOS_Reactive Cocoa/">
-                    <i class="fa fa-google-plus"></i>
-                </a>
-            </li>
-        
-        
-        <li class="post-action">
-            
-                <a class="post-action-btn btn btn--default" href="#">
-            
-                <i class="fa fa-list"></i>
-            </a>
-        </li>
-    </ul>
+    
 </div>
+</main>
 
 
-        
-        
-            
-        
-    </div>
-</article>
-
-
-
-                <footer id="footer" class="main-content-wrap">
-    <span class="copyrights">
-        Copyrights &copy; 2017 Yucapri. All Rights Reserved.
-    </span>
+  
+<footer class="site-footer">
+  
+  <div class="inner">
+     <section class="copyright">All content copyright <a href="/">Yucapri</a> &copy; 2014 &bull; All rights reserved.</section>
+     <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://zespia.tw/hexo/">Hexo</a></section>
+  </div>
 </footer>
 
-            </div>
-            
-                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
-                    <div class="post-actions-wrap">
-    <nav>
-        <ul class="post-actions post-action-nav">
-            <li class="post-action">
-                
-                    <a class="post-action-btn btn btn--disabled">
-                
-                    <i class="fa fa-angle-left"></i>
-                    <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
-                </a>
-            </li>
-            <li class="post-action">
-                
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/09/18/React-Native/React Native_模拟器/" data-tooltip="RN 模拟器小问题">
-                
-                    <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
-                    <i class="fa fa-angle-right"></i>
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <ul class="post-actions post-action-share">
-        <li class="post-action hide-lg hide-md hide-sm">
-            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
-                <i class="fa fa-share-alt"></i>
-            </a>
-        </li>
-        
-            
-            
-            <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/03/28/iOS/iOS_Reactive Cocoa/">
-                    <i class="fa fa-facebook-official"></i>
-                </a>
-            </li>
-        
-            
-            
-            <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2017/03/28/iOS/iOS_Reactive Cocoa/">
-                    <i class="fa fa-twitter"></i>
-                </a>
-            </li>
-        
-            
-            
-            <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2017/03/28/iOS/iOS_Reactive Cocoa/">
-                    <i class="fa fa-google-plus"></i>
-                </a>
-            </li>
-        
-        
-        <li class="post-action">
-            
-                <a class="post-action-btn btn btn--default" href="#">
-            
-                <i class="fa fa-list"></i>
-            </a>
-        </li>
-    </ul>
-</div>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<script type="text/javascript" src="/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/js/index.js"></script>
 
 
-                </div>
-                <div id="share-options-bar" class="share-options-bar" data-behavior="4">
-    <i id="btn-close-shareoptions" class="fa fa-close"></i>
-    <ul class="share-options">
-        
-            
-            
-            <li class="share-option">
-                <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/03/28/iOS/iOS_Reactive Cocoa/">
-                    <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
-                </a>
-            </li>
-        
-            
-            
-            <li class="share-option">
-                <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2017/03/28/iOS/iOS_Reactive Cocoa/">
-                    <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
-                </a>
-            </li>
-        
-            
-            
-            <li class="share-option">
-                <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2017/03/28/iOS/iOS_Reactive Cocoa/">
-                    <i class="fa fa-google-plus"></i><span>分享到 Google+</span>
-                </a>
-            </li>
-        
-    </ul>
-</div>
-
-            
-        </div>
-        
 
 
-    
-        
-    
-
-<div id="about">
-    <div id="about-card">
-        <div id="about-btn-close">
-            <i class="fa fa-remove"></i>
-        </div>
-        
-            <img id="about-card-picture" src="http://7xqedu.com1.z0.glb.clouddn.com/avator.png" alt="作者的图片"/>
-        
-            <h4 id="about-card-name">Yucapri</h4>
-        
-            <div id="about-card-bio"><p>MY BIO</p>
-</div>
-        
-        
-            <div id="about-card-job">
-                <i class="fa fa-briefcase"></i>
-                <br/>
-                <p>iOS Developer</p>
-
-            </div>
-        
-        
-            <div id="about-card-location">
-                <i class="fa fa-map-marker"></i>
-                <br/>
-                beijing haidian
-            </div>
-        
-    </div>
-</div>
-
-        <div id="algolia-search-modal" class="modal-container">
-    <div class="modal">
-        <div class="modal-header">
-            <span class="close-button"><i class="fa fa-close"></i></span>
-            <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
-                <span class="searchby-algolia-text text-color-light text-small">by</span>
-                <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
-            </a>
-            <i class="search-icon fa fa-search"></i>
-            <form id="algolia-search-form">
-                <input type="text" id="algolia-search-input" name="search"
-                    class="form-control input--large search-input" placeholder="Search "
-                    />
-            </form>
-        </div>
-        <div class="modal-body">
-            <div class="no-result text-color-light text-center">没有找到文章</div>
-            <div class="results">
-                
-                <div class="media">
-                    
-                    <div class="media-body">
-                        <a class="link-unstyled" href="http://yoursite.com/2016/01/21/技术/技术_vim基本操作/">
-                            <h3 class="media-heading">vim基本操作</h3>
-                        </a>
-                        <span class="media-meta">
-                            <span class="media-date text-small">
-                                
-                                    Jan 21, 2016
-                                
-                            </span>
-                        </span>
-                        <div class="media-content hide-xs font-merryweather"></div>
-                    </div>
-                    <div style="clear:both;"></div>
-                    <hr>
-                </div>
-                
-                <div class="media">
-                    
-                    <div class="media-body">
-                        <a class="link-unstyled" href="http://yoursite.com/2016/01/21/技术/技术_to_openshift/">
-                            <h3 class="media-heading">to_openshift</h3>
-                        </a>
-                        <span class="media-meta">
-                            <span class="media-date text-small">
-                                
-                                    Jan 21, 2016
-                                
-                            </span>
-                        </span>
-                        <div class="media-content hide-xs font-merryweather"></div>
-                    </div>
-                    <div style="clear:both;"></div>
-                    <hr>
-                </div>
-                
-                <div class="media">
-                    
-                    <div class="media-body">
-                        <a class="link-unstyled" href="http://yoursite.com/2016/01/21/iOS/iOS_UIButton响应传参数/">
-                            <h3 class="media-heading">UIButton响应传参数</h3>
-                        </a>
-                        <span class="media-meta">
-                            <span class="media-date text-small">
-                                
-                                    Jan 21, 2016
-                                
-                            </span>
-                        </span>
-                        <div class="media-content hide-xs font-merryweather"></div>
-                    </div>
-                    <div style="clear:both;"></div>
-                    <hr>
-                </div>
-                
-                <div class="media">
-                    
-                    <div class="media-body">
-                        <a class="link-unstyled" href="http://yoursite.com/2016/01/21/技术/技术_Git基本命令行操作/">
-                            <h3 class="media-heading">Git基本命令行操作</h3>
-                        </a>
-                        <span class="media-meta">
-                            <span class="media-date text-small">
-                                
-                                    Jan 21, 2016
-                                
-                            </span>
-                        </span>
-                        <div class="media-content hide-xs font-merryweather"></div>
-                    </div>
-                    <div style="clear:both;"></div>
-                    <hr>
-                </div>
-                
-                <div class="media">
-                    
-                    <div class="media-body">
-                        <a class="link-unstyled" href="http://yoursite.com/2016/01/22/iOS/iOS_UITextField增加textDidChange回调功能/">
-                            <h3 class="media-heading">UITextField增加textDidChange回调功能</h3>
-                        </a>
-                        <span class="media-meta">
-                            <span class="media-date text-small">
-                                
-                                    Jan 22, 2016
-                                
-                            </span>
-                        </span>
-                        <div class="media-content hide-xs font-merryweather"></div>
-                    </div>
-                    <div style="clear:both;"></div>
-                    <hr>
-                </div>
-                
-                <div class="media">
-                    
-                    <div class="media-body">
-                        <a class="link-unstyled" href="http://yoursite.com/2016/01/22/Mac/Mac_清空废纸篓/">
-                            <h3 class="media-heading">清空废纸篓</h3>
-                        </a>
-                        <span class="media-meta">
-                            <span class="media-date text-small">
-                                
-                                    Jan 22, 2016
-                                
-                            </span>
-                        </span>
-                        <div class="media-content hide-xs font-merryweather"></div>
-                    </div>
-                    <div style="clear:both;"></div>
-                    <hr>
-                </div>
-                
-                <div class="media">
-                    
-                    <div class="media-body">
-                        <a class="link-unstyled" href="http://yoursite.com/2016/01/22/Mac/Mac_关闭DashBoard/">
-                            <h3 class="media-heading">关闭DashBoard</h3>
-                        </a>
-                        <span class="media-meta">
-                            <span class="media-date text-small">
-                                
-                                    Jan 22, 2016
-                                
-                            </span>
-                        </span>
-                        <div class="media-content hide-xs font-merryweather"></div>
-                    </div>
-                    <div style="clear:both;"></div>
-                    <hr>
-                </div>
-                
-                <div class="media">
-                    
-                    <div class="media-body">
-                        <a class="link-unstyled" href="http://yoursite.com/2016/01/22/Linux/Linux_软连接与硬连接/">
-                            <h3 class="media-heading">软连接与硬连接</h3>
-                        </a>
-                        <span class="media-meta">
-                            <span class="media-date text-small">
-                                
-                                    Jan 22, 2016
-                                
-                            </span>
-                        </span>
-                        <div class="media-content hide-xs font-merryweather"></div>
-                    </div>
-                    <div style="clear:both;"></div>
-                    <hr>
-                </div>
-                
-                <div class="media">
-                    
-                    <div class="media-body">
-                        <a class="link-unstyled" href="http://yoursite.com/2016/01/22/技术/技术_vim高级用法/">
-                            <h3 class="media-heading">vim高级用法</h3>
-                        </a>
-                        <span class="media-meta">
-                            <span class="media-date text-small">
-                                
-                                    Jan 22, 2016
-                                
-                            </span>
-                        </span>
-                        <div class="media-content hide-xs font-merryweather"></div>
-                    </div>
-                    <div style="clear:both;"></div>
-                    <hr>
-                </div>
-                
-                <div class="media">
-                    
-                    <div class="media-body">
-                        <a class="link-unstyled" href="http://yoursite.com/2016/01/23/iOS/iOS_自定义url_scheam/">
-                            <h3 class="media-heading">自定义url_scheam</h3>
-                        </a>
-                        <span class="media-meta">
-                            <span class="media-date text-small">
-                                
-                                    Jan 23, 2016
-                                
-                            </span>
-                        </span>
-                        <div class="media-content hide-xs font-merryweather"></div>
-                    </div>
-                    <div style="clear:both;"></div>
-                    <hr>
-                </div>
-                
-            </div>
-        </div>
-        <div class="modal-footer">
-            <p class="results-count text-medium"
-                data-message-zero="没有找到文章"
-                data-message-one="找到 1 篇文章"
-                data-message-other="找到 {n} 篇文章">
-                找到 40 篇文章
-            </p>
-        </div>
-    </div>
-</div>
-
-        
-<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
-        <!--SCRIPTS-->
-<script src="/assets/js/script-ivwiy10zeb8fifc4swnhkwneuk64y53w2scmdmtp8thi9cqfxh31aowtroaz.min.js" type="text/javascript"></script>
-<!--SCRIPTS END-->
-
-    
 
 
-    </body>
+</body>
 </html>
