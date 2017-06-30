@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      Reactive Cocoa | Yucapri 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="Yucapri">
+    
+    
+
+    <meta name="description" content="Reactive Cocoa常见类介绍
+RACSiganl信号类,一般表示将来有数据传递，只要有数据改变，信号内部接收到数据，就会马上发出数据
+
+注意：
+
+信号类(RACSiganl)，只是表示当数据改变时，信号内部会发出数据，它本身不具备发送信号的能力，而是交给内部一个订阅者去发出。\
+默认一个信号都是冷信号，也就是值改变了，也不会触发，只有订阅了这个信号，这个信号才会变为热信号，值改变了才会触">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Reactive Cocoa | Yucapri">
+<meta property="og:url" content="http://yoursite.com/2017/03/28/iOS/iOS_Reactive Cocoa/index.html">
+<meta property="og:site_name" content="Yucapri">
+<meta property="og:description" content="Reactive Cocoa常见类介绍
+RACSiganl信号类,一般表示将来有数据传递，只要有数据改变，信号内部接收到数据，就会马上发出数据
+
+注意：
+
+信号类(RACSiganl)，只是表示当数据改变时，信号内部会发出数据，它本身不具备发送信号的能力，而是交给内部一个订阅者去发出。\
+默认一个信号都是冷信号，也就是值改变了，也不会触发，只有订阅了这个信号，这个信号才会变为热信号，值改变了才会触">
+<meta property="og:updated_time" content="2017-06-30T04:24:59.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Reactive Cocoa | Yucapri">
+<meta name="twitter:description" content="Reactive Cocoa常见类介绍
+RACSiganl信号类,一般表示将来有数据传递，只要有数据改变，信号内部接收到数据，就会马上发出数据
+
+注意：
+
+信号类(RACSiganl)，只是表示当数据改变时，信号内部会发出数据，它本身不具备发送信号的能力，而是交给内部一个订阅者去发出。\
+默认一个信号都是冷信号，也就是值改变了，也不会触发，只有订阅了这个信号，这个信号才会变为热信号，值改变了才会触">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="http://7xqedu.com1.z0.glb.clouddn.com/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/uno.css" type="text/css">
+    <link rel="stylesheet" href="/css/highlight.css" type="text/css">
+    <link rel="stylesheet" href="/css/archive.css" type="text/css">
+    <link rel="stylesheet" href="/css/china-social-icon.css" type="text/css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+        <a href="/" title="link to homepage for Yucapri"><img src="http://7xqedu.com1.z0.glb.clouddn.com/avator.png" width="80" alt="Yucapri logo" class="panel-cover__logo logo" /></a>
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">Yucapri</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+        <p class="panel-cover__description">
+          code made the world
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+<nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+    
+      <!-- Github -->
+      <li class="navigation__item">
+        <a href="https://github.com/203Monitor" title="Huno on GitHub">
+          <i class='icon icon-social-github'></i>
+          <span class="label">GitHub</span>
+        </a>
+      </li>
+    
+
+    <!-- China social icon -->
+    <!--
+    
+      <li class="navigation__item">
+        <a href="" title="">
+          <i class='icon cs-icon-douban'></i>
+          <span class="label">Douban</span>
+        </a>
+      </li>
+
+      <li class="navigation__item">
+        <a href="" title="">
+          <i class='icon cs-icon-weibo'></i>
+          <span class="label">Weibo</span>
+        </a>
+      </li>
+
+    -->
+
+
+
+  </ul>
+</nav>
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">Reactive Cocoa</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2017-03-28" class="post-meta__date date">2017-03-28</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+            <font class="categories">
+            &#8226; 分类:
+            <a class="categories-link" href="/categories/iOS/">iOS</a>
+            </font>
+          
+
+          
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/Reactive-Cocoa/">Reactive Cocoa</a>
+            </font>
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <p>Reactive Cocoa常见类介绍</p>
+<p><code>RACSiganl</code><br>信号类,一般表示将来有数据传递，只要有数据改变，信号内部接收到数据，就会马上发出数据</p>
+<blockquote>
+<p>注意：</p>
+<ul>
+<li>信号类(RACSiganl)，只是表示当数据改变时，信号内部会发出数据，它本身不具备发送信号的能力，而是交给内部一个订阅者去发出。\</li>
+<li>默认一个信号都是冷信号，也就是值改变了，也不会触发，只有订阅了这个信号，这个信号才会变为热信号，值改变了才会触发</li>
+<li>如何订阅信号：调用信号RACSignal的subscribeNext就能订阅</li>
+</ul>
+</blockquote>
+<p><code>RACSubscriber</code><br>信号类,一般表示将来有数据传递，只要有数据改变，信号内部接收到数据，就会马上发出数据</p>
+<blockquote>
+<p>注意：</p>
+<ul>
+<li>信号类(RACSiganl)，只是表示当数据改变时，信号内部会发出数据，它本身不具备发送信号的能力，而是交给内部一个订阅者去发出。\</li>
+<li>默认一个信号都是冷信号，也就是值改变了，也不会触发，只有订阅了这个信号，这个信号才会变为热信号，值改变了才会触发</li>
+<li>如何订阅信号：调用信号RACSignal的subscribeNext就能订阅</li>
+</ul>
+</blockquote>
+<p><code>RACSubscriber</code><br>表示订阅者的意思，用于发送信号，这是一个协议，不是一个类，只要遵守这个协议，并且实现方法才能成为订阅者。通过create创建的信号，都有一个订阅者，帮助他发送数据</p>
+<p><code> </code><br>用于取消订阅或者清理资源，当信号发送完成或者发送错误的时候，就会自动触发它</p>
+<blockquote>
+<p>使用场景</p>
+<ul>
+<li>不想监听某个信号时，可以通过它主动取消订阅信号</li>
+</ul>
+</blockquote>
+<p><code>RACSubject</code><br>用于取消订阅或者清理资源，当信号发送完成或者发送错误的时候，就会自动触发它</p>
+<blockquote>
+<p>使用场景</p>
+<ul>
+<li>不想监听某个信号时，可以通过它主动取消订阅信号</li>
+</ul>
+</blockquote>
+<p><code>RACSubject</code><br>RACSubject信号提供者，自己可以充当信号，又能发送信号</p>
+<blockquote>
+<p>使用场景</p>
+<ul>
+<li>通常用来代替代理，有了它，就不必要定义代理了</li>
+</ul>
+</blockquote>
+<p><code> </code><br>重复提供信号类，RACSubject的子类</p>
+<blockquote>
+<p>   RACReplaySubject与RACSubject区别:</p>
+<ul>
+<li>RACReplaySubject可以先发送信号，在订阅信号，RACSubject就不可以<br>使用场景一</li>
+<li>如果一个信号每被订阅一次，就需要把之前的值重复发送一遍，使用重复提供信号类<br>使用场景二</li>
+<li>可以设置capacity数量来限制缓存的value的数量,即只缓充最新的几个值</li>
+</ul>
+</blockquote>
+<p><code>RACTuple</code><br>重复提供信号类，RACSubject的子类</p>
+<blockquote>
+<p>   RACReplaySubject与RACSubject区别:</p>
+<ul>
+<li>RACReplaySubject可以先发送信号，在订阅信号，RACSubject就不可以<br>使用场景一</li>
+<li>如果一个信号每被订阅一次，就需要把之前的值重复发送一遍，使用重复提供信号类<br>使用场景二</li>
+<li>可以设置capacity数量来限制缓存的value的数量,即只缓充最新的几个值</li>
+</ul>
+</blockquote>
+<p><code>RACTuple</code><br>元组类,类似NSArray,用来包装值<br>RAC中的集合类，用于代替NSArray,NSDictionary,可以使用它来快速遍历数组和字典</p>
+<p><code>RACCommand</code><br>RAC中的集合类，用于代替NSArray,NSDictionary,可以使用它来快速遍历数组和字典</p>
+<p><code>RACCommand</code><br>RAC中用于处理事件的类，可以把事件如何处理,事件中的数据如何传递，包装到这个类中，他可以很方便的监控事件的执行过程</p>
+<blockquote>
+<p>使用场景</p>
+<ul>
+<li>监听按钮点击，网络请求</li>
+</ul>
+</blockquote>
+<p><code> </code></p>
+<h4 id="u7528_u4E8E_u5F53_u4E00_u4E2A_u4FE1_u53F7_uFF0C_u88AB_u591A_u6B21_u8BA2_u9605_u65F6_uFF0C_u4E3A_u4E86_u4FDD_u8BC1_u521B_u5EFA_u4FE1_u53F7_u65F6_uFF0C_u907F_u514D_u591A_u6B21_u8C03_u7528_u521B_u5EFA_u4FE1_u53F7_u4E2D_u7684block_uFF0C_u9020_u6210_u526F_u4F5C_u7528_uFF0C_u53EF_u4EE5_u4F7F_u7528_u8FD9_u4E2A_u7C7B_u5904_u7406"><a href="#u7528_u4E8E_u5F53_u4E00_u4E2A_u4FE1_u53F7_uFF0C_u88AB_u591A_u6B21_u8BA2_u9605_u65F6_uFF0C_u4E3A_u4E86_u4FDD_u8BC1_u521B_u5EFA_u4FE1_u53F7_u65F6_uFF0C_u907F_u514D_u591A_u6B21_u8C03_u7528_u521B_u5EFA_u4FE1_u53F7_u4E2D_u7684block_uFF0C_u9020_u6210_u526F_u4F5C_u7528_uFF0C_u53EF_u4EE5_u4F7F_u7528_u8FD9_u4E2A_u7C7B_u5904_u7406" class="headerlink" title="用于当一个信号，被多次订阅时，为了保证创建信号时，避免多次调用创建信号中的block，造成副作用，可以使用这个类处理"></a>用于当一个信号，被多次订阅时，为了保证创建信号时，避免多次调用创建信号中的block，造成副作用，可以使用这个类处理</h4><blockquote>
+<p>使用注意:</p>
+<ul>
+<li>RACMulticastConnection通过RACSignal的-publish或者-muticast:方法创建</li>
+</ul>
+</blockquote>
+<p><code>RACScheduler</code><br>用于当一个信号，被多次订阅时，为了保证创建信号时，避免多次调用创建信号中的block，造成副作用，可以使用这个类处理</p>
+<blockquote>
+<p>使用注意:</p>
+<ul>
+<li>RACMulticastConnection通过RACSignal的-publish或者-muticast:方法创建</li>
+</ul>
+</blockquote>
+<p><code>RACScheduler</code><br>RAC中的队列，用GCD封装的</p>
+<p><code>RACEvent</code><br>表⽰stream不包含有意义的值,也就是看到这个，可以直接理解为nil</p>
+<p><code>RACEvent</code><br>把数据包装成信号事件(signal event)。它主要通过RACSignal的-materialize来使用，然并卵</p>
+
+  </section>
+
+  <section class="post-comments">
+
+    <!-- 将评论系统（例如Disqus、多说、友言、畅言等）提供的代码片段粘贴在这里 -->
+    
+</section>
+
+
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
