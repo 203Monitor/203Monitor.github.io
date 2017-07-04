@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <title>TTTAttributedLabel使用心得 | Yucapri</title>
+  <meta name="description" content="code made the world" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" type="text/css" href="/css/screen.css" />
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400" />
+
+  <meta name="generator" content="Yucapri">
+
+  
+  
+  
+
+  
+</head>
+
+
+<body class="post-template">
+
+  <header class="site-head"  style="background-image: url(http://7xs2qm.com1.z0.glb.clouddn.com/03013.png)" >
+    <div class="vertical">
+        <div class="site-head-content inner">
+             <a class="blog-logo" href="/"><img src="http://7xqedu.com1.z0.glb.clouddn.com/avator.png" alt="Blog Logo"/></a> 
+            <h1 class="blog-title">Yucapri</h1>
+            <h2 class="blog-description">code made the world</h2>
+        </div>
+    </div>
+</header>
+  
+
+<main class="content" role="main">
+  <article class="post">
+    <span class="post-meta">
+      <time datetime="2017-03-09T16:00:00.000Z" itemprop="datePublished">
+          2017-03-10
+      </time>
+    
+    
+    | 
+    <a href='/tags/TTTAttributedLabel/'>TTTAttributedLabel</a>
+    
+    
+</span>
+    <h1 class="post-title">TTTAttributedLabel使用心得</h1>
+    <section class="post-content">
+      <p>TTTAttributedLabel实现了在label上添加链接等点击事件的功能<br>点击事件TTT的实现方法是在<code>- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event</code>方法中获取到touch的点，随后将这个点传入<code>- (TTTAttributedLabelLink *)linkAtPoint:(CGPoint)point</code>方法中，找到点击位置的链接文本，如果有则进入回调，没有则事件结束。<br>TTT提供了<code>- (CFIndex)characterIndexAtPoint:(CGPoint)p</code>方法来计算、确定点击到的链接文本。</p>
+<p>方法的实现顺序</p>
+<ul>
+<li>先判断了一下点击的点是否在label的rect中</li>
+<li>然后取了全部文字在label上的rect</li>
+<li>转换坐标系，以便于使用coreText</li>
+<li>使用了CGPathCreateMutable()创建了一个可变路径</li>
+<li>用链接文本的区域在label上添加了一个矩形路径</li>
+<li>获取矩形路径范围内制定长度的字符串的的CTFrame</li>
+<li>通过CTFrame获取CFArray，获取区域内文字的行数</li>
+<li>遍历每一行,获取每一行的矩形坐标，与当前点击位置做比较，判断是否点在文字范围内，如果在范围内则再判断是范围内那个字符串</li>
+</ul>
+
+    </section>
+    <footer class="post-footer">
+      <section class="author">
+    <h4>Yucapri</h4>
+    <p>code made the world</p>
+</section>
+      <section class="share">
+    <h4>Share this post</h4>
+    <a class="icon-twitter" href="http://twitter.com/share?url=http://yoursite.com/2017/03/10/iOS/iOS_TTTAttributedLabel使用心得/"
+       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+        <span class="hidden">Twitter</span>
+    </a>
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/03/10/iOS/iOS_TTTAttributedLabel使用心得/"
+       onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+        <span class="hidden">Facebook</span>
+    </a>
+    <a class="icon-google-plus" href="https://plus.google.com/share?url=http://yoursite.com/2017/03/10/iOS/iOS_TTTAttributedLabel使用心得/"
+       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+        <span class="hidden">Google+</span>
+    </a>
+</section>
+    </footer>
+  </article>
+  <nav class="pagination" role="pagination">
+    
+    <a class="newer-posts" href="/2017/03/28/iOS/iOS_Reactive Cocoa/">
+        ← Reactive Cocoa
+    </a>
+    
+    <span class="page-number">•</span>
+    
+    <a class="older-posts" href="/2017/03/10/iOS/iOS_UIButton切换selected状态标题闪烁问题/">
+        UIButton切换selected状态标题闪烁问题 →
+    </a>
+    
+</nav>
+  <div id="comment" class="comments-area">
+    <h1 class="title"><a href="#disqus_comments" name="disqus_comments">Comments</a></h1>
+
+    
+</div>
+</main>
+
+
+  
+<footer class="site-footer">
+  
+  <div class="inner">
+     <section class="copyright">All content copyright <a href="/">Yucapri</a> &copy; 2014 &bull; All rights reserved.</section>
+     <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://zespia.tw/hexo/">Hexo</a></section>
+  </div>
+</footer>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<script type="text/javascript" src="/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/js/index.js"></script>
+
+
+
+
+
+
+</body>
+</html>

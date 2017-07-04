@@ -40,6 +40,126 @@
   <article class="post">
     <header class="post-header">
       <span class="post-meta">
+      <time datetime="2017-05-31T16:00:00.000Z" itemprop="datePublished">
+          2017-06-01
+      </time>
+    
+    
+    | 
+    <a href='/tags/Xcode全局变量/'>Xcode全局变量</a>
+    
+    
+</span>
+      <h2 class="post-title"><a href="/2017/06/01/iOS/iOS_Xcode全局变量/">Xcode全局变量</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+      
+        原文地址
+$(BUILT_PRODUCTS_DIR)build成功后的，最终产品路径－－即build/Debug-iphoneos路径下$(TARGET_NAME)目标工程名称$(SRCROOT)工程文件（比如Nuno.xcodeproj）的路径$(CURRENT_PROJECT_VERSION)当前工程版本号当编译静态库，设备选模拟器(iPhone 5.0 Simulator)，未设置任何Build Settings参数时，默认的基础
+      
+      </p>
+      
+      <p>
+          <a href="/2017/06/01/iOS/iOS_Xcode全局变量/" class="excerpt-link">Read More...</a>
+      </p>
+      
+    </section>
+  </article>
+  
+  <article class="post">
+    <header class="post-header">
+      <span class="post-meta">
+      <time datetime="2017-05-10T16:00:00.000Z" itemprop="datePublished">
+          2017-05-11
+      </time>
+    
+    
+    | 
+    <a href='/tags/AppleDoc/'>AppleDoc</a>
+    
+    
+</span>
+      <h2 class="post-title"><a href="/2017/05/11/Mac/Mac_AppleDoc/">AppleDoc</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+      
+        结项目前都要做文档，这个工具真是用处大大的。/Users/wuguobin/Library/Developer/Shared/Documentation/DocSets 记住这个目录下载appleDoc，安装后即可生成文档，xxx.docset,然后将这些文件夹放入上面那个目录就可以了
+
+      
+      </p>
+      
+      <p>
+          <a href="/2017/05/11/Mac/Mac_AppleDoc/" class="excerpt-link">Read More...</a>
+      </p>
+      
+    </section>
+  </article>
+  
+  <article class="post">
+    <header class="post-header">
+      <span class="post-meta">
+      <time datetime="2017-05-10T16:00:00.000Z" itemprop="datePublished">
+          2017-05-11
+      </time>
+    
+    
+    | 
+    <a href='/tags/ssh-key/'>ssh-key</a>
+    
+    
+</span>
+      <h2 class="post-title"><a href="/2017/05/11/Mac/Mac_一个电脑多个ssh-key/">一个电脑多个ssh-key</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+      
+        一个电脑多个ssh-key可以通过config文件来管理123456789Host aaaHostName github.comUser gitIdentityFile ~/.ssh/id_rsa_aaaHost bbbHostName github.comUser gitIdentityFile ~/.ssh/id_rsa_bbb
+配置完成即可通过ssh -T aaa或bbb来验证之后再clone项目就可以直接使用配置的别名例如 gi
+      
+      </p>
+      
+      <p>
+          <a href="/2017/05/11/Mac/Mac_一个电脑多个ssh-key/" class="excerpt-link">Read More...</a>
+      </p>
+      
+    </section>
+  </article>
+  
+  <article class="post">
+    <header class="post-header">
+      <span class="post-meta">
+      <time datetime="2017-05-01T16:00:00.000Z" itemprop="datePublished">
+          2017-05-02
+      </time>
+    
+    
+    | 
+    <a href='/tags/Openshift/'>Openshift</a>
+    
+    
+</span>
+      <h2 class="post-title"><a href="/2017/05/02/Mac/Mac_在openshift部署war包/">在Openshift部署war包</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+      
+        获取到项目的ssh链接，使用scp ROOT.war ssh链接:/tmp 将war包上传至openshift通过ssh连接到openshift，cd jbossews/webapps &amp;&amp; mv /tmp/ROOT.war ROOT.war然后到openshift应用主页restart application就可以了
+scp ROOT.war 58e5a9f889f5cf3f5f000185@jbossews-0513
+      
+      </p>
+      
+      <p>
+          <a href="/2017/05/02/Mac/Mac_在openshift部署war包/" class="excerpt-link">Read More...</a>
+      </p>
+      
+    </section>
+  </article>
+  
+  <article class="post">
+    <header class="post-header">
+      <span class="post-meta">
       <time datetime="2017-03-27T16:00:00.000Z" itemprop="datePublished">
           2017-03-28
       </time>
@@ -68,6 +188,64 @@ RACSiganl信号类,一般表示将来有数据传递，只要有数据改变，�
       
       <p>
           <a href="/2017/03/28/iOS/iOS_Reactive Cocoa/" class="excerpt-link">Read More...</a>
+      </p>
+      
+    </section>
+  </article>
+  
+  <article class="post">
+    <header class="post-header">
+      <span class="post-meta">
+      <time datetime="2017-03-09T16:00:00.000Z" itemprop="datePublished">
+          2017-03-10
+      </time>
+    
+    
+    | 
+    <a href='/tags/TTTAttributedLabel/'>TTTAttributedLabel</a>
+    
+    
+</span>
+      <h2 class="post-title"><a href="/2017/03/10/iOS/iOS_TTTAttributedLabel使用心得/">TTTAttributedLabel使用心得</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+      
+        TTTAttributedLabel实现了在label上添加链接等点击事件的功能点击事件TTT的实现方法是在- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event方法中获取到touch的点，随后将这个点传入- (TTTAttributedLabelLink *)linkAtPoint:(CGPoint)point方法中，找到点击位置的链接文本，如果有则进入回调，没
+      
+      </p>
+      
+      <p>
+          <a href="/2017/03/10/iOS/iOS_TTTAttributedLabel使用心得/" class="excerpt-link">Read More...</a>
+      </p>
+      
+    </section>
+  </article>
+  
+  <article class="post">
+    <header class="post-header">
+      <span class="post-meta">
+      <time datetime="2017-03-09T16:00:00.000Z" itemprop="datePublished">
+          2017-03-10
+      </time>
+    
+    
+    | 
+    <a href='/tags/UIButton/'>UIButton</a>
+    
+    
+</span>
+      <h2 class="post-title"><a href="/2017/03/10/iOS/iOS_UIButton切换selected状态标题闪烁问题/">UIButton切换selected状态标题闪烁问题</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+      
+        在使用UIButton时会遇到切换selected状态然后更换标题，这时候标题会闪，因此只修改normal状态的文字就好了，像这样123456789WS(weakSelf);[self.joinButton addAction:^(UIButton *button) &#123;weakSelf.callBack(weakSelf.data,weakSelf.joinButton.isSelected);[weakSelf.joinBu
+      
+      </p>
+      
+      <p>
+          <a href="/2017/03/10/iOS/iOS_UIButton切换selected状态标题闪烁问题/" class="excerpt-link">Read More...</a>
       </p>
       
     </section>
@@ -165,207 +343,9 @@ session.save_path 要修改最后一个 默认值为／tmp的那个
     </section>
   </article>
   
-  <article class="post">
-    <header class="post-header">
-      <span class="post-meta">
-      <time datetime="2016-08-22T16:00:00.000Z" itemprop="datePublished">
-          2016-08-23
-      </time>
-    
-    
-    | 
-    <a href='/tags/CABasicAnimation/'>CABasicAnimation</a>
-    
-    
-</span>
-      <h2 class="post-title"><a href="/2016/08/23/iOS/iOS_CABasicAnimation/">CABasicAnimation</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-      
-        今天用到了CABasicAnimation来处理一个动画，简单学习一下
-AnimationWithKeyPath的值：
-
-transform.scale = 比例轉換
-transform.scale.x = 闊的比例轉換
-transform.scale.y = 高的比例轉換
-transform.rotation.z = 平面圖的旋轉
-opacity = 透明度
-margin
-zPosition
-backgroundColor 背景颜色
-
-      
-      </p>
-      
-      <p>
-          <a href="/2016/08/23/iOS/iOS_CABasicAnimation/" class="excerpt-link">Read More...</a>
-      </p>
-      
-    </section>
-  </article>
-  
-  <article class="post">
-    <header class="post-header">
-      <span class="post-meta">
-      <time datetime="2016-08-16T16:00:00.000Z" itemprop="datePublished">
-          2016-08-17
-      </time>
-    
-    
-    | 
-    <a href='/tags/docker/'>docker</a>
-    
-    
-</span>
-      <h2 class="post-title"><a href="/2016/08/17/Linux/Linux_docker安装与部署/">Linux_docker安装与部署</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-      
-        安装1yum -y install docker-io
-
-      
-      </p>
-      
-      <p>
-          <a href="/2016/08/17/Linux/Linux_docker安装与部署/" class="excerpt-link">Read More...</a>
-      </p>
-      
-    </section>
-  </article>
-  
-  <article class="post">
-    <header class="post-header">
-      <span class="post-meta">
-      <time datetime="2016-08-15T16:00:00.000Z" itemprop="datePublished">
-          2016-08-16
-      </time>
-    
-    
-    | 
-    <a href='/tags/坑/'>坑</a>
-    
-    
-</span>
-      <h2 class="post-title"><a href="/2016/08/16/React-Native/React Native_坑/">React Nativeの坑</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-      
-        
-不会报错的RN与React配比
-
-For RN 0.30 and 0.31: npm install react@15.2.1For RN 0.32: npm install react@15.3.0
-
-RN-&gt;View支持的属性
-
-widthheighttopleftrightbottomminWidthmaxWidthminHeightmaxHeightmarginmarginVerticalmarginHorizontal
-      
-      </p>
-      
-      <p>
-          <a href="/2016/08/16/React-Native/React Native_坑/" class="excerpt-link">Read More...</a>
-      </p>
-      
-    </section>
-  </article>
-  
-  <article class="post">
-    <header class="post-header">
-      <span class="post-meta">
-      <time datetime="2016-08-15T16:00:00.000Z" itemprop="datePublished">
-          2016-08-16
-      </time>
-    
-    
-    | 
-    <a href='/tags/atom/'>atom</a>
-    
-    
-</span>
-      <h2 class="post-title"><a href="/2016/08/16/技术/技术_Atom快捷键定义/">Atom快捷键定义</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-      
-        1&#39;atom-text-editor&#39;:&#10;&#10;&#39;cmd-alt-1&#39;: &#39;nuclide-react-native:start-packager&#39;&#10;&#10;&#39;cmd-alt-2&#39;: &#39;nuclide-react-native:stop-packager&#39;
-atom-text-editor 是触发这个快捷键的区域，cmd-alt-1 是
-      
-      </p>
-      
-      <p>
-          <a href="/2016/08/16/技术/技术_Atom快捷键定义/" class="excerpt-link">Read More...</a>
-      </p>
-      
-    </section>
-  </article>
-  
-  <article class="post">
-    <header class="post-header">
-      <span class="post-meta">
-      <time datetime="2016-08-10T16:00:00.000Z" itemprop="datePublished">
-          2016-08-11
-      </time>
-    
-    
-    | 
-    <a href='/tags/特殊字符/'>特殊字符</a>
-    
-    
-</span>
-      <h2 class="post-title"><a href="/2016/08/11/Mac/Mac_特殊字符/">特殊字符</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-      
-        alt + 1 ¡alt + 2 ™alt + 3 £alt + 4 ¢alt + 5 ∞alt + 6 §alt + 7 ¶alt + 8 •alt + 9 ªalt + 0 ºalt + - –alt + = ≠alt + a åalt + b ∫alt + c çalt + d ∂alt + e ´alt + f ƒalt + g ©alt + h ˙alt + i ˆalt + j ∆alt + k ˚alt + l ¬alt 
-      
-      </p>
-      
-      <p>
-          <a href="/2016/08/11/Mac/Mac_特殊字符/" class="excerpt-link">Read More...</a>
-      </p>
-      
-    </section>
-  </article>
-  
-  <article class="post">
-    <header class="post-header">
-      <span class="post-meta">
-      <time datetime="2016-08-08T16:00:00.000Z" itemprop="datePublished">
-          2016-08-09
-      </time>
-    
-    
-    | 
-    <a href='/tags/Office/'>Office</a>
-    
-    
-</span>
-      <h2 class="post-title"><a href="/2016/08/09/Windows/Windows_Office/">Windows Office</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-      
-        
-XP系统最高只能安装2010！
-
-简体中文版 Office 2010 pro plus retail 32和64合包
-安装密钥：GXVBT-YXFGD-QT97T-VPKWB-TF328，安装之前要在控制面板把office组件卸载干净1ed2k://|file|cn\_office\_professional\_plus\_2010\_x86\_x64\_dvd\_515527.iso|1850281984|8CA2D23BCB767
-      
-      </p>
-      
-      <p>
-          <a href="/2016/08/09/Windows/Windows_Office/" class="excerpt-link">Read More...</a>
-      </p>
-      
-    </section>
-  </article>
-  
   <nav class="pagination" role="pagination">
     
-    <span class="page-number">Page 1 of 4</span>
+    <span class="page-number">Page 1 of 5</span>
     <a class="older-posts" href="/page/2/">Older Posts →</a>
   </nav>
 </main>
