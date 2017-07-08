@@ -1133,3 +1133,70 @@ pre .chunk {
    End of file. Media queries should be the last thing here. Do not add stuff
    below this point, or it will probably fuck everything up.
    ========================================================================== */
+
+
+
+
+
+
+
+
+   /* global */
+* {word-break:break-all;font-family:宋体,Arial;}
+
+body{
+    text-align:center; 
+    margin:0px; 
+    padding:0px; 
+    background-color:#ffffff;
+    font-size:12px;
+    color:#333333;
+}
+a,td{
+    font-size:12px;
+    color:#004f98;
+}
+ul{
+    margin:0px;
+    padding:0px;
+}
+
+a:link,a:visited,a:active {color:#003278;text-decoration:none;}
+a:hover {color:#003278;text-decoration:underline;}
+
+/* common */
+.m  {
+    margin:auto;
+    width:1000px;
+    clear:both;
+    background-color: #FFFFFF;
+}
+.box_body {
+    border:#AACCEE 1px solid;
+    border-top:none;
+    padding:6px 8px 6px 8px;
+}
+.box_body li {
+    height:22px;
+    line-height:22px;
+    overflow:hidden;
+}
+.tab_head {
+    border:#AACCEE 1px solid;
+    border-bottom:none;
+    height:26px;
+    line-height:26px;
+    font-size:13px;
+    overflow:hidden;
+    background:#EFF6FF url('image/box_head.gif') repeat-x;
+    color:#1B4C7A;
+    font-weight:bold;
+}
+.tab_2 {
+    float:left;
+    padding:0 15px 0 15px;
+    border-right:#AACCEE 1px solid;
+    cursor:pointer;
+    background:#FFFFFF;
+}
+
