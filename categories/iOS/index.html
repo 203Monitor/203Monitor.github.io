@@ -48,6 +48,37 @@
   <article class="post">
     <header class="post-header">
       <span class="post-meta">
+      <time datetime="2017-07-31T16:00:00.000Z" itemprop="datePublished">
+          2017-08-01
+      </time>
+    
+    
+    | 
+    <a href='/tags/tableView/'>tableView</a>
+    
+    
+</span>
+      <h2 class="post-title"><a href="/2017/08/01/iOS/iOS_tableView的一些问题/">tableView的一些问题</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+      
+        使用tableView时实现分组效果会遇到sectionHeader是否停留的处理，停留就选择plain，不停留就选择group
+使用group时会遇到分组下边多出一块，那是默认的heightForFooterInSection，在代理方法里返回0.01即可
+
+      
+      </p>
+      
+      <p>
+          <a href="/2017/08/01/iOS/iOS_tableView的一些问题/" class="excerpt-link">Read More...</a>
+      </p>
+      
+    </section>
+  </article>
+  
+  <article class="post">
+    <header class="post-header">
+      <span class="post-meta">
       <time datetime="2017-05-31T16:00:00.000Z" itemprop="datePublished">
           2017-06-01
       </time>
@@ -120,35 +151,6 @@ RACSiganl信号类,一般表示将来有数据传递，只要有数据改变，�
     
     
     | 
-    <a href='/tags/TTTAttributedLabel/'>TTTAttributedLabel</a>
-    
-    
-</span>
-      <h2 class="post-title"><a href="/2017/03/10/iOS/iOS_TTTAttributedLabel使用心得/">TTTAttributedLabel使用心得</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-      
-        TTTAttributedLabel实现了在label上添加链接等点击事件的功能点击事件TTT的实现方法是在- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event方法中获取到touch的点，随后将这个点传入- (TTTAttributedLabelLink *)linkAtPoint:(CGPoint)point方法中，找到点击位置的链接文本，如果有则进入回调，没
-      
-      </p>
-      
-      <p>
-          <a href="/2017/03/10/iOS/iOS_TTTAttributedLabel使用心得/" class="excerpt-link">Read More...</a>
-      </p>
-      
-    </section>
-  </article>
-  
-  <article class="post">
-    <header class="post-header">
-      <span class="post-meta">
-      <time datetime="2017-03-09T16:00:00.000Z" itemprop="datePublished">
-          2017-03-10
-      </time>
-    
-    
-    | 
     <a href='/tags/UIButton/'>UIButton</a>
     
     
@@ -164,6 +166,35 @@ RACSiganl信号类,一般表示将来有数据传递，只要有数据改变，�
       
       <p>
           <a href="/2017/03/10/iOS/iOS_UIButton切换selected状态标题闪烁问题/" class="excerpt-link">Read More...</a>
+      </p>
+      
+    </section>
+  </article>
+  
+  <article class="post">
+    <header class="post-header">
+      <span class="post-meta">
+      <time datetime="2017-03-09T16:00:00.000Z" itemprop="datePublished">
+          2017-03-10
+      </time>
+    
+    
+    | 
+    <a href='/tags/TTTAttributedLabel/'>TTTAttributedLabel</a>
+    
+    
+</span>
+      <h2 class="post-title"><a href="/2017/03/10/iOS/iOS_TTTAttributedLabel使用心得/">TTTAttributedLabel使用心得</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+      
+        TTTAttributedLabel实现了在label上添加链接等点击事件的功能点击事件TTT的实现方法是在- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event方法中获取到touch的点，随后将这个点传入- (TTTAttributedLabelLink *)linkAtPoint:(CGPoint)point方法中，找到点击位置的链接文本，如果有则进入回调，没
+      
+      </p>
+      
+      <p>
+          <a href="/2017/03/10/iOS/iOS_TTTAttributedLabel使用心得/" class="excerpt-link">Read More...</a>
       </p>
       
     </section>
@@ -334,35 +365,6 @@ backgroundColor 背景颜色
     </section>
   </article>
   
-  <article class="post">
-    <header class="post-header">
-      <span class="post-meta">
-      <time datetime="2016-01-26T16:00:00.000Z" itemprop="datePublished">
-          2016-01-27
-      </time>
-    
-    
-    | 
-    <a href='/tags/AFNetworking/'>AFNetworking</a>
-    
-    
-</span>
-      <h2 class="post-title"><a href="/2016/01/27/iOS/iOS_AFNetworking_3.0/">AFNetworking 3.0</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <p>
-      
-        AFNetworking是一款在OS X和iOS下都令人喜爱的网络库。为了迎合iOS新版本的升级, AFNetworking在3.0版本中删除了基于 NSURLConnection API的所有支持。如果你的项目以前使用过这些API，建议您立即升级到基于 NSURLSession 的API的AFNetworking的版本。本指南将引导您完成这个过程。本指南是为了引导使用AFNetworking 2.x升级到最新的版本API，以达到过渡的
-      
-      </p>
-      
-      <p>
-          <a href="/2016/01/27/iOS/iOS_AFNetworking_3.0/" class="excerpt-link">Read More...</a>
-      </p>
-      
-    </section>
-  </article>
-  
   <nav class="pagination" role="pagination">
     
     <span class="page-number">Page 1 of 2</span>
@@ -395,11 +397,10 @@ backgroundColor 背景颜色
 
 		<section class="copyright">All content copyright <a href="/">Yucapri</a> &copy; 2014 &bull; All rights reserved.</section>
 		<section class="poweredby">Proudly published with <a class="icon-ghost" href="http://zespia.tw/hexo/">Hexo</a></section>
-		<section class="poweredby">Hosted by <a class="icon-ghost" href="https://pages.coding.net">Coding Pages</a></section>
+		<section class="poweredby">Hosted by <a class="icon-ghost" href="https://pages.github.com">Github Pages</a></section>
 	</div>
 </footer>
 
-	  	 		  	 	
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <script type="text/javascript" src="/js/jquery.fitvids.js"></script>
