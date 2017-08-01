@@ -65,7 +65,10 @@
       
         SVN基本命令行操作
 先复习一下常用的几个命令
-1###### ```rm``` &#10;###### ```git add">1###### ```rm``` &#10;###### ```git addcommit -a -m 'information'```1###### ```git pull">commit -a -m 'information'```1###### ```git pullpush``` 1###### ``
+lsrmgit addgit commit -a -m &#39;information&#39;git pullgit pushgit cloneadd全部问号的文件:1svn status | grep ? |cut -d" "  -f2- | xargs svn add
+查看状态:1svn st
+提交:1svn ci -m 'information'
+查看仓库信息:1svn info
       
       </p>
       
@@ -326,11 +329,10 @@ RACSiganl信号类,一般表示将来有数据传递，只要有数据改变，�
 
 		<section class="copyright">All content copyright <a href="/">Yucapri</a> &copy; 2014 &bull; All rights reserved.</section>
 		<section class="poweredby">Proudly published with <a class="icon-ghost" href="http://zespia.tw/hexo/">Hexo</a></section>
-		<section class="poweredby">Hosted by <a class="icon-ghost" href="https://pages.coding.net">Coding Pages</a></section>
+		<section class="poweredby">Hosted by <a class="icon-ghost" href="https://pages.github.com">Github Pages</a></section>
 	</div>
 </footer>
 
-	  	 		  	 	
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <script type="text/javascript" src="/js/jquery.fitvids.js"></script>
