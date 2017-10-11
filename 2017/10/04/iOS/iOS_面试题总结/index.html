@@ -124,6 +124,10 @@
 <td style="text-align:left">所以当const单独使用时它就与static相同，而当与extern一起合作的时候，它的特性就跟extern的一样了！所以对const我没有什么可以过多的描述，我只是想提醒你，const char<em> g_str = “123456” 与 const char g_str[] = “123456” 是不同的，前面那个const修饰的是char</em> 而不是 g_str，它的 g_str 并不是常量，它被看作是一个定义了的全局变量（可以被其他编译单元使用），所以如果你想让char<em> g_str 遵守const的全局变量规则，最好这么定义：const char</em> const g_str=”123456”</td>
 <td></td>
 </tr>
+<tr>
+<td style="text-align:left">“三次握手”的目的是“为了防止已失效的连接请求报文段突然又传送到了服务端，因而产生错误</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 
@@ -194,11 +198,10 @@
 
 		<section class="copyright">All content copyright <a href="/">Yucapri</a> &copy; 2014 &bull; All rights reserved.</section>
 		<section class="poweredby">Proudly published with <a class="icon-ghost" href="http://zespia.tw/hexo/">Hexo</a></section>
-		<section class="poweredby">Hosted by <a class="icon-ghost" href="https://pages.coding.net">Coding Pages</a></section>
+		<section class="poweredby">Hosted by <a class="icon-ghost" href="https://pages.github.com">Github Pages</a></section>
 	</div>
 </footer>
 
-	  	 		  	 	
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <script type="text/javascript" src="/js/jquery.fitvids.js"></script>
